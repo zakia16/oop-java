@@ -97,7 +97,7 @@ void main() {
 * **Wrong Java version:** Open **File -> Project Structure -> Project** and verify the Project SDK.
 
 ---
-# 2: Variables & Primitive Data Types
+# 2. Variables & Primitive Data Types
 
 In this section, you will learn how to store, manipulate, and work with data in memory using variables and Java's built-in primitive data types.
 
