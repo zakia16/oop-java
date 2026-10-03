@@ -1,1 +1,1 @@
-
+Getting Started with Java in IntelliJ IDEAPrerequisitesIntelliJ IDEA (Community / Ultimate)Java Development Kit (JDK) (Amazon Corretto 25)Quickstart: First Java Class in IntelliJCreate Project: Open IntelliJ $\rightarrow$ New Project $\rightarrow$ Name: HelloWorld $\rightarrow$ Language: Java $\rightarrow$ Build system: IntelliJ $\rightarrow$ JDK: Select Corretto-25 $\rightarrow$ Create.Create Class: Right-click src $\rightarrow$ New $\rightarrow$ Java Class $\rightarrow$ Name: HelloWorld.Add Code:
