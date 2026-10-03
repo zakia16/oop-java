@@ -283,15 +283,14 @@ Remember:
 
 Logical operators combine conditions.
 
-| **Operator** | **Meaning** | **Example**     | **Result** |        |   |        |         |
-| ------------ | ----------- | --------------- | ---------- | ------ | - | ------ | ------- |
-| `&&`         | AND         | `true && true`  | `true`     |        |   |        |         |
-| `&&`         | AND         | `true && false` | `false`    |        |   |        |         |
-| `            |             | `               | OR         | `true  |   | false` | `true`  |
-| `            |             | `               | OR         | `false |   | false` | `false` |
-| `!`          | NOT         | `!true`         | `false`    |        |   |        |         |
-| `!`          | NOT         | `!false`        | `true`     |        |   |        |         |
-
+| Operator | Meaning | Example | Result |
+| :--- | :--- | :--- | :--- |
+| `&&` | AND | `true && true` | `true` |
+| `&&` | AND | `true && false` | `false` |
+| `\|\|` | OR | `true \|\| false` | `true` |
+| `\|\|` | OR | `false \|\| false` | `false` |
+| `!` | NOT | `!true` | `false` |
+| `!` | NOT | `!false` | `true` |
 ---
 
 ## 3.5 Increment and Decrement
