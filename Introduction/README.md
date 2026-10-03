@@ -45,6 +45,17 @@
 
 ---
 
+## Executing Source Files Directly (No Manual `javac`)
+
+Java allows you to run source files directly without manually compiling them first. The available features depend on the Java version.
+
+| **Feature**                 | **Java Version** | **Command**                          | **Multi-File Support?**                        |
+| --------------------------- | ---------------- | ------------------------------------ | ---------------------------------------------- |
+| **Traditional Compilation** | Before Java 11   | `javac Hello.java` then `java Hello` | Manual compilation required                    |
+| **Single-File Source**      | Java 11+         | `java Hello.java`                    | Single source file only                      |
+| **Multi-File Source**       | Java 22+         | `java Hello.java`                    | Automatically compiles required source files |
+
+
 ## Java 25: Compact Source Files
 
 Java 25 supports compact source files, allowing beginners to write simple programs with less boilerplate code.
