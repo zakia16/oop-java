@@ -116,18 +116,16 @@ String name = "Alex";
 
 Java provides **8 primitive data types**, divided into four main categories.
 
-| **Category**   | **Type**  | **Size**      | **Default Value** | **Usage / Range**                                                     |
-| -------------- | --------- | ------------- | ----------------- | --------------------------------------------------------------------- |
-| **Integers**   | `byte`    | 1 byte        | `0`               | Small integers (-128 to 127)                                          |
-|                | `short`   | 2 bytes       | `0`               | Integers (-32,768 to 32,767)                                          |
-|                | `int`     | 4 bytes       | `0`               | Standard integers; common default choice                              |
-|                | `long`    | 8 bytes       | `0L`              | Large integers; use `L` suffix, e.g., `10000000000L`                  |
-| **Decimals**   | `float`   | 4 bytes       | `0.0f`            | Single-precision floating-point numbers; use `f` suffix               |
-|                | `double`  | 8 bytes       | `0.0d`            | Double-precision floating-point numbers; default for decimal literals |
-| **Characters** | `char`    | 2 bytes       | `'\u0000'`        | A single UTF-16 code unit, e.g., `'A'`                                |
-| **Booleans**   | `boolean` | JVM-dependent | `false`*          | Logical values: `true` or `false`                                     |
-
-> **Note:** The default values shown apply to fields and array elements. Local variables do not receive automatic default values and must be initialized before use. Java specifies no fixed storage size for `boolean`.
+| **Category**   | **Type**  | **Size**      | **Usage / Range**                                                     |
+| -------------- | --------- | ------------- | --------------------------------------------------------------------- |
+| **Integers**   | `byte`    | 1 byte        | Small integers (-128 to 127)                                          |
+|                | `short`   | 2 bytes       | Integers (-32,768 to 32,767)                                          |
+|                | `int`     | 4 bytes       | Standard integers; common default choice                              |
+|                | `long`    | 8 bytes       | Large integers; use `L` suffix, e.g., `10000000000L`                  |
+| **Decimals**   | `float`   | 4 bytes       | Single-precision floating-point numbers; use `f` suffix               |
+|                | `double`  | 8 bytes       | Double-precision floating-point numbers; default for decimal literals |
+| **Characters** | `char`    | 2 bytes       | A single UTF-16 code unit, e.g., `'A'`                                |
+| **Booleans**   | `boolean` | JVM-dependent | Logical values: `true` or `false`                                     |
 
 ---
 
