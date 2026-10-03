@@ -214,6 +214,59 @@ Follow these rules when naming Java variables:
 **Summary:** Primitive types store basic values, `var` reduces repetitive type declarations, and meaningful variable names make Java code easier to read and maintain.
 
 ---
+
+# 3. Operators & Arithmetic Expressions
+
+In this section, you will learn how to perform calculations, manipulate values, and evaluate expressions in Java using arithmetic, assignment, increment, and precedence rules.
+
+---
+
+## 3.1 Basic Arithmetic Operators
+
+Java provides standard mathematical operators for performing basic calculations:
+
+| Operator | Name | Description | Example | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| `+` | Addition | Adds two values | `10 + 5` | `15` |
+| `-` | Subtraction | Subtracts second value from first | `10 - 5` | `5` |
+| `*` | Multiplication | Multiplies two values | `10 * 5` | `50` |
+| `/` | Division | Divides first value by second | `10 / 4` | `2` *(integer division)* |
+| `%` | Modulus | Returns division remainder | `10 % 3` | `1` |
+
+> **Integer Division Note:** Dividing two integers (`int / int`) drops the decimal portion. To get a precise result, at least one operand must be a floating-point type (`double` or `float`):
+> ```java
+> double result = 10.0 / 4; // Evaluates to 2.5
+> ```
+
+---
+
+## 3.2 Compound Assignment Operators
+
+Compound assignment operators combine an arithmetic operation with variable assignment to shorten your code:
+
+| Operator | Equivalent Expression | Example (`int x = 10;`) | Final Value of `x` |
+| :--- | :--- | :--- | :--- |
+| `+=` | `x = x + 5` | `x += 5;` | `15` |
+| `-=` | `x = x - 3` | `x -= 3;` | `7` |
+| `*=` | `x = x * 2` | `x *= 2;` | `20` |
+| `/=` | `x = x / 2` | `x /= 2;` | `5` |
+| `%=` | `x = x % 3` | `x %= 3;` | `1` |
+
+---
+
+## 3. Increment & Decrement Operators
+
+The `++` and `--` operators increase or decrease a variable's value by `1`.
+
+* **Prefix (`++x`, `--x`):** Modifies the value **before** the expression is evaluated.
+* **Postfix (`x++`, `x--`):** Modifies the value **after** the current expression is evaluated.
+
+```java
+int a = 5;
+int b = ++a; // Pre-increment: 'a' becomes 6, then assigned to 'b' (a = 6, b = 6)
+
+int x = 5;
+int y = x++; // Post-increment: 'x' (5) assigned to 'y', then 'x' becomes 6 (x = 6, y = 5)
 ## Next Steps
 
 * [Java Tutorials](https://dev.java/learn/)
