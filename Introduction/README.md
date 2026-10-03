@@ -19,42 +19,104 @@
    }
    ```
 
-4. Run: Click the green Run icon next to main (or right-click inside main -> Run 'HelloWorld.main()').
+# Getting Started with Java in IntelliJ IDEA
 
-Expected output:
+## Prerequisites
 
-Hello World!
-Understanding the Code
-Code	Meaning
-public class HelloWorld	Defines a class named HelloWorld.
-public static void main(String[] args)	Defines the program's entry point.
-System.out.println("Hello World!");	Prints text to the console.
-{ }	Marks the beginning and end of a code block.
-;	Marks the end of a Java statement.
-Java 25: Traditional vs. Compact Source Files
+* **IntelliJ IDEA** ([Community / Ultimate](https://www.jetbrains.com/idea/download/))
+* **Java Development Kit (JDK)** ([Amazon Corretto 25](https://docs.aws.amazon.com/corretto/latest/corretto-25-ug/downloads-list.html))
 
-Java 25 supports compact source files, which let beginners write simple programs with less boilerplate.
+---
 
-Traditional Java:
+## Quickstart: First Java Class in IntelliJ
 
+1. **Create Project:** Open IntelliJ -> **New Project** -> Name: `HelloWorld` -> Language: **Java** -> Build system: **IntelliJ** -> JDK: Select **Corretto-25** -> **Create**.
+
+2. **Create Class:** Right-click `src` -> **New** -> **Java Class** -> Name: `HelloWorld`.
+
+3. **Add Code:**
+
+   ```java
+   public class HelloWorld {
+       public static void main(String[] args) {
+           System.out.println("Hello World");
+       }
+   }
+   ```
+
+4. **Run the Program:** Click the green **Run** icon next to `main`, or right-click inside the `main` method and select **Run 'HelloWorld.main()'**.
+
+   **Expected output:**
+
+   ```text
+   Hello World
+   ```
+
+---
+
+## Understanding the Code
+
+| Code                                     | Meaning                                      |
+| ---------------------------------------- | -------------------------------------------- |
+| `public class HelloWorld`                | Defines a class named `HelloWorld`.          |
+| `public static void main(String[] args)` | The entry point of the program.              |
+| `System.out.println("Hello World");`     | Prints text to the console.                  |
+| `{ }`                                    | Marks the beginning and end of a code block. |
+| `;`                                      | Marks the end of a Java statement.           |
+
+---
+
+## Java 25: Compact Source Files
+
+Java 25 supports compact source files, allowing beginners to write simple programs with less boilerplate code.
+
+### Traditional Java
+
+```java
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Hello World");
     }
 }
+```
 
-Compact source file in Java 25:
+### Compact Source File (Java 25)
 
+```java
 void main() {
-    IO.println("Hello World!");
+    IO.println("Hello World");
 }
+```
 
-The compact example uses Java 25's implicitly declared class and instance main method features. IO.println() is available through the java.io.IO API, which is automatically imported in compact source files.
+**Key differences:**
 
-Note: Use the traditional version for this IntelliJ quickstart. It introduces the standard class and main method structure commonly used in Java projects.
+* Traditional Java explicitly declares a class and a `main` method.
+* Compact source files do not require an explicit class declaration.
+* The compact form supports an instance `main` method.
+* `IO.println()` is available through Java's `java.io.IO` API and is automatically imported in compact source files.
 
-Troubleshooting
-JDK not found: Verify that JDK 25 is installed and selected in the project settings.
-Run icon missing: Make sure the code is saved in HelloWorld.java and the class name matches the filename.
+**Note:** Start with the traditional version to understand Java classes and methods before trying compact source files.
+
+---
+
+## Troubleshooting
+
+* **JDK not found:** Verify that JDK 25 is installed and selected in the project settings.
+* **Run icon missing:** Ensure the file is named `HelloWorld.java` and the class name matches the filename.
+* **No output:** Check the Run console for compilation errors and confirm that you are running the correct class.
+* **Wrong Java version:** Open **File -> Project Structure -> Project** and verify the Project SDK.
+
+---
+
+## Next Steps
+
+* [Java Tutorials](https://dev.java/learn/)
+* [Java Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
+* [Classes and Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
+
+---
+
+**Happy coding!**
+
 Output not appearing: Check the Run console for compilation errors.
 Wrong Java version: Open File → Project Structure → Project and verify the Project SDK.
