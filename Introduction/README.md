@@ -97,7 +97,125 @@ void main() {
 * **Wrong Java version:** Open **File -> Project Structure -> Project** and verify the Project SDK.
 
 ---
+# 2: Variables & Primitive Data Types
 
+In this section, you will learn how to store, manipulate, and work with data in memory using variables and Java's built-in primitive data types.
+
+---
+
+## 2.1 What is a Variable?
+
+A **variable** is a named container in memory used to store data. In Java, every variable must have a declared **data type**, a **name**, and optionally an initial **value**.
+
+```java
+// Syntax: dataType variableName = value;
+int age = 20;
+String name = "Alex";
+```
+## 2.2 Java Primitive Data Types
+
+Java provides **8 primitive data types**, divided into four main categories.
+
+| **Category**   | **Type**  | **Size**      | **Default Value** | **Usage / Range**                                                     |
+| -------------- | --------- | ------------- | ----------------- | --------------------------------------------------------------------- |
+| **Integers**   | `byte`    | 1 byte        | `0`               | Small integers (-128 to 127)                                          |
+|                | `short`   | 2 bytes       | `0`               | Integers (-32,768 to 32,767)                                          |
+|                | `int`     | 4 bytes       | `0`               | Standard integers; common default choice                              |
+|                | `long`    | 8 bytes       | `0L`              | Large integers; use `L` suffix, e.g., `10000000000L`                  |
+| **Decimals**   | `float`   | 4 bytes       | `0.0f`            | Single-precision floating-point numbers; use `f` suffix               |
+|                | `double`  | 8 bytes       | `0.0d`            | Double-precision floating-point numbers; default for decimal literals |
+| **Characters** | `char`    | 2 bytes       | `'\u0000'`        | A single UTF-16 code unit, e.g., `'A'`                                |
+| **Booleans**   | `boolean` | JVM-dependent | `false`*          | Logical values: `true` or `false`                                     |
+
+> **Note:** The default values shown apply to fields and array elements. Local variables do not receive automatic default values and must be initialized before use. Java specifies no fixed storage size for `boolean`.
+
+---
+
+## 2.3 Basic Code Example
+
+The following example demonstrates how to declare primitive variables and print their values.
+
+```java
+public class VariablesDemo {
+    public static void main(String[] args) {
+        // Integer types
+        int studentCount = 35;
+        long population = 8_000_000_000L;
+
+        // Decimal types
+        double gpa = 3.85;
+        float price = 19.99f;
+
+        // Character and Boolean
+        char grade = 'A';
+        boolean isPassed = true;
+
+        // Output values
+        System.out.println("Student Count: " + studentCount);
+        System.out.println("Population: " + population);
+        System.out.println("GPA: " + gpa);
+        System.out.println("Price: " + price);
+        System.out.println("Grade: " + grade);
+        System.out.println("Passed Course? " + isPassed);
+    }
+}
+```
+
+**Expected output:**
+
+```text
+Student Count: 35
+Population: 8000000000
+GPA: 3.85
+Price: 19.99
+Grade: A
+Passed Course? true
+```
+
+---
+
+## 2.4 Modern Java: Type Inference (`var`)
+
+Starting with **Java 10**, the `var` keyword allows the compiler to infer a local variable's type from its initializer.
+
+```java
+public class VarDemo {
+    public static void main(String[] args) {
+        var score = 95;          // Inferred as int
+        var message = "Success"; // Inferred as String
+        var rating = 4.8;        // Inferred as double
+
+        System.out.println(score);
+        System.out.println(message);
+        System.out.println(rating);
+    }
+}
+```
+
+**Key points:**
+
+* `var` is available starting in Java 10.
+* The variable must have an initializer so the compiler can infer its type.
+* `var` does not make Java dynamically typed. The inferred type remains fixed.
+* `var` can be used for local variables, including variables declared inside methods and loop variables.
+* `var` cannot be used for fields, method parameters, or return types.
+
+---
+
+## 2.5 Naming Conventions and Rules
+
+Follow these rules when naming Java variables:
+
+* **CamelCase:** Start with a lowercase letter and capitalize subsequent words. Examples: `userScore`, `totalAmount`.
+* **Valid characters:** Names can contain letters, digits, underscores (`_`), and dollar signs (`$`).
+* **Cannot start with a digit:** `1stPlace` is invalid; `firstPlace` is valid.
+* **Reserved keywords:** Java keywords such as `class`, `public`, `int`, and `static` cannot be used as variable names.
+* **Case-sensitive:** `score`, `Score`, and `SCORE` are different identifiers.
+* **Meaningful names:** Prefer `studentCount` over unclear names such as `x`.
+
+**Summary:** Primitive types store basic values, `var` reduces repetitive type declarations, and meaningful variable names make Java code easier to read and maintain.
+
+---
 ## Next Steps
 
 * [Java Tutorials](https://dev.java/learn/)
