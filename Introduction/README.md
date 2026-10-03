@@ -216,46 +216,152 @@ Follow these rules when naming Java variables:
 ---
 
 # 3. Operators & Arithmetic Expressions
+---
 
-In this section, you will learn how to perform calculations, manipulate values, and evaluate expressions in Java using arithmetic, assignment, increment, and precedence rules.
+# 3. Operators & Expressions
+
+In this section, you will learn how to perform calculations, compare values, and work with conditions using Java operators.
 
 ---
 
-## 3.1 Basic Arithmetic Operators
+## 3.1 Arithmetic Operators
 
-Java provides standard mathematical operators for performing basic calculations:
+Arithmetic operators perform mathematical calculations.
 
-| Operator | Name | Description | Example | Result |
-| :--- | :--- | :--- | :--- | :--- |
-| `+` | Addition | Adds two values | `10 + 5` | `15` |
-| `-` | Subtraction | Subtracts second value from first | `10 - 5` | `5` |
-| `*` | Multiplication | Multiplies two values | `10 * 5` | `50` |
-| `/` | Division | Divides first value by second | `10 / 4` | `2` *(integer division)* |
-| `%` | Modulus | Returns division remainder | `10 % 3` | `1` |
+| **Operator** | **Name**       | **Example** | **Result** |
+| ------------ | -------------- | ----------- | ---------: |
+| `+`          | Addition       | `10 + 3`    |       `13` |
+| `-`          | Subtraction    | `10 - 3`    |        `7` |
+| `*`          | Multiplication | `10 * 3`    |       `30` |
+| `/`          | Division       | `10 / 3`    |        `3` |
+| `%`          | Remainder      | `10 % 3`    |        `1` |
 
-> **Integer Division Note:** Dividing two integers (`int / int`) drops the decimal portion. To get a precise result, at least one operand must be a floating-point type (`double` or `float`):
-> ```java
-> double result = 10.0 / 4; // Evaluates to 2.5
-> ```
+When both values are integers, `/` performs **integer division**.
 
----
-
-## 3.2 Compound Assignment Operators
-
-Compound assignment operators combine an arithmetic operation with variable assignment to shorten your code:
-
-| Operator | Equivalent Expression | Example (`int x = 10;`) | Final Value of `x` |
-| :--- | :--- | :--- | :--- |
-| `+=` | `x = x + 5` | `x += 5;` | `15` |
-| `-=` | `x = x - 3` | `x -= 3;` | `7` |
-| `*=` | `x = x * 2` | `x *= 2;` | `20` |
-| `/=` | `x = x / 2` | `x /= 2;` | `5` |
-| `%=` | `x = x % 3` | `x %= 3;` | `1` |
+| **Example** | **Result** |
+| ----------- | ---------: |
+| `5 / 2`     |        `2` |
+| `5.0 / 2`   |      `2.5` |
 
 ---
 
+## 3.2 Assignment Operators
 
+Assignment operators assign or update values.
 
+| **Operator** | **Example** | **Equivalent** | **Result** |
+| ------------ | ----------- | -------------- | ---------: |
+| `=`          | `x = 10`    | —              |       `10` |
+| `+=`         | `x += 5`    | `x = x + 5`    |       `15` |
+| `-=`         | `x -= 5`    | `x = x - 5`    |        `5` |
+| `*=`         | `x *= 5`    | `x = x * 5`    |       `50` |
+| `/=`         | `x /= 5`    | `x = x / 5`    |        `2` |
+| `%=`         | `x %= 3`    | `x = x % 3`    |        `1` |
+
+Assume `x = 10` before each example.
+
+---
+
+## 3.3 Comparison Operators
+
+Comparison operators compare values and return `true` or `false`.
+
+| **Operator** | **Meaning**              | **Example** | **Result** |
+| ------------ | ------------------------ | ----------- | ---------- |
+| `==`         | Equal to                 | `10 == 10`  | `true`     |
+| `!=`         | Not equal to             | `10 != 5`   | `true`     |
+| `>`          | Greater than             | `10 > 5`    | `true`     |
+| `<`          | Less than                | `10 < 5`    | `false`    |
+| `>=`         | Greater than or equal to | `10 >= 10`  | `true`     |
+| `<=`         | Less than or equal to    | `10 <= 5`   | `false`    |
+
+Remember:
+
+| **Operator** | **Meaning** |
+| ------------ | ----------- |
+| `=`          | Assignment  |
+| `==`         | Comparison  |
+
+---
+
+## 3.4 Logical Operators
+
+Logical operators combine conditions.
+
+| **Operator** | **Meaning** | **Example**     | **Result** |        |   |        |         |
+| ------------ | ----------- | --------------- | ---------- | ------ | - | ------ | ------- |
+| `&&`         | AND         | `true && true`  | `true`     |        |   |        |         |
+| `&&`         | AND         | `true && false` | `false`    |        |   |        |         |
+| `            |             | `               | OR         | `true  |   | false` | `true`  |
+| `            |             | `               | OR         | `false |   | false` | `false` |
+| `!`          | NOT         | `!true`         | `false`    |        |   |        |         |
+| `!`          | NOT         | `!false`        | `true`     |        |   |        |         |
+
+---
+
+## 3.5 Increment and Decrement
+
+`++` increases a value by `1`.
+
+`--` decreases a value by `1`.
+
+| **Operator** | **Example** | **Result** |
+| ------------ | ----------- | ---------: |
+| `++`         | `x++`       |    `x + 1` |
+| `--`         | `x--`       |    `x - 1` |
+
+### Prefix vs Postfix
+
+| **Expression** | **Description**          | **Example**      |       **Result** |
+| -------------- | ------------------------ | ---------------- | ---------------: |
+| `x++`          | Use first, then increase | `x = 5; y = x++` | `y = 5`, `x = 6` |
+| `++x`          | Increase first, then use | `x = 5; y = ++x` | `y = 6`, `x = 6` |
+
+---
+
+## 3.6 Ternary Operator
+
+The ternary operator is a short way to choose between two values.
+
+### Syntax
+
+```text
+condition ? valueIfTrue : valueIfFalse
+```
+
+| **Example**                    | **Result** |
+| ------------------------------ | ---------- |
+| `20 >= 18 ? "Adult" : "Minor"` | `"Adult"`  |
+| `15 >= 18 ? "Adult" : "Minor"` | `"Minor"`  |
+
+---
+
+## 3.7 Operator Precedence
+
+Java evaluates operators in a specific order.
+
+For example:
+
+| **Example**    | **Result** |
+| -------------- | ---------: |
+| `10 + 5 * 2`   |       `20` |
+| `(10 + 5) * 2` |       `30` |
+
+A simplified precedence order is:
+
+```text
+()
+* / %
++ -
+< > <= >=
+== !=
+&&
+||
+?:
+= += -= *= /=
+```
+
+*** Use parentheses when you want to clearly control the order of operations.
 
 ---
 ## Next Steps
