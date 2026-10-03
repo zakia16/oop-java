@@ -98,7 +98,6 @@ void main() {
 
 ---
 # 2. Variables & Primitive Data Types
-
 In this section, you will learn how to store, manipulate, and work with data in memory using variables and Java's built-in primitive data types.
 
 ---
@@ -216,10 +215,6 @@ Follow these rules when naming Java variables:
 ---
 
 # 3. Operators & Arithmetic Expressions
----
-
-# 3. Operators & Expressions
-
 In this section, you will learn how to perform calculations, compare values, and work with conditions using Java operators.
 
 ---
