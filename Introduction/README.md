@@ -19,10 +19,7 @@
    }
    ```
 
- 4. Run the Program
-Find the green Run icon next to the main method.
-Click the icon and select Run 'HelloWorld.main()'.
-Look at the Run console at the bottom of IntelliJ IDEA.
+4. Run: Click the green Run icon next to main (or right-click inside main -> Run 'HelloWorld.main()').
 
 Expected output:
 
