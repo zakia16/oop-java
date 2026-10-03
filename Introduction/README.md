@@ -254,19 +254,10 @@ Compound assignment operators combine an arithmetic operation with variable assi
 
 ---
 
-## 3. Increment & Decrement Operators
 
-The `++` and `--` operators increase or decrease a variable's value by `1`.
 
-* **Prefix (`++x`, `--x`):** Modifies the value **before** the expression is evaluated.
-* **Postfix (`x++`, `x--`):** Modifies the value **after** the current expression is evaluated.
 
-```java
-int a = 5;
-int b = ++a; // Pre-increment: 'a' becomes 6, then assigned to 'b' (a = 6, b = 6)
-
-int x = 5;
-int y = x++; // Post-increment: 'x' (5) assigned to 'y', then 'x' becomes 6 (x = 6, y = 5)
+---
 ## Next Steps
 
 * [Java Tutorials](https://dev.java/learn/)
