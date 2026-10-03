@@ -19,14 +19,45 @@
    }
    ```
 
-   Run: Click the green Run icon next to main (or right-click inside main → Run 'HelloWorld.main()').Executing Source Files Directly (No Manual javac)FeatureJava VersionCommandMulti-File Support?TraditionalPrior to Java 11javac Hello.java then java HelloManual compilation requiredSingle-File SourceJava 11+java Hello.java❌ Single file onlyMulti-File SourceJava 22+java Hello.java✅ Auto-detects dependenciesModern Java 25: Compact Source Files & Instance MainJava 25 reduces boilerplate for quick scripts, demos, and beginners by removing required class wrappers and static keywords.Before vs. AfterJava// Traditional
+ 4. Run the Program
+Find the green Run icon next to the main method.
+Click the icon and select Run 'HelloWorld.main()'.
+Look at the Run console at the bottom of IntelliJ IDEA.
+
+Expected output:
+
+Hello World!
+Understanding the Code
+Code	Meaning
+public class HelloWorld	Defines a class named HelloWorld.
+public static void main(String[] args)	Defines the program's entry point.
+System.out.println("Hello World!");	Prints text to the console.
+{ }	Marks the beginning and end of a code block.
+;	Marks the end of a Java statement.
+Java 25: Traditional vs. Compact Source Files
+
+Java 25 supports compact source files, which let beginners write simple programs with less boilerplate.
+
+Traditional Java:
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
 }
-Java// Java 25 Compact Source File
+
+Compact source file in Java 25:
+
 void main() {
     IO.println("Hello World!");
 }
-Key ChangesImplicit Class: Top-level class declarations are optional; the compiler generates one automatically.Instance main Methods: main() no longer needs to be static. Valid signatures include void main(), public void main(), and traditional String[] args variants (JVM prefers main(String[] args) if both exist).
+
+The compact example uses Java 25's implicitly declared class and instance main method features. IO.println() is available through the java.io.IO API, which is automatically imported in compact source files.
+
+Note: Use the traditional version for this IntelliJ quickstart. It introduces the standard class and main method structure commonly used in Java projects.
+
+Troubleshooting
+JDK not found: Verify that JDK 25 is installed and selected in the project settings.
+Run icon missing: Make sure the code is saved in HelloWorld.java and the class name matches the filename.
+Output not appearing: Check the Run console for compilation errors.
+Wrong Java version: Open File → Project Structure → Project and verify the Project SDK.
