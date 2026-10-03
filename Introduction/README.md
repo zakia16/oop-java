@@ -1,27 +1,6 @@
 # Getting Started with Java in IntelliJ IDEA
 
 ## Prerequisites
-* **IntelliJ IDEA** ([Community / Ultimate](https://www.jetbrains.com/idea/download/))
-* **Java Development Kit (JDK)** ([Amazon Corretto 25](https://docs.aws.amazon.com/corretto/latest/corretto-25-ug/downloads-list.html))
-
----
-
-## Quickstart: First Java Class in IntelliJ
-
-1. **Create Project:** Open IntelliJ &rarr; **New Project** &rarr; Name: `HelloWorld` &rarr; Language: **Java** &rarr; Build system: **IntelliJ** &rarr; JDK: Select **Corretto-25** &rarr; **Create**.
-2. **Create Class:** Right-click `src` &rarr; **New** &rarr; **Java Class** &rarr; Name: `HelloWorld`.
-3. **Add Code:**
-   ```java
-   public class HelloWorld {
-       public static void main(String[] args) {
-           System.out.println("Hello World");
-       }
-   }
-   ```
-
-# Getting Started with Java in IntelliJ IDEA
-
-## Prerequisites
 
 * **IntelliJ IDEA** ([Community / Ultimate](https://www.jetbrains.com/idea/download/))
 * **Java Development Kit (JDK)** ([Amazon Corretto 25](https://docs.aws.amazon.com/corretto/latest/corretto-25-ug/downloads-list.html))
@@ -112,7 +91,7 @@ void main() {
 
 * [Java Tutorials](https://dev.java/learn/)
 * [Java Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
-* [Classes and Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
+
 
 ---
 
