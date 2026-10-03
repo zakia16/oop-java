@@ -1,4 +1,4 @@
-# Getting Started with Java in IntelliJ IDEA
+# 1. Getting Started with Java in IntelliJ IDEA
 
 ## Prerequisites
 
