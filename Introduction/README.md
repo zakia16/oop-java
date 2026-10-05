@@ -77,14 +77,6 @@ void main() {
     IO.println("Hello World");
 }
 ```
-
-**Key differences:**
-
-* Traditional Java explicitly declares a class and a `main` method.
-* Compact source files do not require an explicit class declaration.
-* The compact form supports an instance `main` method.
-* `IO.println()` is available through Java's `java.io.IO` API and is automatically imported in compact source files.
-
 **Note:** In our class we will use the traditional version to understand Java classes and methods rather than trying compact source files.
 ---
 ## 1.3 Compiler Theory: How Java Works Under the Hood
