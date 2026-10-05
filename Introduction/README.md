@@ -6,6 +6,22 @@ Before writing Java code, ensure you have the following installed and configured
 * **Java Development Kit (JDK)** ([Amazon Corretto 25](https://docs.aws.amazon.com/corretto/latest/corretto-25-ug/downloads-list.html))
 
 ---
+## 1.2 Compiler Theory: How Java Works
+
+Java uses a two-step execution model: **compilation** and **JVM execution**.
+
+```text
+Java Source Code       Java Bytecode          Machine Code
+HelloWorld.java  →     HelloWorld.class  →    Native Code
+                    javac                 JVM
+```
+
+1. **Compilation:** `javac` converts `.java` source code into `.class` bytecode.
+2. **Execution:** The JVM executes the bytecode and may use **JIT compilation** to convert frequently executed code into native machine code.
+3. **Portability:** The same bytecode can run on different operating systems with a compatible JVM.
+4. **Error Detection:** The compiler catches many errors before the program runs.
+
+---
 
 ## Quickstart: First Java Class in IntelliJ
 
@@ -86,7 +102,50 @@ void main() {
 * `IO.println()` is available through Java's `java.io.IO` API and is automatically imported in compact source files.
 
 **Note:** Start with the traditional version to understand Java classes and methods before trying compact source files.
+---
 
+
+## 1.3 Transitioning from Python to Java
+
+| **Concept**          | **Python**       | **Java**                       |
+| -------------------- | ---------------- | ------------------------------ |
+| **Typing**           | Dynamic          | Static                         |
+| **Print**            | `print("Hello")` | `System.out.println("Hello");` |
+| **Code Blocks**      | Indentation      | `{ }`                          |
+| **Statement Ending** | New line         | `;`                            |
+| **Boolean**          | `True` / `False` | `true` / `false`               |
+| **Comments**         | `# Comment`      | `// Comment`                   |
+| **Character**        | `"a"`            | `'a'` (`char`)                 |
+| **String**           | `"a"`            | `"a"` (`String`)               |
+
+### Side-by-Side Example
+
+**Python**
+
+```python
+name = "Alex"
+age = 20
+
+if age >= 18:
+    print(f"{name} is an adult.")
+```
+
+**Java**
+
+```java
+public class Comparison {
+    public static void main(String[] args) {
+        String name = "Alex";
+        int age = 20;
+
+        if (age >= 18) {
+            System.out.println(name + " is an adult.");
+        }
+    }
+}
+```
+
+**Key takeaway:** Python emphasizes simplicity and dynamic typing, while Java uses explicit types, structured code blocks, and compilation to bytecode.
 ---
 
 ## Troubleshooting
