@@ -98,16 +98,17 @@ Java uses a two-step execution model: **compilation** and **JVM execution**.
 
 ## 1.4 Transitioning from Python to Java
 
-| **Concept**          | **Python**       | **Java**                       |
-| -------------------- | ---------------- | ------------------------------ |
-| **Typing**           | Dynamic          | Static                         |
-| **Print**            | `print("Hello")` | `System.out.println("Hello");` |
-| **Code Blocks**      | Indentation      | `{ }`                          |
-| **Statement Ending** | New line         | `;`                            |
-| **Boolean**          | `True` / `False` | `true` / `false`               |
-| **Comments**         | `# Comment`      | `// Comment`                   |
-| **Character**        | `"a"`            | `'a'` (`char`)                 |
-| **String**           | `"a"`            | `"a"` (`String`)               |
+| **Concept**                 | **Python**                     | **Java**                                                                           |
+| --------------------------- | ------------------------------ | ---------------------------------------------------------------------------------- |
+| **Typing**                  | Dynamic                        | Static                                                                             |
+| **Print Output**            | `print("Hello")`               | `System.out.println("Hello");`                                                     |
+| **Input / Console Reading** | `name = input("Enter name: ")` | `Scanner scanner = new Scanner(System.in);`<br>`String name = scanner.nextLine();` |
+| **Code Blocks**             | Indentation                    | `{ }` curly braces                                                                 |
+| **Statement Ending**        | New line                       | Semicolon `;` required                                                             |
+| **Comments**                | `# Comment`                    | `// Comment`                                                                       |
+| **Characters**              | `"a"` (String)                 | `'a'` (`char`)                                                                     |
+| **Strings**                 | `"a"` (String)                 | `"a"` (`String`)                                                                   |
+| **Boolean**                 | `True` / `False` | `true` / `false`      |
 
 ### Side-by-Side Example
 
