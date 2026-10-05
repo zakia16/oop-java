@@ -33,7 +33,7 @@ Before writing Java code, ensure you have the following installed and configured
 
 ---
 
-## Understanding the Code
+### Understanding the Code
 
 | Code                                     | Meaning                                      |
 | ---------------------------------------- | -------------------------------------------- |
@@ -143,14 +143,6 @@ public class Comparison {
     }
 }
 ```
----
-
-## Troubleshooting
-
-* **JDK not found:** Verify that JDK 25 is installed and selected in the project settings.
-* **Run icon missing:** Ensure the file is named `HelloWorld.java` and the class name matches the filename.
-* **No output:** Check the Run console for compilation errors and confirm that you are running the correct class.
-* **Wrong Java version:** Open **File -> Project Structure -> Project** and verify the Project SDK.
 
 ---
 # 2. Variables & Primitive Data Types
