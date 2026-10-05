@@ -6,38 +6,8 @@ Before writing Java code, ensure you have the following installed and configured
 * **Java Development Kit (JDK)** ([Amazon Corretto 25](https://docs.aws.amazon.com/corretto/latest/corretto-25-ug/downloads-list.html))
 
 ---
-## 1.2 Compiler Theory: How Java Works
 
-Java uses a two-step execution model: **compilation** and **JVM execution**.
-
-```text
-Java Source Code       Java Bytecode          Machine Code
-HelloWorld.java  →     HelloWorld.class  →    Native Code
-                    javac                 JVM
-```
-## 1.2 Compiler Theory: How Java Works Under the Hood
-
-Java uses a two-step execution model: **compilation** and **JVM execution**.
-
-```text
-+--------------------+       javac       +--------------------+       JVM       +----------------------+
-|   Java Source Code |  -------------->  |    Java Bytecode   |  ------------> | Native Machine Code |
-|   HelloWorld.java  |    Compilation    |   HelloWorld.class |    Execution    |     Hardware / OS    |
-+--------------------+                   +--------------------+                 +----------------------+
-```
-
-
-
-
-
-1. **Compilation:** `javac` converts `.java` source code into `.class` bytecode.
-2. **Execution:** The JVM executes the bytecode and may use **JIT compilation** to convert frequently executed code into native machine code.
-3. **Portability:** The same bytecode can run on different operating systems with a compatible JVM.
-4. **Error Detection:** The compiler catches many errors before the program runs.
-
----
-
-## Quickstart: First Java Class in IntelliJ
+## 1.2 Quickstart: First Java Class in IntelliJ
 
 1. **Create Project:** Open IntelliJ -> **New Project** -> Name: `HelloWorld` -> Language: **Java** -> Build system: **IntelliJ** -> JDK: Select **Corretto-25** -> **Create**.
 
@@ -117,9 +87,24 @@ void main() {
 
 **Note:** Start with the traditional version to understand Java classes and methods before trying compact source files.
 ---
+## 1.3 Compiler Theory: How Java Works Under the Hood
 
+Java uses a two-step execution model: **compilation** and **JVM execution**.
 
-## 1.3 Transitioning from Python to Java
+```text
++--------------------+       javac       +--------------------+       JVM       +----------------------+
+|   Java Source Code |  -------------->  |    Java Bytecode   |  ------------> | Native Machine Code |
+|   HelloWorld.java  |    Compilation    |   HelloWorld.class |    Execution    |     Hardware / OS    |
++--------------------+                   +--------------------+                 +----------------------+
+```
+
+1. **Compilation:** `javac` converts `.java` source code into `.class` bytecode.
+2. **Execution:** The JVM executes the bytecode and may use **JIT compilation** to convert frequently executed code into native machine code.
+3. **Portability:** The same bytecode can run on different operating systems with a compatible JVM.
+4. **Error Detection:** The compiler catches many errors before the program runs.
+---
+
+## 1.4 Transitioning from Python to Java
 
 | **Concept**          | **Python**       | **Java**                       |
 | -------------------- | ---------------- | ------------------------------ |
@@ -158,8 +143,6 @@ public class Comparison {
     }
 }
 ```
-
-**Key takeaway:** Python emphasizes simplicity and dynamic typing, while Java uses explicit types, structured code blocks, and compilation to bytecode.
 ---
 
 ## Troubleshooting
