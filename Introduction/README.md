@@ -15,6 +15,20 @@ Java Source Code       Java Bytecode          Machine Code
 HelloWorld.java  →     HelloWorld.class  →    Native Code
                     javac                 JVM
 ```
+## 1.2 Compiler Theory: How Java Works Under the Hood
+
+Java uses a two-step execution model: **compilation** and **JVM execution**.
+
+```text
++--------------------+       javac       +--------------------+       JVM       +----------------------+
+|   Java Source Code |  -------------->  |    Java Bytecode   |  ------------> | Native Machine Code |
+|   HelloWorld.java  |    Compilation    |   HelloWorld.class |    Execution    |     Hardware / OS    |
++--------------------+                   +--------------------+                 +----------------------+
+```
+
+
+
+
 
 1. **Compilation:** `javac` converts `.java` source code into `.class` bytecode.
 2. **Execution:** The JVM executes the bytecode and may use **JIT compilation** to convert frequently executed code into native machine code.
