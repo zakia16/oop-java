@@ -1,7 +1,7 @@
 # 1. Getting Started with Java in IntelliJ IDEA
 
-## Prerequisites
-
+## 1.1 Prerequisites
+Before writing Java code, ensure you have the following installed and configured:
 * **IntelliJ IDEA** ([Community / Ultimate](https://www.jetbrains.com/idea/download/))
 * **Java Development Kit (JDK)** ([Amazon Corretto 25](https://docs.aws.amazon.com/corretto/latest/corretto-25-ug/downloads-list.html))
 
@@ -37,7 +37,7 @@
 
 | Code                                     | Meaning                                      |
 | ---------------------------------------- | -------------------------------------------- |
-| `public class HelloWorld`                | Defines a class named `HelloWorld`.          |
+| `public class HelloWorld`                | Defines a class named HelloWorld (must match the .java filename).          |
 | `public static void main(String[] args)` | The entry point of the program.              |
 | `System.out.println("Hello World");`     | Prints text to the console.                  |
 | `{ }`                                    | Marks the beginning and end of a code block. |
