@@ -419,7 +419,7 @@ A simplified precedence order is:
 
 Java uses the **`Scanner`** class to read input from the keyboard.
 
-### 1. Import `Scanner`
+### 4.2.1 Import `Scanner`
 
 ```java
 import java.util.Scanner;
@@ -427,7 +427,7 @@ import java.util.Scanner;
 
 `Scanner` is part of the `java.util` package.
 
-### 2. Create a `Scanner` Object
+### 4.2.2 Create a `Scanner` Object
 
 ```java
 Scanner scan = new Scanner(System.in);
@@ -436,9 +436,9 @@ Scanner scan = new Scanner(System.in);
 * **`Scanner`** — Class/type
 * **`scan`** — Variable name
 * **`new Scanner()`** — Creates a `Scanner` object
-* **`System.in`** — Reads from keyboard input
+* **`System.in`** — Reads keyboard input
 
-### 3. Common Reading Methods
+### 4.2.3 Common Reading Methods
 
 | **Task**    | **Example**                       | **Description**         |
 | ----------- | --------------------------------- | ----------------------- |
@@ -448,7 +448,7 @@ Scanner scan = new Scanner(System.in);
 | Entire line | `String s = scan.nextLine();`     | Reads the entire line   |
 | Boolean     | `boolean b = scan.nextBoolean();` | Reads `true` or `false` |
 
-### 4. Example
+### 4.2.4 Example
 
 ```java
 import java.util.Scanner;
@@ -469,7 +469,7 @@ public class Main {
 }
 ```
 
-### `next()` vs. `nextLine()`
+### 4.2.5 `next()` vs. `nextLine()`
 
 | **Method**   | **Input**    | **Result**     |
 | ------------ | ------------ | -------------- |
