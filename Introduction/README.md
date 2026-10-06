@@ -58,7 +58,7 @@ Java allows you to run source files directly without manually compiling them fir
 
 ## Java 25: Compact Source Files
 
-Java 25 supports compact source files, allowing beginners to write simple programs with less boilerplate code.
+Java 25 supports compact source files, letting beginners write simple programs with less boilerplate.
 
 ### Traditional Java
 
@@ -152,6 +152,12 @@ A **variable** is a named container in memory used to store data. In Java, every
 int age = 20;
 String name = "Alex";
 ```
+You MUST store data that matches the declared variable type. Attempting to assign an incompatible type will trigger a compile-time error:
+```java
+// Invalid: Type mismatch error
+int myInt = "hello"; // The IDE/compiler will not let you compile this code
+```
+
 ## 2.2 Java Primitive Data Types
 
 Java provides **8 primitive data types**, divided into four main categories.
