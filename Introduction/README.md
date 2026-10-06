@@ -415,9 +415,11 @@ A simplified precedence order is:
 *** Use parentheses when you want to clearly control the order of operations.
 ---
 
+# 4. User Input & Console I/O
+
 ## 4.2 Reading Console Input with `Scanner`
 
-Java uses the **`Scanner`** class to read input from the keyboard.
+Java uses the **`Scanner`** class to read keyboard input.
 
 ### 4.2.1 Import `Scanner`
 
@@ -444,11 +446,11 @@ Scanner scan = new Scanner(System.in);
 | ----------- | --------------------------------- | ----------------------- |
 | Integer     | `int n = scan.nextInt();`         | Reads an `int`          |
 | Double      | `double n = scan.nextDouble();`   | Reads a `double`        |
-| Single word | `String s = scan.next();`         | Reads one word/token    |
-| Entire line | `String s = scan.nextLine();`     | Reads the entire line   |
+| Single Word | `String s = scan.next();`         | Reads one word          |
+| Entire Line | `String s = scan.nextLine();`     | Reads a full line       |
 | Boolean     | `boolean b = scan.nextBoolean();` | Reads `true` or `false` |
 
-### 4.2.4 Example
+### 4.2.4 Code Example
 
 ```java
 import java.util.Scanner;
@@ -465,6 +467,8 @@ public class Main {
 
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
+
+        scan.close();
     }
 }
 ```
@@ -476,7 +480,7 @@ public class Main {
 | `next()`     | `John Smith` | `"John"`       |
 | `nextLine()` | `John Smith` | `"John Smith"` |
 
-> **Remember:** `next()` reads one word, while `nextLine()` reads the entire line.
+> **Remember:** `next()` reads one word; `nextLine()` reads the entire line.
 
 
 ---
