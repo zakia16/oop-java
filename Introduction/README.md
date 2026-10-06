@@ -482,6 +482,10 @@ public class Main {
 
 > **Remember:** `next()` reads one word; `nextLine()` reads the entire line.
 
+## 4.2 Console Output
+
+Java uses System.out to display output in the console.
+
 ### 4.2.1 Console Output Methods
 
 Java provides several methods for displaying output in the console:
