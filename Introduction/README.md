@@ -415,13 +415,13 @@ A simplified precedence order is:
 *** Use parentheses when you want to clearly control the order of operations.
 ---
 
-# 4. User Input & Console I/O
+# 4. Console Input & Output
 
-## 4.2 Reading Console Input with `Scanner`
+## 4.1 Reading Console Input with `Scanner`
 
 Java uses the **`Scanner`** class to read keyboard input.
 
-### 4.2.1 Import `Scanner`
+### 4.1.1 Import `Scanner`
 
 ```java
 import java.util.Scanner;
@@ -429,7 +429,7 @@ import java.util.Scanner;
 
 `Scanner` is part of the `java.util` package.
 
-### 4.2.2 Create a `Scanner` Object
+### 4.1.2 Create a `Scanner` Object
 
 ```java
 Scanner scan = new Scanner(System.in);
@@ -440,7 +440,7 @@ Scanner scan = new Scanner(System.in);
 * **`new Scanner()`** — Creates a `Scanner` object
 * **`System.in`** — Reads keyboard input
 
-### 4.2.3 Common Reading Methods
+### 4.1.3 Common Reading Methods
 
 | **Task**    | **Example**                       | **Description**         |
 | ----------- | --------------------------------- | ----------------------- |
@@ -450,7 +450,7 @@ Scanner scan = new Scanner(System.in);
 | Entire Line | `String s = scan.nextLine();`     | Reads a full line       |
 | Boolean     | `boolean b = scan.nextBoolean();` | Reads `true` or `false` |
 
-### 4.2.4 Code Example
+### 4.1.4 Code Example
 
 ```java
 import java.util.Scanner;
@@ -473,7 +473,7 @@ public class Main {
 }
 ```
 
-### 4.2.5 `next()` vs. `nextLine()`
+### 4.1.5 `next()` vs. `nextLine()`
 
 | **Method**   | **Input**    | **Result**     |
 | ------------ | ------------ | -------------- |
@@ -482,6 +482,26 @@ public class Main {
 
 > **Remember:** `next()` reads one word; `nextLine()` reads the entire line.
 
+### 4.2.1 Console Output Methods
+
+Java provides several methods for displaying output in the console:
+
+```java
+System.out.print("Hello");
+System.out.println("Hello");
+System.out.printf("Age: %d", age);
+```
+System.out.print() — Prints text without moving to a new line.
+System.out.println() — Prints text and moves to a new line.
+System.out.printf() — Prints formatted output.
+
+## 4.2.2 Escape Sequences
+| **Sequence** | **Meaning**  |
+| ------------ | ------------ |
+| `\n`         | New line     |
+| `\t`         | Tab          |
+| `\"`         | Double quote |
+| `\\`         | Backslash    |
 
 ---
 ## Next Steps
