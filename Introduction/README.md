@@ -413,6 +413,71 @@ A simplified precedence order is:
 ```
 
 *** Use parentheses when you want to clearly control the order of operations.
+---
+
+## 4.2 Reading Console Input with `Scanner`
+
+Java uses the **`Scanner`** class to read input from the keyboard.
+
+### 1. Import `Scanner`
+
+```java
+import java.util.Scanner;
+```
+
+`Scanner` is part of the `java.util` package.
+
+### 2. Create a `Scanner` Object
+
+```java
+Scanner scan = new Scanner(System.in);
+```
+
+* **`Scanner`** — Class/type
+* **`scan`** — Variable name
+* **`new Scanner()`** — Creates a `Scanner` object
+* **`System.in`** — Reads from keyboard input
+
+### 3. Common Reading Methods
+
+| **Task**    | **Example**                       | **Description**         |
+| ----------- | --------------------------------- | ----------------------- |
+| Integer     | `int n = scan.nextInt();`         | Reads an `int`          |
+| Double      | `double n = scan.nextDouble();`   | Reads a `double`        |
+| Single word | `String s = scan.next();`         | Reads one word/token    |
+| Entire line | `String s = scan.nextLine();`     | Reads the entire line   |
+| Boolean     | `boolean b = scan.nextBoolean();` | Reads `true` or `false` |
+
+### 4. Example
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scan.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scan.nextInt();
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+```
+
+### `next()` vs. `nextLine()`
+
+| **Method**   | **Input**    | **Result**     |
+| ------------ | ------------ | -------------- |
+| `next()`     | `John Smith` | `"John"`       |
+| `nextLine()` | `John Smith` | `"John Smith"` |
+
+> **Remember:** `next()` reads one word, while `nextLine()` reads the entire line.
+
 
 ---
 ## Next Steps
