@@ -95,20 +95,20 @@ Java uses a two-step execution model: **compilation** and **JVM execution**.
 3. **Portability:** The same bytecode can run on different operating systems with a compatible JVM.
 4. **Error Detection:** The compiler catches many errors before the program runs.
 ---
-
 ## 1.4 Transitioning from Python to Java
 
 | **Concept**                 | **Python**                     | **Java**                                                                           |
 | --------------------------- | ------------------------------ | ---------------------------------------------------------------------------------- |
 | **Typing**                  | Dynamic                        | Static                                                                             |
-| **Print Output**            | `print("Hello")`               | `System.out.println("Hello");`                                                     |
+| **Print Output**            | `print("Hello")`               | `System.out.println("Hello");`<br>`System.out.print("Hello");`                     |
 | **Input / Console Reading** | `name = input("Enter name: ")` | `Scanner scanner = new Scanner(System.in);`<br>`String name = scanner.nextLine();` |
 | **Code Blocks**             | Indentation                    | `{ }` curly braces                                                                 |
 | **Statement Ending**        | New line                       | Semicolon `;` required                                                             |
 | **Comments**                | `# Comment`                    | `// Comment`                                                                       |
 | **Characters**              | `"a"` (String)                 | `'a'` (`char`)                                                                     |
 | **Strings**                 | `"a"` (String)                 | `"a"` (`String`)                                                                   |
-| **Boolean**                 | `True` / `False` | `true` / `false`      |
+| **Boolean**                 | `True` / `False`               | `true` / `false`                                                                   |
+
 
 ### Side-by-Side Example
 
