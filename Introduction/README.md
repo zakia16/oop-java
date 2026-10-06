@@ -176,21 +176,14 @@ Java provides **8 primitive data types**, divided into four main categories.
 ---
 ### `char` vs. `String`
 
-`char` is a primitive type that stores **one character** using single quotes:
+`char` is a primitive type that stores **one character** using single quotes. String stores a **sequence of characters** using double quotes.
 
 ```java
 char letter = 'A';
-
-String stores a sequence of characters using double quotes:
-
 String name = "Alex";
-
+```
 String is not a primitive type. It is a class/reference type provided by Java.
 
-char     → primitive → 'A'
-String   → reference → "Alex"
-
-Java has 8 primitive types. String is a class, not a primitive type.
 
 ## 2.3 Basic Code Example
 
