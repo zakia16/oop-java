@@ -205,6 +205,7 @@ public class VariablesDemo {
         boolean isPassed = true;
 
         // Output values
+        // In Java, using '+' with a String automatically converts the non-string operand to a String
         System.out.println("Student Count: " + studentCount);
         System.out.println("Population: " + population);
         System.out.println("GPA: " + gpa);
