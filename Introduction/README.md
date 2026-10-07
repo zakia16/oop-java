@@ -370,24 +370,7 @@ Logical operators combine conditions.
 
 ---
 
-## 3.6 Ternary Operator
-
-The ternary operator is a short way to choose between two values.
-
-### Syntax
-
-```text
-condition ? valueIfTrue : valueIfFalse
-```
-
-| **Example**                    | **Result** |
-| ------------------------------ | ---------- |
-| `20 >= 18 ? "Adult" : "Minor"` | `"Adult"`  |
-| `15 >= 18 ? "Adult" : "Minor"` | `"Minor"`  |
-
----
-
-## 3.7 Operator Precedence
+## 3.6 Operator Precedence
 
 Java evaluates operators in a specific order.
 
