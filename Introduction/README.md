@@ -97,18 +97,18 @@ Java uses a two-step execution model: **compilation** and **JVM execution**.
 ---
 ## 1.4 Transitioning from Python to Java
 
-| **Concept**                 | **Python**                     | **Java**                                                                           |
-| --------------------------- | ------------------------------ | ---------------------------------------------------------------------------------- |
-| **Typing**                  | Dynamic                        | Static                                                                             |
-| **Print Output**            | `print("Hello")`               | `System.out.println("Hello");`<br>`System.out.print("Hello");` //prints without moving to a new line.                    |
-| **Input / Console Reading** | `name = input("Enter name: ")` | `Scanner scanner = new Scanner(System.in);`<br>`String name = scanner.nextLine();` |
-| **Code Blocks**             | Indentation                    | `{ }` curly braces                                                                 |
-| **Statement Ending**        | New line                       | Semicolon `;` required                                                             |
-| **Comments**                | `# Comment`                    | `// Comment`                                                                       |
-| **Characters**              | `"a"` (String)                 | `'a'` (`char`)                                                                     |
-| **Strings**                 | `"a"` (String)                 | `"a"` (`String`)                                                                   |
-| **Boolean**                 | `True` / `False`               | `true` / `false`                                                                   |
-
+| **Concept**                 | **Python**                     | **Java**                                                                                              |
+| --------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| **Typing**                  | Dynamic                        | Static                                                                                                |
+| **Print Output**            | `print("Hello")`               | `System.out.println("Hello");`<br>`System.out.print("Hello");` // prints without moving to a new line |
+| **Input / Console Reading** | `name = input("Enter name: ")` | `Scanner scanner = new Scanner(System.in);`<br>`String name = scanner.nextLine();`                    |
+| **Code Blocks**             | Indentation                    | `{ }` curly braces                                                                                    |
+| **Statement Ending**        | New line                       | Semicolon `;` required                                                                                |
+| **Comments**                | `# Comment`                    | `// Comment`<br>`/* Block comment */`                                                                 |
+| **Documentation**           | `"""Docstring"""`              | `/** JavaDoc */`                                                                                      |
+| **Characters**              | `"a"` (String)                 | `'a'` (`char`)                                                                                        |
+| **Strings**                 | `"a"` (String)                 | `"a"` (`String`)                                                                                      |
+| **Boolean**                 | `True` / `False`               | `true` / `false`                                                                                      |
 
 ### Side-by-Side Example
 
