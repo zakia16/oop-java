@@ -367,6 +367,3 @@ System.out.println(ch1 > ch2);  // false
 
 **Key Point:** Use `char` for individual characters, `String` for text, and the `Character` class for character checks and conversions.
 ---
-System.out.println(ch1 < ch2); // true
-```
----
