@@ -86,3 +86,164 @@ System.out.println(dayName);
 * Switch expressions return values that can be assigned to variables.
 
 ---
+
+## 2. Loops and Control Statements
+
+Loops execute a block of code repeatedly while a condition is satisfied or for a specified number of iterations.
+
+### 2.1 `while` Loop
+
+Executes repeatedly **while the condition is `true`**. Useful when the number of iterations is unknown.
+
+**Syntax:**
+
+```java
+while (condition) {
+    // Code to execute
+}
+```
+
+**Example:**
+
+```java
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+**Key Point:** Update the loop variable to avoid an infinite loop.
+
+### 2.2 `do-while` Loop
+
+Executes the code block **at least once** before checking the condition.
+
+**Syntax:**
+
+```java
+do {
+    // Code to execute
+} while (condition);
+```
+
+**Example:**
+
+```java
+int n = 6;
+
+do {
+    System.out.println(n);
+    n++;
+} while (n < 10);
+```
+
+**Key Point:** The condition is checked after each iteration. Notice the semicolon (`;`) after `while (condition)`.
+
+### 2.3 `for` Loop
+
+Repeats a block of code using initialization, a condition, and an update expression.
+
+**Syntax:**
+
+```java
+for (initialization; condition; update) {
+    // Code to execute
+}
+```
+
+**Example:**
+
+```java
+for (int i = 1; i <= 10; i++) {
+    System.out.println("9 x " + i + " = " + (9 * i));
+}
+```
+
+**Key Points:**
+
+* **Initialization:** Runs once at the beginning.
+* **Condition:** Checked before each iteration.
+* **Update:** Runs after each iteration.
+
+### 2.4 Nested `for` Loops
+
+A nested loop is a loop inside another loop. The inner loop completes each iteration before the outer loop advances.
+
+**Example:**
+
+```java
+for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j <= i; j++) {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+```
+
+**Output:**
+
+```text
+*
+**
+***
+****
+*****
+```
+
+**Key Point:** Nested loops are useful for patterns, tables, and multidimensional arrays.
+
+### 2.5 `break` Statement
+
+The `break` statement immediately terminates the innermost loop.
+
+**Example:**
+
+```java
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break;
+    }
+    System.out.print(i + " ");
+}
+```
+
+**Output:**
+
+```text
+0 1 2 3 4
+```
+
+### 2.6 `continue` Statement
+
+The `continue` statement skips the remaining code in the current iteration and proceeds to the next iteration.
+
+**Example:**
+
+```java
+for (int i = 0; i < 5; i++) {
+    if (i == 2) {
+        continue;
+    }
+    System.out.print(i + " ");
+}
+```
+
+**Output:**
+
+```text
+0 1 3 4
+```
+
+### 2.7 Summary
+
+| Statement    | Purpose                                              |
+| ------------ | ---------------------------------------------------- |
+| `while`      | Repeats while a condition is `true`.                 |
+| `do-while`   | Executes at least once, then checks the condition.   |
+| `for`        | Repeats using initialization, condition, and update. |
+| Nested loops | Places one loop inside another.                      |
+| `break`      | Terminates the innermost loop.                       |
+| `continue`   | Skips the current iteration.                         |
+---
