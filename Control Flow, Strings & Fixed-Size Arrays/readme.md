@@ -247,3 +247,91 @@ for (int i = 0; i < 5; i++) {
 | `break`      | Terminates the innermost loop.                       |
 | `continue`   | Skips the current iteration.                         |
 ---
+
+## 3. Java Strings & Text Processing
+
+A **`String`** is an object representing a sequence of characters, enclosed in double quotes (`" "`).
+
+### 3.1 `char` vs. `String`
+
+* **`char`**: Stores a single character using single quotes.
+* **`String`**: Stores a sequence of characters using double quotes.
+
+```java
+char grade = 'A';
+String courseName = "CS 1336";
+```
+
+### 3.2 Essential String Methods
+
+| Method                  | Return Type | Description                                    |
+| ----------------------- | ----------- | ---------------------------------------------- |
+| `length()`              | `int`       | Returns the number of characters.              |
+| `charAt(index)`         | `char`      | Returns the character at a zero-based index.   |
+| `substring(start, end)` | `String`    | Extracts characters from `start` to `end - 1`. |
+| `toLowerCase()`         | `String`    | Converts to lowercase.                         |
+| `toUpperCase()`         | `String`    | Converts to uppercase.                         |
+| `trim()`                | `String`    | Removes leading and trailing whitespace.       |
+| `toCharArray()`         | `char[]`    | Converts a string into a character array.      |
+
+**Example:**
+
+```java
+String text = "Hello Java";
+
+System.out.println(text.length());        // 10
+System.out.println(text.charAt(0));       // H
+System.out.println(text.substring(0, 5)); // Hello
+System.out.println(text.toUpperCase());   // HELLO JAVA
+System.out.println(text.toLowerCase());   // hello java
+System.out.println("  Hello  ".trim());   // Hello
+
+char[] chars = text.toCharArray();
+```
+
+### 3.3 String Equality: `.equals()` vs. `==`
+
+Use `.equals()` to compare String contents. The `==` operator compares object references.
+
+```java
+String str1 = new String("Hello");
+String str2 = new String("Hello");
+
+System.out.println(str1 == str2);      // false
+System.out.println(str1.equals(str2)); // true
+```
+
+### 3.4 Character Operations
+
+Java's `Character` class provides methods to check and convert individual characters.
+
+| Method                      | Description                         | Example                      | Result |
+| --------------------------- | ----------------------------------- | ---------------------------- | ------ |
+| `Character.isLetter(ch)`    | Checks if a character is a letter.  | `Character.isLetter('t')`    | `true` |
+| `Character.isUpperCase(ch)` | Checks if a character is uppercase. | `Character.isUpperCase('T')` | `true` |
+| `Character.isLowerCase(ch)` | Checks if a character is lowercase. | `Character.isLowerCase('t')` | `true` |
+| `Character.toUpperCase(ch)` | Converts to uppercase.              | `Character.toUpperCase('t')` | `'T'`  |
+| `Character.toLowerCase(ch)` | Converts to lowercase.              | `Character.toLowerCase('T')` | `'t'`  |
+
+**Example:**
+
+```java
+String str = "cit";
+char firstChar = str.charAt(0);          // 'c'
+
+char[] chars = str.toCharArray();        // ['c', 'i', 't']
+
+boolean isLetter = Character.isLetter('t'); // true
+char upper = Character.toUpperCase('t');    // 'T'
+char lower = Character.toLowerCase('T');    // 't'
+```
+
+Characters can also be compared using `==`, `<`, and `>` based on their Unicode values.
+
+```java
+char ch1 = 's';
+char ch2 = 't';
+
+System.out.println(ch1 < ch2); // true
+```
+---
