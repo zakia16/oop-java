@@ -462,28 +462,6 @@ Scanner scan = new Scanner(System.in);
 | Entire Line | `String s = scan.nextLine();`     | Reads a full line       |
 | Boolean     | `boolean b = scan.nextBoolean();` | Reads `true` or `false` |
 
-### 4.1.4 Code Example
-
-```java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.print("Enter your name: ");
-        String name = scan.nextLine();
-
-        System.out.print("Enter your age: ");
-        int age = scan.nextInt();
-
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-
-        scan.close();
-    }
-}
-```
 
 ### 4.1.5 `next()` vs. `nextLine()`
 
@@ -507,9 +485,9 @@ System.out.print("Hello");
 System.out.println("Hello");
 System.out.printf("Age: %d", age);
 ```
-System.out.print() — Prints text without moving to a new line.
-System.out.println() — Prints text and moves to a new line.
-System.out.printf() — Prints formatted output.
+System.out.print() — Prints text without moving to a new line.  
+System.out.println() — Prints text and moves to a new line.   
+System.out.printf() — Prints formatted output.  
 
 ## 4.2.2 Escape Sequences
 | **Sequence** | **Meaning**  |
@@ -519,7 +497,41 @@ System.out.printf() — Prints formatted output.
 | `\"`         | Double quote |
 | `\\`         | Backslash    |
 
+## 4.3 Closing the Scanner
+
+```java
+scan.close();
+```
+
+> Closing `Scanner` also closes `System.in`.
+
 ---
+
+## 4.4 Complete Example
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scan.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scan.nextInt();
+
+        System.out.printf("%nName: %s%n", name);
+        System.out.printf("Age: %d%n", age);
+
+        scan.close();
+    }
+}
+```
+
+---
+
 ## Next Steps
 
 * [Java Tutorials](https://dev.java/learn/)
