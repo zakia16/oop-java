@@ -250,109 +250,167 @@ for (int i = 0; i < 5; i++) {
 
 ## 3. Java Strings & Text Processing
 
-A **`String`** is an object representing a sequence of characters, enclosed in double quotes (`" "`).
+A **`String`** is an object that represents a sequence of characters. String literals are enclosed in double quotes (`" "`).
 
-### 3.1 `char` vs. `String`
+## 3.1 `char` vs. `String`
 
 * **`char`**: Stores a single character using single quotes (`' '`).
-* **`String`**: Stores a sequence of characters using double quotes (`" "`).
+* **`String`**: Represents a sequence of characters using double quotes (`" "`).
 
 ```java
 char grade = 'A';
 String courseName = "CS 1336";
 ```
 
-### 3.2 Essential String Methods
+### String Indexing
 
-| Method                  | Return Type | Description                                    |
-| ----------------------- | ----------- | ---------------------------------------------- |
-| `length()`              | `int`       | Returns the number of characters.              |
-| `charAt(index)`         | `char`      | Returns the character at a zero-based index.   |
-| `substring(start, end)` | `String`    | Extracts characters from `start` to `end - 1`. |
-| `toLowerCase()`         | `String`    | Converts to lowercase.                         |
-| `toUpperCase()`         | `String`    | Converts to uppercase.                         |
-| `trim()`                | `String`    | Removes leading and trailing whitespace.       |
-| `toCharArray()`         | `char[]`    | Converts a string into a character array.      |
-| `equalsIgnoreCase(str)` | `boolean`   | Compares strings without considering case.     |
-| `isEmpty()`             | `boolean`   | Checks whether the string has zero characters. |
+String indexes start at `0`.
+
+```java
+String text = "Java";
+
+System.out.println(text.charAt(0)); // J
+System.out.println(text.charAt(3)); // a
+```
+
+For `"Java"`:
+
+```text
+ J   a   v   a
+ 0   1   2   3
+```
+
+---
+
+## 3.2 String Concatenation
+
+The `+` operator can be used to combine strings.
+
+```java
+String firstName = "John";
+String lastName = "Smith";
+
+String fullName = firstName + " " + lastName;
+
+System.out.println(fullName); // John Smith
+```
+
+Strings can also be combined with other data types:
+
+```java
+int age = 20;
+
+System.out.println("Age: " + age); // Age: 20
+```
+
+---
+
+## 3.3 Essential String Methods
+
+| **Method**              | **Return Type** | **Description**                                                       |
+| ----------------------- | --------------- | --------------------------------------------------------------------- |
+| `length()`              | `int`           | Returns the number of characters.                                     |
+| `charAt(index)`         | `char`          | Returns the character at a zero-based index.                          |
+| `substring(start, end)` | `String`        | Extracts characters from `start` to `end - 1`.                        |
+| `toLowerCase()`         | `String`        | Converts to lowercase.                                                |
+| `toUpperCase()`         | `String`        | Converts to uppercase.                                                |
+| `trim()`                | `String`        | Removes leading and trailing whitespace.                              |
+| `contains(str)`         | `boolean`       | Checks whether the string contains the specified text.                |
+| `indexOf(str)`          | `int`           | Returns the index of the first occurrence; returns `-1` if not found. |
+| `startsWith(str)`       | `boolean`       | Checks whether the string starts with the specified text.             |
+| `endsWith(str)`         | `boolean`       | Checks whether the string ends with the specified text.               |
+| `replace(old, new)`     | `String`        | Replaces occurrences of text.                                         |
+| `toCharArray()`         | `char[]`        | Converts the string into a character array.                           |
+| `isEmpty()`             | `boolean`       | Checks whether the string has zero characters.                        |
+| `isBlank()`             | `boolean`       | Checks whether the string is empty or contains only whitespace.       |
 
 **Example:**
 
 ```java
 String text = "Hello Java";
 
-System.out.println(text.length());         // 10
-System.out.println(text.charAt(0));        // H
-System.out.println(text.substring(0, 5));  // Hello
-System.out.println(text.toUpperCase());    // HELLO JAVA
-System.out.println(text.toLowerCase());    // hello java
-System.out.println("  Hello  ".trim());    // Hello
-System.out.println(text.isEmpty());        // false
-System.out.println("Java".equalsIgnoreCase("java")); // true
-
-char[] chars = text.toCharArray();
+System.out.println(text.length());                  // 10
+System.out.println(text.charAt(0));                 // H
+System.out.println(text.substring(0, 5));           // Hello
+System.out.println(text.toUpperCase());             // HELLO JAVA
+System.out.println(text.toLowerCase());             // hello java
+System.out.println("  Hello  ".trim());             // Hello
+System.out.println(text.contains("Java"));          // true
+System.out.println(text.indexOf("Java"));           // 6
+System.out.println(text.startsWith("Hello"));       // true
+System.out.println(text.endsWith("Java"));          // true
+System.out.println(text.replace("Java", "World"));  // Hello World
+System.out.println(text.isEmpty());                 // false
 ```
 
-**Important: String Immutability**
+---
 
-Strings are immutable, meaning their contents cannot be changed after creation. String methods return new strings rather than modifying the original.
+## 3.4 String Equality: `.equals()` vs. `==`
 
-```java
-String text = "hello";
-text.toUpperCase();
-
-System.out.println(text); // hello
-
-text = text.toUpperCase();
-System.out.println(text); // HELLO
-```
-
-### 3.3 String Equality: `.equals()` vs. `==`
-
-Use `.equals()` to compare string contents. The `==` operator compares object references.
+Use `.equals()` to compare String contents. The `==` operator compares object references.
 
 ```java
 String str1 = new String("Hello");
 String str2 = new String("Hello");
 
-System.out.println(str1 == str2);              // false
-System.out.println(str1.equals(str2));         // true
+System.out.println(str1 == str2);                   // false
+System.out.println(str1.equals(str2));              // true
 System.out.println(str1.equalsIgnoreCase("hello")); // true
 ```
 
 * **`==`**: Checks whether references point to the same object.
-* **`.equals()`**: Compares string contents, including case.
-* **`.equalsIgnoreCase()`**: Compares string contents without considering case.
+* **`.equals()`**: Compares String contents, including case.
+* **`.equalsIgnoreCase()`**: Compares String contents without considering case.
 
-### 3.4 Character Operations
+---
+
+## 3.5 String Immutability
+
+Strings are **immutable**, meaning their contents cannot be changed after creation. String methods return new strings rather than modifying the original.
+
+```java
+String text = "hello";
+
+text.toUpperCase();
+
+System.out.println(text); // hello
+
+text = text.toUpperCase();
+
+System.out.println(text); // HELLO
+```
+
+---
+
+## 3.6 Character Operations
 
 Java's `Character` class provides methods to check and convert individual characters.
 
-| Method                      | Description                              | Example                      | Result |
-| --------------------------- | ---------------------------------------- | ---------------------------- | ------ |
-| `Character.isLetter(ch)`    | Checks whether a character is a letter.  | `Character.isLetter('t')`    | `true` |
-| `Character.isDigit(ch)`     | Checks whether a character is a digit.   | `Character.isDigit('5')`     | `true` |
-| `Character.isUpperCase(ch)` | Checks whether a character is uppercase. | `Character.isUpperCase('T')` | `true` |
-| `Character.isLowerCase(ch)` | Checks whether a character is lowercase. | `Character.isLowerCase('t')` | `true` |
-| `Character.toUpperCase(ch)` | Converts to uppercase.                   | `Character.toUpperCase('t')` | `'T'`  |
-| `Character.toLowerCase(ch)` | Converts to lowercase.                   | `Character.toLowerCase('T')` | `'t'`  |
+| **Method**                  | **Description**                          | **Example**                  | **Result** |
+| --------------------------- | ---------------------------------------- | ---------------------------- | ---------- |
+| `Character.isLetter(ch)`    | Checks whether a character is a letter.  | `Character.isLetter('t')`    | `true`     |
+| `Character.isDigit(ch)`     | Checks whether a character is a digit.   | `Character.isDigit('5')`     | `true`     |
+| `Character.isUpperCase(ch)` | Checks whether a character is uppercase. | `Character.isUpperCase('T')` | `true`     |
+| `Character.isLowerCase(ch)` | Checks whether a character is lowercase. | `Character.isLowerCase('t')` | `true`     |
+| `Character.toUpperCase(ch)` | Converts to uppercase.                   | `Character.toUpperCase('t')` | `'T'`      |
+| `Character.toLowerCase(ch)` | Converts to lowercase.                   | `Character.toLowerCase('T')` | `'t'`      |
 
 **Example:**
 
 ```java
 String str = "cit";
 
-char firstChar = str.charAt(0);             // 'c'
-char[] chars = str.toCharArray();            // ['c', 'i', 't']
+char firstChar = str.charAt(0);
+char[] chars = str.toCharArray();
 
-boolean isLetter = Character.isLetter('t');  // true
-boolean isDigit = Character.isDigit('5');    // true
+boolean isLetter = Character.isLetter('t'); // true
+boolean isDigit = Character.isDigit('5');   // true
 
-char upper = Character.toUpperCase('t');     // 'T'
-char lower = Character.toLowerCase('T');     // 't'
+char upper = Character.toUpperCase('t');    // 'T'
+char lower = Character.toLowerCase('T');    // 't'
 ```
 
-**Comparing Characters**
+### Comparing Characters
 
 Characters can be compared using `==`, `<`, and `>` based on their Unicode values.
 
@@ -365,7 +423,9 @@ System.out.println(ch1 < ch2);  // true
 System.out.println(ch1 > ch2);  // false
 ```
 
-**Key Point:** Use `char` for individual characters, `String` for text, and the `Character` class for character checks and conversions.
+## Key Point
+
+Use **`char`** for individual characters, **`String`** for text, and the **`Character`** class for character checks and conversions.
 ---
 
 ## 4. Fixed-Size 1D Arrays
