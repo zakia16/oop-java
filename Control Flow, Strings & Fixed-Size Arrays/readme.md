@@ -367,3 +367,174 @@ System.out.println(ch1 > ch2);  // false
 
 **Key Point:** Use `char` for individual characters, `String` for text, and the `Character` class for character checks and conversions.
 ---
+
+## 4. Fixed-Size 1D Arrays
+
+An **array** is a fixed-size container that stores elements of the same data type. Indexes range from `0` to `length - 1`.
+
+### 4.1 Declaring and Initializing Arrays
+
+```java
+// Fixed length: elements receive default values
+int[] scores = new int[5]; // indexes 0–4
+
+// Array literal
+int[] numbers = {10, 20, 30, 40, 50};
+```
+
+**Key Point:** An array's size is fixed after creation.
+
+### 4.2 Accessing and Modifying Elements
+
+```java
+int[] ages = {18, 20, 22, 25};
+
+System.out.println(ages[0]); // 18
+
+ages[1] = 21;                // Modify element
+
+System.out.println(ages.length); // 4
+```
+
+* Indexes start at `0`.
+* Use `array[index]` to access or modify an element.
+* Use `array.length` to get the number of elements.
+* Valid indexes are `0` through `length - 1`.
+
+```java
+// ages[4] = 30; // Error: ArrayIndexOutOfBoundsException
+```
+
+### 4.3 Iterating Over Arrays
+
+#### Standard `for` Loop
+
+Use when you need the index.
+
+```java
+int[] values = {5, 10, 15, 20};
+
+for (int i = 0; i < values.length; i++) {
+    System.out.println("Index " + i + ": " + values[i]);
+}
+```
+
+#### Enhanced `for-each` Loop
+
+Use when you only need each element.
+
+```java
+String[] fruits = {"Apple", "Banana", "Cherry"};
+
+for (String fruit : fruits) {
+    System.out.println(fruit);
+}
+```
+
+### 4.4 Array Default Values
+
+When an array is created with `new`, its elements receive default values.
+
+| Type                           | Default    |
+| ------------------------------ | ---------- |
+| `int`, `long`, `short`, `byte` | `0`        |
+| `double`, `float`              | `0.0`      |
+| `char`                         | `'\u0000'` |
+| `boolean`                      | `false`    |
+| Reference types                | `null`     |
+
+```java
+int[] numbers = new int[3];
+
+System.out.println(numbers[0]); // 0
+```
+
+### 4.5 Common Array Operations
+
+#### Sum
+
+```java
+int[] numbers = {10, 20, 30};
+int sum = 0;
+
+for (int number : numbers) {
+    sum += number;
+}
+
+System.out.println(sum); // 60
+```
+
+#### Find Maximum
+
+```java
+int[] numbers = {10, 45, 20, 30};
+int max = numbers[0];
+
+for (int number : numbers) {
+    if (number > max) {
+        max = number;
+    }
+}
+
+System.out.println(max); // 45
+```
+
+#### Search for a Value
+
+```java
+int[] numbers = {10, 20, 30, 40};
+int target = 30;
+boolean found = false;
+
+for (int number : numbers) {
+    if (number == target) {
+        found = true;
+        break;
+    }
+}
+
+System.out.println(found); // true
+```
+
+## 5. Integrated Practical Code Example
+
+This example combines **arrays, `Scanner`, loops, calculations, `printf()`, and `if-else`**.
+
+```java
+import java.util.Scanner;
+
+public class Week2Demo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double[] scores = new double[3];
+
+        // Input scores
+        for (int i = 0; i < scores.length; i++) {
+            System.out.print("Enter score for Exam " + (i + 1) + ": ");
+            scores[i] = scanner.nextDouble();
+        }
+
+        // Calculate average
+        double sum = 0;
+
+        for (double score : scores) {
+            sum += score;
+        }
+
+        double average = sum / scores.length;
+
+        System.out.printf("%nAverage Score: %.2f%n", average);
+
+        // Evaluate result
+        if (average >= 70.0) {
+            System.out.println("Status: PASS");
+        } else {
+            System.out.println("Status: FAIL");
+        }
+
+        scanner.close();
+    }
+}
+```
+---
