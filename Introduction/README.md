@@ -271,8 +271,8 @@ Follow these rules when naming Java variables:
 **Summary:** Primitive types store basic values, `var` reduces repetitive type declarations, and meaningful variable names make Java code easier to read and maintain.
 
 ---
-
 # 3. Operators & Arithmetic Expressions
+
 In this section, you will learn how to perform calculations, compare values, and work with conditions using Java operators.
 
 ---
@@ -282,19 +282,19 @@ In this section, you will learn how to perform calculations, compare values, and
 Arithmetic operators perform mathematical calculations.
 
 | **Operator** | **Name**       | **Example** | **Result** |
-| ------------ | -------------- | ----------- | ---------: |
-| `+`          | Addition       | `10 + 3`    |       `13` |
-| `-`          | Subtraction    | `10 - 3`    |        `7` |
-| `*`          | Multiplication | `10 * 3`    |       `30` |
-| `/`          | Division       | `10 / 3`    |        `3` |
-| `%`          | Remainder      | `10 % 3`    |        `1` |
+| ------------ | -------------- | ----------- | ---------- |
+| `+`          | Addition       | `10 + 3`    | `13`       |
+| `-`          | Subtraction    | `10 - 3`    | `7`        |
+| `*`          | Multiplication | `10 * 3`    | `30`       |
+| `/`          | Division       | `10 / 3`    | `3`        |
+| `%`          | Remainder      | `10 % 3`    | `1`        |
 
 When both values are integers, `/` performs **integer division**.
 
 | **Example** | **Result** |
-| ----------- | ---------: |
-| `5 / 2`     |        `2` |
-| `5.0 / 2`   |      `2.5` |
+| ----------- | ---------- |
+| `5 / 2`     | `2`        |
+| `5.0 / 2`   | `2.5`      |
 
 ---
 
@@ -303,13 +303,13 @@ When both values are integers, `/` performs **integer division**.
 Assignment operators assign or update values.
 
 | **Operator** | **Example** | **Equivalent** | **Result** |
-| ------------ | ----------- | -------------- | ---------: |
-| `=`          | `x = 10`    | —              |       `10` |
-| `+=`         | `x += 5`    | `x = x + 5`    |       `15` |
-| `-=`         | `x -= 5`    | `x = x - 5`    |        `5` |
-| `*=`         | `x *= 5`    | `x = x * 5`    |       `50` |
-| `/=`         | `x /= 5`    | `x = x / 5`    |        `2` |
-| `%=`         | `x %= 3`    | `x = x % 3`    |        `1` |
+| ------------ | ----------- | -------------- | ---------- |
+| `=`          | `x = 10`    | —              | `10`       |
+| `+=`         | `x += 5`    | `x = x + 5`    | `15`       |
+| `-=`         | `x -= 5`    | `x = x - 5`    | `5`        |
+| `*=`         | `x *= 5`    | `x = x * 5`    | `50`       |
+| `/=`         | `x /= 5`    | `x = x / 5`    | `2`        |
+| `%=`         | `x %= 3`    | `x = x % 3`    | `1`        |
 
 Assume `x = 10` before each example.
 
@@ -339,16 +339,29 @@ Remember:
 
 ## 3.4 Logical Operators
 
-Logical operators combine conditions.
+Logical operators combine or reverse conditions.
 
-| Operator | Meaning | Example | Result |
-| :--- | :--- | :--- | :--- |
-| `&&` | AND | `true && true` | `true` |
-| `&&` | AND | `true && false` | `false` |
-| `\|\|` | OR | `true \|\| false` | `true` |
-| `\|\|` | OR | `false \|\| false` | `false` |
-| `!` | NOT | `!true` | `false` |
-| `!` | NOT | `!false` | `true` |
+| **Operator** | **Meaning** | **Example**       | **Result** |
+| ------------ | ----------- | ----------------- | ---------- |
+| `&&`         | AND         | `true && false`   | `false`    |
+| `\|\|`       | OR          | `true \|\| false` | `true`     |
+| `!`          | NOT         | `!true`           | `false`    |
+
+### Example
+
+```java
+int age = 20;
+boolean hasID = true;
+
+System.out.println(age >= 18 && hasID); // true
+```
+
+* `&&` is `true` only when **both** conditions are true.
+* `||` is `true` when **at least one** condition is true.
+* `!` reverses a boolean value.
+
+**Short-circuit evaluation:** Java may stop evaluating a logical expression as soon as the result is known.
+
 ---
 
 ## 3.5 Increment and Decrement
@@ -357,17 +370,24 @@ Logical operators combine conditions.
 
 `--` decreases a value by `1`.
 
-| **Operator** | **Example** | **Result** |
-| ------------ | ----------- | ---------: |
-| `++`         | `x++`       |    `x + 1` |
-| `--`         | `x--`       |    `x - 1` |
+```java
+int x = 5;
 
-### Prefix vs Postfix
+x++;
+System.out.println(x); // 6
 
-| **Expression** | **Description**          | **Example**      |       **Result** |
-| -------------- | ------------------------ | ---------------- | ---------------: |
+x--;
+System.out.println(x); // 5
+```
+
+### Prefix vs. Postfix
+
+| **Expression** | **Description**          | **Example**      | **Result**       |
+| -------------- | ------------------------ | ---------------- | ---------------- |
 | `x++`          | Use first, then increase | `x = 5; y = x++` | `y = 5`, `x = 6` |
 | `++x`          | Increase first, then use | `x = 5; y = ++x` | `y = 6`, `x = 6` |
+
+The same rule applies to `--x` and `x--`.
 
 ---
 
@@ -378,14 +398,15 @@ Java evaluates operators in a specific order.
 For example:
 
 | **Example**    | **Result** |
-| -------------- | ---------: |
-| `10 + 5 * 2`   |       `20` |
-| `(10 + 5) * 2` |       `30` |
+| -------------- | ---------- |
+| `10 + 5 * 2`   | `20`       |
+| `(10 + 5) * 2` | `30`       |
 
-A simplified precedence order is:
+A simplified precedence order, from **higher to lower**, is:
 
 ```text
 ()
+!
 * / %
 + -
 < > <= >=
@@ -393,10 +414,17 @@ A simplified precedence order is:
 &&
 ||
 ?:
-= += -= *= /=
+= += -= *= /= %=
 ```
 
-*** Use parentheses when you want to clearly control the order of operations.
+Use parentheses when you want to clearly control or communicate the order of operations.
+
+```java
+int result = (10 + 5) * 2;
+```
+
+Using parentheses often makes code easier to read and understand.
+
 ---
 
 # 4. Console Input & Output
