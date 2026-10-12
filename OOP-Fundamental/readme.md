@@ -1,47 +1,137 @@
 # Week 3: Object-Oriented Programming (OOP) Fundamentals
 
-This chapter introduces Java's object-oriented programming concepts: classes, objects, fields, constructors, and methods. Examples compare Java with Python to help you understand the differences.
+This chapter introduces Java methods, classes, objects, fields, constructors, and object references. Examples compare Java with Python to help you understand the differences.
 
-## 3.1 Java Methods (Functions): The Building Blocks
+## 3.1 Java Methods: The Building Blocks
 
-In Python, you can define standalone functions using `def`. In Java, methods must be declared inside a class.
+A **method** is a named block of code that performs a task. Methods help organize programs, reduce repeated code, and break complex problems into smaller steps.
 
-* **Value-returning methods:** Specify a return type, such as `int` or `String`, and use `return` to send a value back.
-* **`void` methods:** Perform an action without returning a value.
+In Python, functions are defined using `def` and can exist outside a class. In Java, methods must be declared inside a class.
+
+### Methods That Return Values
+
+A method can calculate a result and return it using `return`. Its return type specifies the type of value returned.
+
+```java
+public static int add(int a, int b) {
+    return a + b;
+}
+```
+
+Here, `int` is the return type, `add` is the method name, and `a` and `b` are parameters.
+
+### `void` Methods
+
+A `void` method performs an action without returning a value.
+
+```java
+public static void displayMessage() {
+    System.out.println("Hello, Java!");
+}
+```
+
+### Complete Example
 
 ```java
 public class Calculator {
-    public int add(int a, int b) {
+    public static int add(int a, int b) {
         return a + b;
     }
 
-    public void displayMessage() {
+    public static void displayMessage() {
         System.out.println("Hello, Java!");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(add(3, 4));
+        displayMessage();
     }
 }
 ```
 
-**Python vs. Java**
+**Output:**
 
-| Python                              | Java                           |
-| ----------------------------------- | ------------------------------ |
-| `def add(a, b):`                    | `public int add(int a, int b)` |
-| `return a + b`                      | `return a + b;`                |
-| No explicit return type required    | Return type must be declared   |
-| Functions can exist outside classes | Methods belong to classes      |
+```text
+7
+Hello, Java!
+```
 
-**Key idea:** Java methods define behavior inside classes. Next, we will see how classes organize both data and behavior.
+The program begins executing in `main()`. The `add()` method returns `7`, while `displayMessage()` prints a message.
+
+### Python vs. Java
+
+| Python                                   | Java                                  |
+| ---------------------------------------- | ------------------------------------- |
+| `def add(a, b):`                         | `public static int add(int a, int b)` |
+| No explicit return type required         | Return type must be declared          |
+| Parameters do not require declared types | Parameter types must be declared      |
+| Functions can exist outside classes      | Methods belong to classes             |
+
+### Parameters and Arguments
+
+**Parameters** are variables listed in a method definition. **Arguments** are the actual values supplied when calling the method.
+
+```java
+public static void printTwice(String message) {
+    System.out.println(message);
+    System.out.println(message);
+}
+
+public static void main(String[] args) {
+    printTwice("Hello, Java!");
+}
+```
+
+**Output:**
+
+```text
+Hello, Java!
+Hello, Java!
+```
+
+Here, `message` is the parameter, and `"Hello, Java!"` is the argument.
+
+A method can accept multiple parameters:
+
+```java
+public static void printTime(int hour, int minute) {
+    System.out.println(hour + ":" + minute);
+}
+```
+
+Call the method by providing arguments in the same order:
+
+```java
+printTime(11, 59);
+```
+
+**Output:**
+
+```text
+11:59
+```
+
+Do not declare types when passing arguments. Use `printTime(11, 59)`, not `printTime(int 11, int 59)`.
+
+### Flow of Execution
+
+Java begins execution at the first statement in `main()`. When a method is called, execution moves to that method. After the method finishes, execution returns to the statement following the call.
+
+Methods make programs easier to read, reuse, test, and maintain.
 
 ## 3.2 Procedural vs. Object-Oriented Programming
 
-| Aspect         | Procedural Programming                          | Object-Oriented Programming (OOP)                                                                      |
-| -------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **Focus**      | Functions, e.g., `printStudentInfo(name, gpa)`  | Objects, e.g., `student1.displayProfile()`                                                             |
-| **Data**       | Variables, e.g., `String name = "Alex";`        | Object fields, e.g., `student1.name`                                                                   |
-| **Code reuse** | Call the same function with different arguments | Create multiple objects from one class, e.g., `new Student("Alex", 3.8)` and `new Student("Sam", 3.2)` |
+Procedural programming organizes code around functions. Object-oriented programming (OOP) organizes data and behavior into objects.
 
+| Aspect         | Procedural Programming                          | Object-Oriented Programming (OOP)          |
+| -------------- | ----------------------------------------------- | ------------------------------------------ |
+| **Focus**      | Functions, e.g., `printStudentInfo(name, gpa)`  | Objects, e.g., `student1.displayProfile()` |
+| **Data**       | Variables, e.g., `String name = "Alex";`        | Object fields, e.g., `student1.name`       |
+| **Code reuse** | Call the same function with different arguments | Create multiple objects from one class     |
 
-For example, a procedural program might use a function named `printStudentInfo()`. An object-oriented program can organize a student's name, ID, GPA, and related methods in a `Student` class.
+For example, a procedural program might pass a student's name and GPA to a function. An OOP program can store the name and GPA inside a `Student` object and define methods that use that data.
+
+**Key idea:** OOP combines data and behavior into objects.
 
 ## 3.3 Classes and Objects
 
