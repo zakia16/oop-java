@@ -16,19 +16,6 @@ This module introduces Java OOP concepts: classes, objects, fields, constructors
 * **Object:** An instance of a class, created using `new`.
 
 ```text
-Class: Student
-----------------
-name: String
-studentId: int
-gpa: double
-       |
-       v
-Object: student1
-----------------
-name = "Alex"
-studentId = 1001
-gpa = 3.85
-```
 Class (Blueprint)                     Object Instance
 ┌──────────────────────────────┐       ┌──────────────────────────────┐
 │        Student               │       │    student1 (Instance)       │
@@ -37,6 +24,7 @@ Class (Blueprint)                     Object Instance
 │ - studentId: int             │       │ studentId = 1001             │
 │ - gpa: double                │       │ gpa = 3.85                   │
 └──────────────────────────────┘       └──────────────────────────────┘
+```
 
 ## 3.3 Defining a Class and Instance Variables
 
