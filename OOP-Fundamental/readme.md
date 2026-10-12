@@ -29,6 +29,14 @@ name = "Alex"
 studentId = 1001
 gpa = 3.85
 ```
+Class (Blueprint)                     Object Instance
+┌──────────────────────────────┐       ┌──────────────────────────────┐
+│        Student               │       │    student1 (Instance)       │
+├──────────────────────────────┤       ├──────────────────────────────┤
+│ - name: String               │ ───>  │ name = "Alex"                │
+│ - studentId: int             │       │ studentId = 1001             │
+│ - gpa: double                │       │ gpa = 3.85                   │
+└──────────────────────────────┘       └──────────────────────────────┘
 
 ## 3.3 Defining a Class and Instance Variables
 
