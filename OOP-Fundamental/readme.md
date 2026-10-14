@@ -6,7 +6,7 @@ This chapter introduces Java methods, classes, objects, fields, constructors, an
 
 A **method** is a named block of code that performs a task. Methods help organize programs, reduce repeated code, and break complex problems into smaller steps.
 
-In Python, functions are defined using `def` and can exist outside a class. In Java, methods must be declared inside a class.
+In Python, functions are defined using `def` and can exist **outside a class**. In Java, methods must be declared **inside a class**.
 
 ### Methods That Return Values
 
