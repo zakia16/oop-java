@@ -1,6 +1,16 @@
+Basic Principles of OOPs
+Object-oriented programming is mainly based on four principles:
+Encapsulation
+Inheritance
 Abstraction
-Abstraction displays only the necessary information while hiding internal implementation details.
+Polymorphism
 
-For example, a person can drive a car using the steering wheel, brakes, and accelerator without understanding every internal part of the engine.
 
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/9f48a0d2-1109-4ac9-be5f-d53b7b2e29b2" />
+Inheritance
+Inheritance allows one class to acquire properties and behaviours from another class. It supports code reuse and helps create relationships between classes.
+
+For example, classes such as Car and Bike can inherit common features from a Vehicle class.
+
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/4a843286-4361-41da-95bb-5d009fa0365e" />
+
+Reference: https://takeuforward.org/blogs/oops/what-is-oops
