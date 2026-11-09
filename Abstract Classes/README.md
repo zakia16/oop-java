@@ -1,4 +1,9 @@
-
+Basic Principles of OOPs
+Object-oriented programming is mainly based on four principles:
+Encapsulation
+Inheritance
+Abstraction
+Polymorphism
 
 
 Abstraction
