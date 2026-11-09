@@ -12,3 +12,5 @@ Encapsulation combines data and the methods that work on it within a single unit
 
 For example, a bank account can prevent users from directly changing its balance and provide methods for depositing or withdrawing money.
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/02273f56-c939-4417-96d2-3592b3556cdc" />
+
+Reference: https://takeuforward.org/blogs/oops/what-is-oops
