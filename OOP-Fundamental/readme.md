@@ -452,7 +452,7 @@ Code reusability, modularity, scalability, and better organization.
 **How does OOP support scalability?**   
 You can add new classes and reuse existing ones without breaking or rewriting your existing code.
 
-**Can one class have many objects?** 
+**Can one class have many objects?**    
 Yes, you can create unlimited objects from a class.
 
 **Can an object exist without a class?**  
