@@ -441,6 +441,17 @@ Honor Roll: false
 4. `displayProfile()` displays information for the object on which it is called.
 5. Both students use the same class but store different data.
 
+
+### Review: Why OOP?
+How is OOP different from procedural programming?
+OOP focuses on self-contained objects (bundling data and behavior together), whereas procedural programming focuses on step-by-step functions and control flow.
+
+What are the main benefits of OOP?
+Code reusability, modularity, scalability, and better organization.
+
+How does OOP support scalability?
+You can add new classes and reuse existing ones without breaking or rewriting your existing code.
+
 ## Summary
 
 * **Methods** perform tasks and may return values or use `void`.
