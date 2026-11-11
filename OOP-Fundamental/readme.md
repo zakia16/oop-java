@@ -442,7 +442,7 @@ Honor Roll: false
 5. Both students use the same class but store different data.
 
 
-### Review: Why OOP?
+### Review:
 **How is OOP different from procedural programming?**   
 OOP focuses on self-contained objects (bundling data and behavior together), whereas procedural programming focuses on step-by-step functions and control flow.
 
@@ -451,6 +451,15 @@ Code reusability, modularity, scalability, and better organization.
 
 **How does OOP support scalability?**   
 You can add new classes and reuse existing ones without breaking or rewriting your existing code.
+
+**Can one class have many objects?** 
+Yes, you can create unlimited objects from a class.
+
+**Can an object exist without a class?**  
+No, an object must be created from a class.
+
+**Can an object be null?**  
+Yes, you can assign null to an object reference.
 
 ## Summary
 
