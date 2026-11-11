@@ -443,13 +443,13 @@ Honor Roll: false
 
 
 ### Review: Why OOP?
-How is OOP different from procedural programming?
+**How is OOP different from procedural programming?**   
 OOP focuses on self-contained objects (bundling data and behavior together), whereas procedural programming focuses on step-by-step functions and control flow.
 
-What are the main benefits of OOP?
+**What are the main benefits of OOP?**   
 Code reusability, modularity, scalability, and better organization.
 
-How does OOP support scalability?
+**How does OOP support scalability?**   
 You can add new classes and reuse existing ones without breaking or rewriting your existing code.
 
 ## Summary
