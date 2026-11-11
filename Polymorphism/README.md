@@ -8,4 +8,8 @@ For example, a method named makeSound() may produce different results for a dog,
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/e8a87f53-9595-456c-823e-406f260346fb" />
 
 ### Review
+**Why is polymorphism useful?**   
+ It makes code flexible, reusable, and easier to scale.
 
+**Which OOP principle does polymorphism support?**   
+ It supports flexibility and extensibility.
