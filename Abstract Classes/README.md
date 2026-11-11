@@ -11,3 +11,14 @@ Abstraction displays only the necessary information while hiding internal implem
 
 For example, a person can drive a car using the steering wheel, brakes, and accelerator without understanding every internal part of the engine.
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/5115b926-4d76-4cf0-9930-9b2f308298fc" />
+
+
+### Review
+**How is abstraction achieved in Java?**   
+ Using abstract classes or interfaces.
+
+**Can we create an object of an abstract class?**   
+ No, abstract classes cannot be instantiated.
+
+ **Can abstract classes have concrete methods?**   
+ Yes, they can have both abstract and regular methods.
