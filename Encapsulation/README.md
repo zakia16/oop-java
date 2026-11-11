@@ -14,3 +14,12 @@ For example, a bank account can prevent users from directly changing its balance
 <img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/02273f56-c939-4417-96d2-3592b3556cdc" />
 
 Reference: https://takeuforward.org/blogs/oops/what-is-oops
+
+
+
+### Review
+**How is encapsulation implemented in Java?**   
+Using 'private' fields and 'public' getters/setters.
+
+**What are the benefits of encapsulation?**   
+Security, flexibility, and control over data access.
