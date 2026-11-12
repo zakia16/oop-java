@@ -1,3 +1,25 @@
+
+
+# Basic Principles of Object-Oriented Programming (OOP)
+
+Object-Oriented Programming (OOP) is a programming approach organized around **objects**, which combine data and behavior.
+
+OOP is built on four fundamental principles:
+
+| Principle | Description |
+|---|---|
+| **Encapsulation** | Bundles data and methods together while controlling access to data. |
+| **Abstraction** | Hides implementation details and exposes only essential functionality. |
+| **Inheritance** | Allows a class to reuse and extend another class's properties and methods. |
+| **Polymorphism** | Allows the same method or interface to behave differently depending on the object. |
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/33add195-4f94-4be3-9310-cbb894afacbd" width="850" alt="Four principles of object-oriented programming">
+</p>
+
+---
+
+
 Basic Principles of OOPs
 Object-oriented programming is mainly based on four principles:  
 Encapsulation  
