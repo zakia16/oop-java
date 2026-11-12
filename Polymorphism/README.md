@@ -1,15 +1,54 @@
 
+## 4. Polymorphism
 
-Polymorphism
-Polymorphism means that the same operation can behave differently in different situations.
+**Polymorphism** means "many forms." It allows the same method or operation to behave differently depending on the object that uses it.
 
-For example, a method named makeSound() may produce different results for a dog, cat, and bird.
+**Real-world example: Animal Sounds**
 
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/e8a87f53-9595-456c-823e-406f260346fb" />
+A method named `makeSound()` can produce different results depending on the animal:
 
-### Review
-**Why is polymorphism useful?**   
- It makes code flexible, reusable, and easier to scale.
+- A `Dog` barks.
+- A `Cat` meows.
+- A `Bird` chirps.
 
-**Which OOP principle does polymorphism support?**   
- It supports flexibility and extensibility.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e8a87f53-9595-456c-823e-406f260346fb"
+       width="700"
+       alt="Animal sounds illustrating polymorphism">
+</p>
+
+### Key Idea
+
+The same method call can produce different behaviors for different objects.
+
+### Review Questions
+
+**1. Why is polymorphism useful?**
+
+<details>
+<summary>Show Answer</summary>
+
+It makes code more flexible, reusable, and easier to extend.
+
+</details>
+
+**2. What are the two main types of polymorphism in Java?**
+
+<details>
+<summary>Show Answer</summary>
+
+- **Compile-time polymorphism:** Achieved through method overloading.
+- **Runtime polymorphism:** Achieved through method overriding.
+
+</details>
+
+**3. How does polymorphism support extensibility?**
+
+<details>
+<summary>Show Answer</summary>
+
+New classes can provide their own implementations of methods without changing the code that uses the common parent class or interface.
+
+</details>
+
+---
