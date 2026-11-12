@@ -27,7 +27,7 @@ OOP is built on four fundamental principles:
 
 ---
 
-## 1. Abstraction
+## Abstraction
 
 **Abstraction** displays only the necessary information while hiding internal implementation details.
 
