@@ -14,7 +14,6 @@ OOP is built on four fundamental principles:
 | **Polymorphism** | Allows the same method or interface to behave differently depending on the object. |
 
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/33add195-4f94-4be3-9310-cbb894afbcad" />
-
 <p align="center">
   <sub>
     Image source: Adapted from
