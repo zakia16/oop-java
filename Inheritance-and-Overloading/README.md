@@ -55,6 +55,16 @@ For example, both vehicles may share properties such as `color` and `speed`, and
 
 A child class (subclass) inherits and can extend the functionality of a parent class (superclass).
 
+Inheritance can be classified into 5 types which are as follows:
+<img width="1042" height="745" alt="image" src="https://github.com/user-attachments/assets/0f511a15-2999-47e1-9e68-fcbcf0feb57a" />
+<p align="center">
+  <sub>
+    Image source: Adapted from
+    <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">GeeksforGeeks – OOP Interview Questions</a>
+  </sub>
+</p>
+
+
 ### Review Questions
 
 **1. Why is multiple inheritance not supported with classes in Java?**
