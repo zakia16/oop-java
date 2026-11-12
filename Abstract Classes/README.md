@@ -6,7 +6,7 @@ Inheritance
 Polymorphism  
 
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/33add195-4f94-4be3-9310-cbb894afbcad" />
-> **Image Source:** Adapted from [https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/]
+**Image Source:** Adapted from [https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/]
 
 
 Abstraction
