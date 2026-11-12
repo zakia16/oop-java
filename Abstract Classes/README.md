@@ -16,10 +16,6 @@ OOP is built on four fundamental principles:
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/33add195-4f94-4be3-9310-cbb894afbcad" />
 
 <p align="center">
-  <img src="YOUR_IMAGE_URL" width="750" alt="Four principles of object-oriented programming">
-</p>
-
-<p align="center">
   <sub>
     Image source: Adapted from
     <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">
