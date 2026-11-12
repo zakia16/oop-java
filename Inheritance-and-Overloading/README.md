@@ -1,5 +1,5 @@
 
-## 3. Inheritance
+## Inheritance
 
 **Inheritance** allows one class to acquire the properties (fields) and behaviors (methods) of another class. It promotes **code reuse** and helps establish relationships between classes.
 
