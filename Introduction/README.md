@@ -277,119 +277,37 @@ In this section, you will learn how to perform calculations, compare values, and
 
 ---
 
-| Operator Type | Category | Operators | Example |
-|:---|:---|:---|:---|
-| **Unary** | Postfix | `expr++` `expr--` | `x++` |
-| | Prefix | `++expr` `--expr` `+expr` `-expr` `~` `!` | `++x`, `!true` |
-| **Arithmetic** | Multiplicative | `*` `/` `%` | `10 * 2`, `10 % 3` |
-| | Additive | `+` `-` | `10 + 5` |
-| **Shift** | Shift | `<<` `>>` `>>>` | `8 << 1` |
-| **Relational** | Comparison | `<` `>` `<=` `>=` `instanceof` | `x >= 10` |
-| | Equality | `==` `!=` | `x == 5` |
-| **Bitwise** | AND | `&` | `5 & 3` |
-| | Exclusive OR | `^` | `5 ^ 3` |
-| | Inclusive OR | `|` | `5 | 3` |
-| **Logical** | AND | `&&` | `x > 0 && x < 10` |
-| | OR | `||` | `x < 0 || x > 10` |
-| **Ternary** | Conditional | `? :` | `max = (a > b) ? a : b` |
-| **Assignment** | Assignment | `=` `+=` `-=` `*=` `/=` `%=` | `x += 5` |
-| | Bitwise / Shift assignment | `&=` `^=` `|=` `<<=` `>>=` `>>>=` | `x <<= 1` |
+## 1. Operator Overview
 
-> **Remember:** Operators higher in the table generally have higher precedence. Use parentheses `()` to control the order of evaluation.
+| Operator Type | Category | Operators | Example | Result |
+|:---|:---|:---|:---|:---|
+| **Unary** | Postfix | `x++` `x--` | `x = 5; y = x++` | `y = 5, x = 6` |
+| | Prefix | `++x` `--x` `+x` `-x` `~` `!` | `x = 5; y = ++x` | `y = 6, x = 6` |
+| **Arithmetic** | Multiplicative | `*` `/` `%` | `10 * 3`, `10 / 3`, `10 % 3` | `30`, `3`, `1` |
+| | Additive | `+` `-` | `10 + 3`, `10 - 3` | `13`, `7` |
+| **Shift** | Shift | `<<` `>>` `>>>` | `8 << 1` | `16` |
+| **Relational** | Comparison | `<` `>` `<=` `>=` `instanceof` | `10 >= 10` | `true` |
+| | Equality | `==` `!=` | `10 == 10`, `10 != 5` | `true`, `true` |
+| **Bitwise** | AND | `&` | `5 & 3` | `1` |
+| | Exclusive OR | `^` | `5 ^ 3` | `6` |
+| | Inclusive OR | `\|` | `5 \| 3` | `7` |
+| **Logical** | AND | `&&` | `true && false` | `false` |
+| | OR | `\|\|` | `true \|\| false` | `true` |
+| | NOT | `!` | `!true` | `false` |
+| **Ternary** | Conditional | `? :` | `(10 > 5) ? 10 : 5` | `10` |
+| **Assignment** | Assignment | `=` `+=` `-=` `*=` `/=` `%=` | `x = 10; x += 5` | `15` |
+| | Bitwise / Shift | `&=` `^=` `\|=` `<<=` `>>=` `>>>=` | `x = 5; x <<= 1` | `10` |
 
-## 3.1 Arithmetic Operators
-
-Arithmetic operators perform mathematical calculations.
-
-| **Operator** | **Name**       | **Example** | **Result** |
-| ------------ | -------------- | ----------- | ---------- |
-| `+`          | Addition       | `10 + 3`    | `13`       |
-| `-`          | Subtraction    | `10 - 3`    | `7`        |
-| `*`          | Multiplication | `10 * 3`    | `30`       |
-| `/`          | Division       | `10 / 3`    | `3`        |
-| `%`          | Remainder      | `10 % 3`    | `1`        |
-
-When both values are integers, `/` performs **integer division**.
+**Notes:**
+- When both values are integers, `/` performs **integer division**.
 
 | **Example** | **Result** |
 | ----------- | ---------- |
 | `5 / 2`     | `2`        |
 | `5.0 / 2`   | `2.5`      |
 
----
-
-## 3.2 Assignment Operators
-
-Assignment operators assign or update values.
-
-| **Operator** | **Example** | **Equivalent** | **Result** |
-| ------------ | ----------- | -------------- | ---------- |
-| `=`          | `x = 10`    | —              | `10`       |
-| `+=`         | `x += 5`    | `x = x + 5`    | `15`       |
-| `-=`         | `x -= 5`    | `x = x - 5`    | `5`        |
-| `*=`         | `x *= 5`    | `x = x * 5`    | `50`       |
-| `/=`         | `x /= 5`    | `x = x / 5`    | `2`        |
-| `%=`         | `x %= 3`    | `x = x % 3`    | `1`        |
-
-Assume `x = 10` before each example.
-
----
-
-## 3.3 Comparison Operators
-
-Comparison operators compare values and return `true` or `false`.
-
-| **Operator** | **Meaning**              | **Example** | **Result** |
-| ------------ | ------------------------ | ----------- | ---------- |
-| `==`         | Equal to                 | `10 == 10`  | `true`     |
-| `!=`         | Not equal to             | `10 != 5`   | `true`     |
-| `>`          | Greater than             | `10 > 5`    | `true`     |
-| `<`          | Less than                | `10 < 5`    | `false`    |
-| `>=`         | Greater than or equal to | `10 >= 10`  | `true`     |
-| `<=`         | Less than or equal to    | `10 <= 5`   | `false`    |
-
-Remember:
-
-| **Operator** | **Meaning** |
-| ------------ | ----------- |
-| `=`          | Assignment  |
-| `==`         | Comparison  |
-
----
-
-## 3.4 Logical Operators
-
-Logical operators combine or reverse conditions.
-
-| **Operator** | **Meaning** | **Example**       | **Result** |
-| ------------ | ----------- | ----------------- | ---------- |
-| `&&`         | AND         | `true && false`   | `false`    |
-| `\|\|`       | OR          | `true \|\| false` | `true`     |
-| `!`          | NOT         | `!true`           | `false`    |
-
-### Example
-
-```java
-int age = 20;
-boolean hasID = true;
-
-System.out.println(age >= 18 && hasID); // true
-```
-
-* `&&` is `true` only when **both** conditions are true.
-* `||` is `true` when **at least one** condition is true.
-* `!` reverses a boolean value.
-
-**Short-circuit evaluation:** Java may stop evaluating a logical expression as soon as the result is known.
-
----
-
-## 3.5 Increment and Decrement
-
-`++` increases a value by `1`.
-
-`--` decreases a value by `1`.
-
+- `=` assigns a value; `==` compares values.
+- `++x` increments before using the value; `x++` increments after using it.
 ```java
 int x = 5;
 
@@ -400,50 +318,13 @@ x--;
 System.out.println(x); // 5
 ```
 
-### Prefix vs. Postfix
+- Higher-precedence operators are generally evaluated before lower-precedence operators.
 
-| **Expression** | **Description**          | **Example**      | **Result**       |
-| -------------- | ------------------------ | ---------------- | ---------------- |
-| `x++`          | Use first, then increase | `x = 5; y = x++` | `y = 5`, `x = 6` |
-| `++x`          | Increase first, then use | `x = 5; y = ++x` | `y = 6`, `x = 6` |
-
-The same rule applies to `--x` and `x--`.
-
----
-
-## 3.6 Operator Precedence
-
-Java evaluates operators in a specific order.
-
-For example:
-
-| **Example**    | **Result** |
-| -------------- | ---------- |
-| `10 + 5 * 2`   | `20`       |
-| `(10 + 5) * 2` | `30`       |
-
-A simplified precedence order, from **higher to lower**, is:
-
-```text
-()
-!
-* / %
-+ -
-< > <= >=
-== !=
-&&
-||
-?:
-= += -= *= /= %=
-```
-
-Use parentheses when you want to clearly control or communicate the order of operations.
+- Use parentheses when you want to clearly control or communicate the order of operations.
 
 ```java
 int result = (10 + 5) * 2;
 ```
-
-Using parentheses often makes code easier to read and understand.
 
 ---
 
