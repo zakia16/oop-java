@@ -274,8 +274,28 @@ Follow these rules when naming Java variables:
 # 3. Operators & Arithmetic Expressions
 
 In this section, you will learn how to perform calculations, compare values, and work with conditions using Java operators.
-
+Operators are symbols that perform operations on variables and values. **Operator precedence** determines the order in which operations are evaluated.
 ---
+
+| Operator Type | Category | Operators | Example |
+|:---|:---|:---|:---|
+| **Unary** | Postfix | `expr++` `expr--` | `x++` |
+| | Prefix | `++expr` `--expr` `+expr` `-expr` `~` `!` | `++x`, `!true` |
+| **Arithmetic** | Multiplicative | `*` `/` `%` | `10 * 2`, `10 % 3` |
+| | Additive | `+` `-` | `10 + 5` |
+| **Shift** | Shift | `<<` `>>` `>>>` | `8 << 1` |
+| **Relational** | Comparison | `<` `>` `<=` `>=` `instanceof` | `x >= 10` |
+| | Equality | `==` `!=` | `x == 5` |
+| **Bitwise** | AND | `&` | `5 & 3` |
+| | Exclusive OR | `^` | `5 ^ 3` |
+| | Inclusive OR | `|` | `5 | 3` |
+| **Logical** | AND | `&&` | `x > 0 && x < 10` |
+| | OR | `||` | `x < 0 || x > 10` |
+| **Ternary** | Conditional | `? :` | `max = (a > b) ? a : b` |
+| **Assignment** | Assignment | `=` `+=` `-=` `*=` `/=` `%=` | `x += 5` |
+| | Bitwise / Shift assignment | `&=` `^=` `|=` `<<=` `>>=` `>>>=` | `x <<= 1` |
+
+> **Remember:** Operators higher in the table generally have higher precedence. Use parentheses `()` to control the order of evaluation.
 
 ## 3.1 Arithmetic Operators
 
