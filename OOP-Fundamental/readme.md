@@ -206,6 +206,29 @@ Each object has its own fields. Changing `student1.name` does not change `studen
 
 Because no constructor has been declared in `Student`, Java provides a default no-argument constructor.
 
+## 3.6 Java Naming Conventions
+
+## Java Naming Conventions
+
+Java follows standard naming conventions to make code readable, consistent, and easier to maintain.
+
+| Name | Convention | Examples |
+|:---|:---|:---|
+| **Class name** | Start with an uppercase letter. Use a noun. | `String`, `Color`, `Button`, `System` |
+| **Interface name** | Start with an uppercase letter. Often use an adjective. | `Runnable`, `Remote`, `ActionListener` |
+| **Method name** | Start with a lowercase letter. Use a verb. | `actionPerformed()`, `main()`, `print()`, `println()` |
+| **Variable name** | Start with a lowercase letter. Use descriptive names. | `firstName`, `orderNumber` |
+| **Package name** | Use lowercase letters. | `java.lang`, `java.util`, `java.sql` |
+| **Constant name** | Use uppercase letters. Separate words with underscores (`_`). | `RED`, `YELLOW`, `MAX_PRIORITY` |
+
+### Remember
+
+- **Classes and interfaces:** `PascalCase` — `StudentRecord`
+- **Methods and variables:** `camelCase` — `firstName`, `calculateTotal()`
+- **Constants:** `UPPER_SNAKE_CASE` — `MAX_SIZE`
+- **Packages:** lowercase — `java.util`
+
+
 ## 3.6 Constructors
 
 A **constructor** initializes an object when it is created. It allows you to provide initial values instead of assigning each field separately.
