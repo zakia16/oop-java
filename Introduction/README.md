@@ -273,8 +273,8 @@ Follow these rules when naming Java variables:
 ---
 # 3. Operators & Arithmetic Expressions
 
-In this section, you will learn how to perform calculations, compare values, and work with conditions using Java operators.
-Operators are symbols that perform operations on variables and values. **Operator precedence** determines the order in which operations are evaluated.
+In this section, you will learn how to perform calculations, compare values, and work with conditions using Java operators. Operators are symbols that perform operations on variables and values. **Operator precedence** determines the order in which operations are evaluated.
+
 ---
 
 | Operator Type | Category | Operators | Example |
