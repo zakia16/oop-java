@@ -82,3 +82,30 @@ By declaring fields `private` and providing `public` getter and setter methods w
 
 ---
 
+
+Code Example
+
+Here is a practical example showing how a BankAccount class protects its balance variable from invalid updates:
+
+```java
+public class BankAccount {
+    // 1. Private variable hidden from outside classes
+    private double balance;
+
+    // 2. Public getter method for read access
+    public double getBalance() {
+        return balance;
+    }
+
+    // 3. Public setter/action method with validation logic
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        } else {
+            System.out.println("Deposit amount must be positive.");
+        }
+    }
+}
+```
+In this example, external code cannot run account.balance = -500; because balance is private. Instead, any change must pass through deposit(), which validates the input first.
+
