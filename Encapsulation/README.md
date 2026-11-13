@@ -110,7 +110,7 @@ public class Main {
         BankAccount account = new BankAccount(100.0);
 
         // ❌ Direct access blocked (causes a compile error)
-        // account.balance = 5000.0; 
+        // account.balance = 100000000.0;     
 
         // ✅ Safe access through public methods
         account.deposit(50.0);   // Valid: balance becomes 150.0
