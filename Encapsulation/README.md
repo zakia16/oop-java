@@ -1,7 +1,6 @@
 
 # Module: Encapsulation
 
----
 ## 1. Basic Principles of OOP
 
 Object-Oriented Programming (OOP) is based on four fundamental principles:
