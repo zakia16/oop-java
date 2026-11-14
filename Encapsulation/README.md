@@ -31,10 +31,6 @@ Object-Oriented Programming (OOP) is based on four fundamental principles:
   </sub>
 </p>
 
-### Key Components of Encapsulation
-Private Fields: Instance variables (fields) of a class are declared as private to restrict access from outside the class.
-Public Methods: Public getter and setter methods are provided to allow controlled access and modification of the private fields.
-
 
 ## 2. Encapsulation
 
@@ -59,6 +55,40 @@ A bank account protects its balance from direct modification. Instead, users int
     <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
   </sub>
 </p>
+
+
+### Key Components of Encapsulation
+
+Encapsulation in Java is achieved using two main components:
+
+1. **Private Fields (`private`)**
+   - Instance variables are declared `private` to restrict direct access from outside the class.
+   - This protects an object's data from unintended changes.
+
+2. **Public Methods (`public`)**
+   - **Getter methods** allow access to private fields.
+   - **Setter methods** allow controlled modification of private fields.
+   - Setters can also validate values before updating fields.
+
+**Example:**
+
+```java
+public class Student {
+    private String name;  // Private field
+
+    // Getter
+    public String getName() {
+        return name;
+    }
+
+    // Setter
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+> **Key Idea:** Keep data private and provide controlled access through public methods.
 
 ---
 
