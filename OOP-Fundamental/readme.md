@@ -73,11 +73,12 @@ The program begins executing in `main()`. The `add()` method returns `7`, while 
 
 ```java
 public static void printTwice(String message) {
-    System.out.println(message);
-    System.out.println(message);
+    System.out.println(message); // Print the message the first time
+    System.out.println(message); // Print the message the second time
 }
 
 public static void main(String[] args) {
+    // Call the method, passing "Hello, Java!" as the argument
     printTwice("Hello, Java!");
 }
 ```
@@ -94,14 +95,12 @@ Here, `message` is the parameter, and `"Hello, Java!"` is the argument.
 A method can accept multiple parameters:
 
 ```java
+// A method accepting multiple parameters (hour and minute)
 public static void printTime(int hour, int minute) {
     System.out.println(hour + ":" + minute);
 }
-```
 
-Call the method by providing arguments in the same order:
-
-```java
+// Call the method with integer arguments
 printTime(11, 59);
 ```
 
@@ -158,6 +157,7 @@ Think of a class as a blueprint for a house. The blueprint describes the structu
 
 ```java
 public class Student {
+    // Instance fields (attributes) defining the data each Student object holds
     String name;
     int studentId;
     double gpa;
@@ -178,19 +178,23 @@ Use the `new` keyword to create an object.
 ```java
 public class Main {
     public static void main(String[] args) {
+        // Create two separate Student objects using the default constructor
         Student student1 = new Student();
         Student student2 = new Student();
 
+        // Assign data to student1's fields
         student1.name = "Alex";
         student1.studentId = 1001;
         student1.gpa = 3.85;
 
+        // Assign data to student2's fields independently
         student2.name = "Sam";
         student2.studentId = 1002;
         student2.gpa = 3.20;
 
-        System.out.println(student1.name);
-        System.out.println(student2.name);
+        // Print out names to show they maintain independent values
+        System.out.println(student1.name); // Prints Alex
+        System.out.println(student2.name); // Prints Sam
     }
 }
 ```
@@ -236,17 +240,15 @@ public class Student {
     int studentId;
     double gpa;
 
+    // Parameterized constructor used to initialize fields during object creation
     public Student(String name, int studentId, double gpa) {
         this.name = name;
         this.studentId = studentId;
         this.gpa = gpa;
     }
 }
-```
 
-Now objects can be created with their initial values:
-
-```java
+// Creating objects using the parameterized constructor:
 Student student1 = new Student("Alex", 1001, 3.85);
 Student student2 = new Student("Sam", 1002, 3.20);
 ```
@@ -258,16 +260,20 @@ The constructor initializes each student's fields during object creation.
 A class can have multiple constructors with different parameter lists.
 
 ```java
-public Student() {
-    name = "Unknown";
-    studentId = 0;
-    gpa = 0.0;
+public class Student {
+    String name;
+    int studentId;
+    double gpa;
+
+    // Overloaded no-argument constructor for default values
+    public Student() {
+        name = "Unknown";
+        studentId = 0;
+        gpa = 0.0;
+    }
 }
-```
 
-This no-argument constructor allows you to write:
-
-```java
+// Creating an object using the default constructor:
 Student student1 = new Student();
 ```
 
@@ -278,10 +284,17 @@ If you declare any constructor yourself, Java no longer automatically supplies t
 The `this` keyword refers to the current object. It is commonly used when constructor parameters have the same names as instance fields.
 
 ```java
-public Student(String name, int studentId, double gpa) {
-    this.name = name;
-    this.studentId = studentId;
-    this.gpa = gpa;
+public class Student {
+    String name;
+    int studentId;
+    double gpa;
+
+    // Using 'this' to distinguish between instance fields and parameters sharing the same name
+    public Student(String name, int studentId, double gpa) {
+        this.name = name;       // Refers to the class field = parameter value
+        this.studentId = studentId; // Refers to the class field = parameter value
+        this.gpa = gpa;         // Refers to the class field = parameter value
+    }
 }
 ```
 
