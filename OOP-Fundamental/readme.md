@@ -470,24 +470,63 @@ Honor Roll: false
 5. Both students use the same class but store different data.
 
 
-### Review:
-**How is OOP different from procedural programming?**   
-OOP focuses on self-contained objects (bundling data and behavior together), whereas procedural programming focuses on step-by-step functions and control flow.
 
-**What are the main benefits of OOP?**   
-Code reusability, modularity, scalability, and better organization.
+### Review Questions
 
-**How does OOP support scalability?**   
-You can add new classes and reuse existing ones without breaking or rewriting your existing code.
+**1. How is OOP different from procedural programming?**
 
-**Can one class have many objects?**    
-Yes, you can create unlimited objects from a class.
+<details>
+<summary>Show Answer</summary>
 
-**Can an object exist without a class?**  
-No, an object must be created from a class.
+OOP focuses on objects that bundle data and behavior together, whereas procedural programming focuses on step-by-step instructions and functions.
 
-**Can an object be null?**  
-Yes, you can assign null to an object reference.
+</details>
+
+**2. What are the main benefits of OOP?**
+
+<details>
+<summary>Show Answer</summary>
+
+Code reusability, modularity, scalability, maintainability, and better organization.
+
+</details>
+
+**3. How does OOP support scalability?**
+
+<details>
+<summary>Show Answer</summary>
+
+OOP allows developers to add new classes and extend existing functionality while minimizing changes to other parts of the program.
+
+</details>
+
+**4. Can one class have multiple objects?**
+
+<details>
+<summary>Show Answer</summary>
+
+Yes. A class can be used to create multiple objects, each with its own instance data.
+
+</details>
+
+**5. Can an object exist without a class in Java?**
+
+<details>
+<summary>Show Answer</summary>
+
+Every Java object is an instance of a class. Objects are typically created using the `new` keyword.
+
+</details>
+
+**6. Can an object reference be `null`?**
+
+<details>
+<summary>Show Answer</summary>
+
+Yes. An object reference can be assigned `null`, which means it does not currently refer to any object.
+
+</details>
+
 
 ## Summary
 
