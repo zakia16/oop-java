@@ -171,7 +171,7 @@ Make fields `private` and provide controlled access through `public` methods.
 
 ### Review Questions
 
-**1. How is encapsulation implemented in Java?**
+How is encapsulation implemented in Java?
 
 <details>
 <summary>Show Answer</summary>
@@ -180,13 +180,25 @@ By declaring fields `private` and providing `public` getter and setter methods w
 
 </details>
 
-**2. What are the benefits of encapsulation?**
+<summary><strong>3. What is the purpose of a getter?</strong></summary>
+
+A getter returns the value of a private field.
+</details>
 
 <details>
-<summary>Show Answer</summary>
+<summary><strong>4. What is the purpose of a setter?</strong></summary>
 
-- **Security:** Prevents unauthorized direct access to data.
-- **Control:** Allows validation before changing data.
-- **Flexibility:** Internal implementation can change without affecting how other classes use it.
+A setter modifies a private field. It can also validate the new value before changing the field.
+</details>
 
+<details>
+<summary><strong>5. Does every private field need a getter and setter?</strong></summary>
+
+No. Only provide methods when access is actually needed. Some fields should not be changed directly after an object is created.
+</details>
+
+<details>
+<summary><strong>6. Why is encapsulation important?</strong></summary>
+
+It protects data, controls how objects are modified, and helps maintain the consistency of a program.
 </details>
