@@ -95,19 +95,22 @@ Here, `message` is the parameter, and `"Hello, Java!"` is the argument.
 A method can accept multiple parameters:
 
 ```java
-// A method accepting multiple parameters (hour and minute)
-public static void printTime(int hour, int minute) {
-    System.out.println(hour + ":" + minute);
+public static void printTwice(String message, String extraText) {
+    System.out.println(message + extraText); // Print the combined message the first time
+    System.out.println(message + extraText); // Print the combined message the second time
 }
 
-// Call the method with integer arguments
-printTime(11, 59);
+public static void main(String[] args) {
+    // Call the method, passing two string arguments
+    printTwice("Hello Java", "!");
+}
 ```
 
 **Output:**
 
 ```text
-11:59
+Hello, Java!
+Hello, Java!
 ```
 
 Do not declare types when passing arguments. Use `printTime(11, 59)`, not `printTime(int 11, int 59)`.
