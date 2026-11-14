@@ -154,9 +154,30 @@ Class (Blueprint)                 Object (Instance)
 
 Think of a class as a blueprint for a house. The blueprint describes the structure, while each house built from it is an individual object.
 
-## 3.4 Defining a Class and Fields
+## 3.4 Declaring Classes
 
-Start by creating the class and declaring fields (also called instance variables). Fields store the data each object holds.
+A **class declaration** defines a class and specifies its structure. In Java, a class is declared using the `class` keyword, followed by the class name and a pair of curly braces.
+
+```java
+public class MyClass {
+    // Fields
+    // Constructors
+    // Methods
+}
+```
+
+The **class body** (the code between the curly braces `{ }`) contains the members that define the class:
+
+| Class Member | Purpose |
+|:---|:---|
+| **Fields** | Store the data or state of an object. |
+| **Constructors** | Initialize new objects when they are created. |
+| **Methods** | Define the behaviors or actions an object can perform. |
+
+
+## Fields
+
+ Fields store the data each object holds.
 
 ```java
 public class Student {
@@ -173,7 +194,7 @@ Here:
 * `studentId` stores the student's ID.
 * `gpa` stores the student's GPA.
 
-## 3.5 Instance Methods
+## Methods
 
 **Instance methods** define what an object can do. Instance methods operate on a specific object and can directly use its fields.
 
