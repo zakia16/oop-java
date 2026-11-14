@@ -156,11 +156,11 @@ Think of a class as a blueprint for a house. The blueprint describes the structu
 
 ## 3.4 Defining a Class and Fields
 
-**Fields**, also called instance variables, store an object's data. Each object has its own instance fields.
+Start by creating the class and declaring fields (also called instance variables). Fields store the data each object holds.
 
 ```java
 public class Student {
-    // Instance fields (attributes) defining the data each Student object holds
+    // Instance fields (attributes)
     String name;
     int studentId;
     double gpa;
@@ -173,15 +173,61 @@ Here:
 * `studentId` stores the student's ID.
 * `gpa` stores the student's GPA.
 
-These fields define the data each `Student
-## 3.5 Creating Objects
+## 3.5 Instance Methods
 
-Use the `new` keyword to create an object.
+**Instance methods** define what an object can do. Instance methods operate on a specific object and can directly use its fields.
+
+Add these methods to the `Student` class:
+
+```java
+public class Student {
+    String name;
+    int studentId;
+    double gpa;
+
+    // Instance methods (behavior)
+    public boolean isHonorRoll() {
+        return gpa >= 3.5;
+    }
+
+    public void displayProfile() {
+        System.out.println("Name: " + name);
+        System.out.println("Student ID: " + studentId);
+        System.out.println("GPA: " + gpa);
+        System.out.println("Honor Roll: " + isHonorRoll());
+    }
+}
+```
+
+* `isHonorRoll()` returns `true` if the GPA is at least 3.5; otherwise, it returns `false`.
+* `displayProfile()` prints the student's information and returns no value (`void`).
+
+### Method Anatomy
+
+Consider this method:
+
+```java
+public int add(int a, int b) {
+    return a + b;
+}
+```
+
+| Component       | Meaning            |
+| --------------- | ------------------ |
+| `public`        | Access modifier    |
+| `int`           | Return type        |
+| `add`           | Method name        |
+| `int a, int b`  | Parameters         |
+| `return a + b;` | Returns the result |
+
+## 3.5 Creating Objects & Calling Methods
+
+Now that the Student blueprint has both fields and methods, use the **new** keyword to create objects and the **dot operator (.)** to access their data and methods.
 
 ```java
 public class Main {
     public static void main(String[] args) {
-        // Create two separate Student objects using the default constructor
+        // Create two separate Student objects
         Student student1 = new Student();
         Student student2 = new Student();
 
@@ -210,22 +256,10 @@ Sam
 ```
 
 Each object has its own fields. Changing `student1.name` does not change `student2.name`.
+**Note: Assigning fields one by one works, but it is repetitive and easy to forget a field. Constructors solve this problem.**
 
-Because no constructor has been declared in `Student`, Java provides a default no-argument constructor.
 
-## 3.6 Java Naming Conventions
-Java follows standard naming conventions to make code readable, consistent, and easier to maintain.
-
-| Name | Convention | Examples |
-|:---|:---|:---|
-| **Class name** | Start with an uppercase letter. Use a noun. | `String`, `Color`, `Button`, `System` |
-| **Interface name** | Start with an uppercase letter. Often use an adjective. | `Runnable`, `Remote`, `ActionListener` |
-| **Method name** | Start with a lowercase letter. Use a verb. | `actionPerformed()`, `main()`, `print()`, `println()` |
-| **Variable name** | Start with a lowercase letter. Use descriptive names. | `firstName`, `orderNumber` |
-| **Package name** | Use lowercase letters. | `java.lang`, `java.util`, `java.sql` |
-| **Constant name** | Use uppercase letters. Separate words with underscores (`_`). | `RED`, `YELLOW`, `MAX_PRIORITY` |
-
-## 3.7 Constructors
+## 3.6 Constructors
 
 A **constructor** initializes an object when it is created. It allows you to provide initial values instead of assigning each field separately.
 
@@ -308,72 +342,21 @@ In `this.name = name;`:
 
 This makes it clear which variable stores the object's data.
 
-## 3.8 Instance Methods
 
-**Instance methods** define what an object can do. Unlike the introductory `static` methods in Section 3.1, instance methods operate on a particular object and can directly access its instance fields.
+## 3.8 Java Naming Conventions
+Java follows standard naming conventions to make code readable, consistent, and easier to maintain.
 
-Add these methods to the `Student` class:
+| Name | Convention | Examples |
+|:---|:---|:---|
+| **Class name** | Start with an uppercase letter. Use a noun. | `String`, `Color`, `Button`, `System` |
+| **Interface name** | Start with an uppercase letter. Often use an adjective. | `Runnable`, `Remote`, `ActionListener` |
+| **Method name** | Start with a lowercase letter. Use a verb. | `actionPerformed()`, `main()`, `print()`, `println()` |
+| **Variable name** | Start with a lowercase letter. Use descriptive names. | `firstName`, `orderNumber` |
+| **Package name** | Use lowercase letters. | `java.lang`, `java.util`, `java.sql` |
+| **Constant name** | Use uppercase letters. Separate words with underscores (`_`). | `RED`, `YELLOW`, `MAX_PRIORITY` |
 
-```java
-public boolean isHonorRoll() {
-    return gpa >= 3.5;
-}
 
-public void displayProfile() {
-    System.out.println("Name: " + name);
-    System.out.println("Student ID: " + studentId);
-    System.out.println("GPA: " + gpa);
-    System.out.println("Honor Roll: " + isHonorRoll());
-}
-```
-
-* `isHonorRoll()` returns `true` if the GPA is at least 3.5; otherwise, it returns `false`.
-* `displayProfile()` prints the student's information and returns no value (`void`).
-
-### Method Components
-
-Consider this method:
-
-```java
-public int add(int a, int b) {
-    return a + b;
-}
-```
-
-| Component       | Meaning            |
-| --------------- | ------------------ |
-| `public`        | Access modifier    |
-| `int`           | Return type        |
-| `add`           | Method name        |
-| `int a, int b`  | Parameters         |
-| `return a + b;` | Returns the result |
-
-## 3.9 Calling Methods Through Objects
-
-Use the dot operator (`.`) to access an object's fields and call its instance methods.
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        Student student1 = new Student("Alex", 1001, 3.85);
-
-        student1.displayProfile();
-    }
-}
-```
-
-**Output:**
-
-```text
-Name: Alex
-Student ID: 1001
-GPA: 3.85
-Honor Roll: true
-```
-
-The expression `student1.displayProfile()` calls the method on `student1`. The method uses that object's fields.
-
-## 3.10 Primitive Variables vs. Object References
+## 3.9 Primitive Variables vs. Object References
 
 Java variables can store primitive values or references to objects.
 
