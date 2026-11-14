@@ -1,6 +1,10 @@
 
 # Module: Encapsulation
 
+In our previous modules, we learned how to build classes, instantiate objects, and write instance methods. However, in those initial examples, our fields were wide open—meaning any external code could modify an object's data directly (like setting a negative balance or an invalid GPA).
+
+In professional software development, leaving object data unprotected is a recipe for bugs and security issues. To build secure, maintainable, and scalable applications, we need strict rules for data visibility.
+
 ## 1. Basic Principles of OOP
 
 Object-Oriented Programming (OOP) is based on four fundamental principles:
@@ -25,6 +29,32 @@ Object-Oriented Programming (OOP) is based on four fundamental principles:
   </sub>
 </p>
 
+## 2. Access Modifiers in Java
+
+Before learning how to implement encapsulation, we need to understand **access modifiers**.
+
+Access modifiers control the visibility and accessibility of class members, such as fields, methods, and constructors.
+
+Java provides four access levels:
+
+| Access Modifier | Accessibility |
+|:---|:---|
+| `public` | Accessible from any class. |
+| `private` | Accessible only within the class where it is declared. |
+| `protected` | Accessible within the same package and by subclasses in other packages through inheritance. |
+| `default` (no modifier) | Accessible only within the same package (package-private). |
+
+### Example: Access Modifiers
+
+```java
+public class MyClass {
+    public int publicField;         // Accessible from any class
+    private int privateField;       // Accessible only within MyClass
+    protected int protectedField;   // Same package and subclasses
+    int defaultField;               // Same package only
+}
+```
+**Key Point:** Use `private` to protect data and `public` to provide controlled access through methods.
 
 ## 2. Encapsulation
 
