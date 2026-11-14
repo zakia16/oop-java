@@ -72,7 +72,7 @@ public class Student {
 > **Key Idea:** Keep data private and provide controlled access through public methods.
 
 
-**Real-world example: Bank Account**
+### Real-world example: Bank Account**
 
 A bank account protects its balance from direct modification. Instead, users interact with it through methods such as `deposit()` and `withdraw()`.
 
@@ -88,11 +88,9 @@ A bank account protects its balance from direct modification. Instead, users int
     <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
   </sub>
 </p>
----
 
 
-
-## Code Example: BankAccount
+### Code Example: BankAccount
 
 The following example demonstrates how encapsulation protects a bank account's balance from unauthorized or invalid changes.
 
