@@ -6,7 +6,7 @@ This module covers two important concepts in Java:
 - **Encapsulation:** Protecting data by controlling access to an object's fields and methods.
 - **ArrayList:** Managing collections of objects using Java's built-in `ArrayList` class.
 
-
+---
 ## 1. Basic Principles of OOP
 
 Object-Oriented Programming (OOP) is based on four fundamental principles:
@@ -30,7 +30,7 @@ Object-Oriented Programming (OOP) is based on four fundamental principles:
     <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">GeeksforGeeks – OOP Interview Questions</a>
   </sub>
 </p>
----
+
 
 ## 2. Encapsulation
 
