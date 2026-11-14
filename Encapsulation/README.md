@@ -91,23 +91,25 @@ A bank account protects its balance from direct modification. Instead, users int
 ---
 
 
-Code Example
 
-Here is a practical example showing how a BankAccount class protects its balance variable from invalid updates:
+## Code Example: BankAccount
+
+The following example demonstrates how encapsulation protects a bank account's balance from unauthorized or invalid changes.
 
 ```java
 public class BankAccount {
-    // PRIVATE DATA: Locked inside the class
+
+    // Private field: Direct access is restricted
     private double balance;
 
-    // Constructor to set an initial balance
+    // Constructor
     public BankAccount(double initialBalance) {
         if (initialBalance >= 0) {
             this.balance = initialBalance;
         }
     }
 
-    // PUBLIC METHOD 1: Safe access to add money
+    // Deposit money
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -117,7 +119,7 @@ public class BankAccount {
         }
     }
 
-    // PUBLIC METHOD 2: Safe access to take money out
+    // Withdraw money
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
@@ -127,13 +129,14 @@ public class BankAccount {
         }
     }
 
-    // Optional getter to view the current balance
+    // Getter: Read the current balance
     public double getBalance() {
         return balance;
     }
 }
 ```
-If another class tries to interact with BankAccount, Java enforces the rules: 
+
+### Using the BankAccount Class
 
 ```java
 public class Main {
@@ -150,6 +153,17 @@ public class Main {
     }
 }
 ```
+
+### Understanding the Example
+
+| Component | Purpose |
+|:---|:---|
+| `private double balance` | Protects the account balance from direct access. |
+| `getBalance()` | Getter: Allows reading the balance. |
+| `deposit()` | Allows adding money with validation. |
+| `withdraw()` | Allows withdrawing money with validation. |
+
+> **Important:** A setter is not always necessary. Methods such as `deposit()` and `withdraw()` can provide controlled ways to modify private fields without allowing unrestricted changes.
 
 ---
 
