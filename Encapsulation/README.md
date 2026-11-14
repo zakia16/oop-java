@@ -31,6 +31,10 @@ Object-Oriented Programming (OOP) is based on four fundamental principles:
   </sub>
 </p>
 
+### Key Components of Encapsulation
+Private Fields: Instance variables (fields) of a class are declared as private to restrict access from outside the class.
+Public Methods: Public getter and setter methods are provided to allow controlled access and modification of the private fields.
+
 
 ## 2. Encapsulation
 
