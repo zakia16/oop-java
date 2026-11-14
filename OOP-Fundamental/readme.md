@@ -254,22 +254,44 @@ public class Main {
 Alex
 Sam
 ```
-
-Each object has its own fields. Changing `student1.name` does not change `student2.name`.
-**Note: Assigning fields one by one works, but it is repetitive and easy to forget a field. Constructors solve this problem.**
+**Note:**
+Each object has its own fields. Changing `student1.name` does not change `student2.name`.  
+**Assigning fields one by one works, but it is repetitive and easy to forget a field. Constructors solve this problem.**
 
 
 ## 3.6 Constructors
 
-A **constructor** initializes an object when it is created. It allows you to provide initial values instead of assigning each field separately.
+A **constructor** is a special block of code that runs automatically when `new` is called. It lets you initialize an object's fields in a single line.
 
 ### Constructor Rules
-
 * Its name must match the class name.
 * It has no return type, not even `void`.
 * Java provides a default no-argument constructor only if no constructor is declared.
 
-### Example
+
+### 3.6.1. Default (No-Argument) Constructor
+A no-argument constructor does not take any parameters. If you do not write any constructor yourself, Java invisibly provides one that sets fields to default values (0, false, null). You can also write your own to set custom default values.
+
+```java
+public class Student {
+    String name;
+    int studentId;
+    double gpa;
+
+    // Explicit no-argument constructor for default values
+    public Student() {
+        name = "Unknown";
+        studentId = 0;
+        gpa = 0.0;
+    }
+}
+
+// Creating an object using the no-argument constructor:
+Student student1 = new Student();
+```
+
+### 3.6.2. Parameterized Constructor
+A parameterized constructor takes one or more parameters, allowing you to pass initial values during object creation.
 
 ```java
 public class Student {
@@ -290,9 +312,8 @@ Student student1 = new Student("Alex", 1001, 3.85);
 Student student2 = new Student("Sam", 1002, 3.20);
 ```
 
-The constructor initializes each student's fields during object creation.
 
-### Constructor Overloading
+### 3.6.3. Constructor Overloading
 
 A class can have multiple constructors with different parameter lists.
 
@@ -302,19 +323,36 @@ public class Student {
     int studentId;
     double gpa;
 
-    // Overloaded no-argument constructor for default values
+    // Constructor 1: No-argument constructor
     public Student() {
-        name = "Unknown";
-        studentId = 0;
-        gpa = 0.0;
+        this.name = "Unknown";
+        this.studentId = 0;
+        this.gpa = 0.0;
+    }
+
+    // Constructor 2: Two parameters (for new students without a GPA yet)
+    public Student(String name, int studentId) {
+        this.name = name;
+        this.studentId = studentId;
+        this.gpa = 0.0;
+    }
+
+    // Constructor 3: All three parameters
+    public Student(String name, int studentId, double gpa) {
+        this.name = name;
+        this.studentId = studentId;
+        this.gpa = gpa;
     }
 }
 
-// Creating an object using the default constructor:
-Student student1 = new Student();
+// Java picks the matching constructor based on the arguments passed:
+Student student1 = new Student();                   // Calls Constructor 1
+Student student2 = new Student("Jordan", 1003);     // Calls Constructor 2
+Student student3 = new Student("Alex", 1001, 3.85); // Calls Constructor 3
 ```
 
 If you declare any constructor yourself, Java no longer automatically supplies the default no-argument constructor.
+
 
 ## 3.7 The `this` Keyword
 
