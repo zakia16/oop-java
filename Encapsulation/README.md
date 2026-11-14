@@ -38,25 +38,6 @@ Object-Oriented Programming (OOP) is based on four fundamental principles:
 
 <img width="396" height="231" alt="image" src="https://github.com/user-attachments/assets/cbb30c75-e138-4a63-a8a2-4e47cf48ff14" />
 
-
-**Real-world example: Bank Account**
-
-A bank account protects its balance from direct modification. Instead, users interact with it through methods such as `deposit()` and `withdraw()`.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/02273f56-c939-4417-96d2-3592b3556cdc"
-       width="700"
-       alt="Real-world example illustrating encapsulation">
-</p>
-
-<p align="center">
-  <sub>
-    Image source:
-    <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
-  </sub>
-</p>
-
-
 ### Key Components of Encapsulation
 
 Encapsulation in Java is achieved using two main components:
@@ -90,6 +71,22 @@ public class Student {
 
 > **Key Idea:** Keep data private and provide controlled access through public methods.
 
+**Real-world example: Bank Account**
+
+A bank account protects its balance from direct modification. Instead, users interact with it through methods such as `deposit()` and `withdraw()`.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/02273f56-c939-4417-96d2-3592b3556cdc"
+       width="700"
+       alt="Real-world example illustrating encapsulation">
+</p>
+
+<p align="center">
+  <sub>
+    Image source:
+    <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
+  </sub>
+</p>
 ---
 
 
