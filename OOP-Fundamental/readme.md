@@ -348,6 +348,30 @@ public int add(int a, int b) {
 | `int a, int b`  | Parameters         |
 | `return a + b;` | Returns the result |
 
+
+## Access Modifiers
+
+Java provides **access modifiers** to control the visibility and accessibility of class members (fields, methods, and constructors).
+
+| Access Modifier | Accessibility |
+|---|---|
+| `public` | Accessible from any class. |
+| `private` | Accessible only within the class where it is declared. |
+| `protected` | Accessible within the same package and by subclasses in other packages through inheritance. |
+| `default` (no modifier) | Accessible only within the same package (package-private). |
+
+**Key Point:** Use `private` to protect data and `public` to provide controlled access through methods.
+
+
+```Java
+public class MyClass {
+    public int publicField;       // Accessible everywhere
+    private int privateField;     // Accessible only inside MyClass
+    protected int protectedField; // Accessible in same package and subclasses
+    int defaultField;             // Package-private (default access)
+}
+```
+
 ## 3.9 Calling Methods Through Objects
 
 Use the dot operator (`.`) to access an object's fields and call its instance methods.
