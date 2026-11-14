@@ -163,15 +163,34 @@ public class Main {
 
 > **Important:** A setter is not always necessary. Methods such as `deposit()` and `withdraw()` can provide controlled ways to modify private fields without allowing unrestricted changes.
 
+
+## Benefits of Encapsulation
+
+| Benefit | Explanation |
+|---|---|
+| Data Protection | Prevents direct access to an object's internal data. |
+| Controlled Access | Allows data to be modified through methods that can validate input. |
+| Data Integrity | Helps prevent invalid values and keeps an object's data consistent. |
+| Flexibility | Internal implementation can change without requiring changes to other classes that use the object. |
+| Maintainability | Makes programs easier to understand, test, and update. |
+
 ---
-
-### Key Idea
-
-Make fields `private` and provide controlled access through `public` methods.
 
 ### Review Questions
 
-How is encapsulation implemented in Java?
+
+## 5. Quick Review
+
+**1. What is encapsulation?**
+
+<details>
+<summary>Show Answer</summary>
+
+Encapsulation combines data and methods inside a class while restricting direct access to the data.
+
+</details>
+
+**2. How is encapsulation implemented in Java?**
 
 <details>
 <summary>Show Answer</summary>
@@ -180,25 +199,39 @@ By declaring fields `private` and providing `public` getter and setter methods w
 
 </details>
 
-<summary><strong>3. What is the purpose of a getter?</strong></summary>
-
-A getter returns the value of a private field.
-</details>
+**3. What is the purpose of a getter method?**
 
 <details>
-<summary><strong>4. What is the purpose of a setter?</strong></summary>
+<summary>Show Answer</summary>
 
-A setter modifies a private field. It can also validate the new value before changing the field.
+A getter method returns the value of a private field.
+
 </details>
+
+**4. What is the purpose of a setter method?**
 
 <details>
-<summary><strong>5. Does every private field need a getter and setter?</strong></summary>
+<summary>Show Answer</summary>
 
-No. Only provide methods when access is actually needed. Some fields should not be changed directly after an object is created.
+A setter method modifies the value of a private field. It can also validate the new value before changing it.
+
 </details>
+
+**5. Does every private field need a getter and setter?**
 
 <details>
-<summary><strong>6. Why is encapsulation important?</strong></summary>
+<summary>Show Answer</summary>
 
-It protects data, controls how objects are modified, and helps maintain the consistency of a program.
+No. Provide getters and setters only when needed. Some fields should not be directly modified after an object is created.
+
 </details>
+
+**6. Why is encapsulation important?**
+
+<details>
+<summary>Show Answer</summary>
+
+It protects data, controls how objects are modified, and helps maintain data integrity.
+
+</details>
+
