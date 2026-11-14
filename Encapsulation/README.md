@@ -34,7 +34,7 @@ Object-Oriented Programming (OOP) is based on four fundamental principles:
 
 ## 2. Encapsulation
 
-**Encapsulation** combines data (fields) and the methods that operate on that data within a single unit called a **class**. It also restricts direct access to an object's data.
+**Encapsulation** combines data (fields) and the methods that operate on that data into a single unit called a class. It also restricts direct access to an object's data.
 
 <img width="396" height="231" alt="image" src="https://github.com/user-attachments/assets/cbb30c75-e138-4a63-a8a2-4e47cf48ff14" />
 
