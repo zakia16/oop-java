@@ -170,7 +170,7 @@ Doors: 4
 | `start()` | A method inherited from `Vehicle`. |
 | `honk()` | A method defined specifically in `Car`. |
 
-**Understanding `protected`:** The `protected` modifier allows `Car` to directly access the inherited `brand` and `speed` fields. It also allows access within the same package and by subclasses in other packages through inheritance.
+**Understanding `protected`:** The `protected` modifier allows `Car` to directly access the inherited `brand` and `speed` fields while keeping them hidden from unrelated external classes. It also allows access within the same package and by subclasses in other packages through inheritance.
 
 **Important:** Constructors are not inherited in Java. However, a subclass can call a superclass constructor using `super()`.
 
