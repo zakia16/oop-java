@@ -1,13 +1,12 @@
 
 # Module: Inheritance
 
-As applications grow, you may notice that different classes share common properties and behaviors. For example, a `Car`, a `Bike`, and a `Truck` all share properties such as color and speed, as well as behaviors such as starting and stopping.
+As applications grow, you may notice that different classes share common **properties** and **behaviors**. For example, a `Car`, a `Bike`, and a `Truck` all share properties such as color and speed, as well as behaviors such as starting and stopping.
 
 Instead of writing the same code repeatedly, Java allows one class to inherit fields and methods from another class. This concept is called **inheritance**.
-
 Inheritance promotes code reuse, reduces duplication, and helps organize related classes.
 
-## Basic Principles of Object-Oriented Programming (OOP)
+## 1. Basic Principles of Object-Oriented Programming (OOP)
 
 Object-Oriented Programming (OOP) is a programming approach organized around **objects**, which combine data and behavior.
 
@@ -35,8 +34,7 @@ OOP is built on four fundamental principles:
 
 ---
 
-
-## 1. What Is Inheritance?
+## 2. What Is Inheritance?
 
 **Inheritance** allows one class to acquire the properties (fields) and behaviors (methods) of another class. A child class can also add its own fields and methods or customize inherited behavior.
 
@@ -88,7 +86,7 @@ For example:
 
 **Key Idea:** A subclass inherits features from its superclass and can extend or customize them.
 
-## 2. The `extends` Keyword
+## 3. The `extends` Keyword
 
 In Java, inheritance is implemented using the `extends` keyword.
 
@@ -174,11 +172,11 @@ Doors: 4
 
 **Important:** Constructors are not inherited in Java. However, a subclass constructor can call a superclass constructor using `super()`.
 
-## 3. Types of Inheritance
+## 4. Types of Inheritance
 
 Inheritance can be organized into several structural types.
 
-### 3.1 Single Inheritance
+### 4.1 Single Inheritance
 
 A subclass inherits from one superclass.
 
@@ -200,7 +198,7 @@ class Dog extends Animal {
 
 **Example:** `Dog` inherits from `Animal`.
 
-### 3.2 Multilevel Inheritance
+### 4.2 Multilevel Inheritance
 
 A class inherits from another subclass, forming an inheritance chain.
 
@@ -228,7 +226,7 @@ class Dog extends Mammal {
 
 **Example:** `Dog` inherits from `Mammal`, and `Mammal` inherits from `Animal`. Therefore, `Dog` can access the inherited methods from both parent classes, subject to access rules.
 
-### 3.3 Hierarchical Inheritance
+### 4.3 Hierarchical Inheritance
 
 Multiple subclasses inherit from the same superclass.
 
@@ -256,7 +254,7 @@ class Bike extends Vehicle {
 
 **Example:** Both `Car` and `Bike` inherit from `Vehicle`.
 
-### 3.4 Multiple Inheritance
+### 4.4 Multiple Inheritance
 
 Multiple inheritance occurs when one class inherits from more than one parent class.
 
@@ -276,7 +274,7 @@ Java avoids this restriction to prevent ambiguity and complexity, such as the **
 
 However, Java supports multiple inheritance of type through **interfaces**, which will be covered in a later module.
 
-### 3.5 Hybrid Inheritance
+### 4.5 Hybrid Inheritance
 
 Hybrid inheritance combines two or more types of inheritance.
 
@@ -292,7 +290,7 @@ Java does not support hybrid inheritance through classes alone. However, combina
 | Multiple | One class inherits from multiple parent classes. | No, not with classes |
 | Hybrid | Combines two or more inheritance types. | Through classes and interfaces |
 
-## 4. The `super` Keyword
+## 5. The `super` Keyword
 
 The `super` keyword refers to the immediate parent class of a subclass.
 
