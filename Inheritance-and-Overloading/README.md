@@ -272,7 +272,90 @@ class B { }
 class C extends A, B { }
 ```
 
-Java avoids this restriction to prevent ambiguity and complexity, such as the **Diamond Problem**, which can occur when multiple parent classes provide the same inherited method.
+### Multiple Inheritance
+
+Multiple inheritance occurs when one class inherits from more than one parent class.
+
+**Java does not support multiple inheritance with classes.**
+
+For example, the following code is illegal:
+
+```java
+class A { }
+class B { }
+
+// Not allowed in Java
+class C extends A, B { }
+```
+
+Java avoids this restriction to prevent ambiguity and complexity, such as the **Diamond Problem**.
+
+### The Diamond Problem
+
+The Diamond Problem occurs when two parent classes inherit from the same superclass and provide their own versions of an inherited method. The child class may not know which method to use.
+
+Java avoids this problem with classes, but similar ambiguity can occur with interfaces that have default methods.
+
+<img width="275" height="335" alt="image" src="https://github.com/user-attachments/assets/7bd07e35-a987-4d7c-819d-f73ed7ffafca" />
+
+
+**Java Example: Diamond Problem**
+
+```java
+interface A {
+    default void whoAmI() {
+        System.out.println("Interface A");
+    }
+}
+
+interface B extends A {
+    @Override
+    default void whoAmI() {
+        System.out.println("Interface B");
+    }
+}
+
+interface C extends A {
+    @Override
+    default void whoAmI() {
+        System.out.println("Interface C");
+    }
+}
+
+class D implements B, C {
+    @Override
+    public void whoAmI() {
+        System.out.println("Class D");
+
+        B.super.whoAmI();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        D obj = new D();
+        obj.whoAmI();
+    }
+}
+```
+
+**Output:**
+
+```text
+Class D
+Interface B
+```
+
+### Understanding the Example
+
+- `A` is the common parent interface.
+- `B` and `C` both extend `A` and override `whoAmI()`.
+- `D` implements both `B` and `C`.
+- `D` overrides `whoAmI()` to resolve the ambiguity.
+- `B.super.whoAmI()` explicitly calls the method from interface `B`.
+
+**Key Idea:** Java does not allow a class to extend multiple classes, but it allows a class to implement multiple interfaces. When default methods conflict, the class must resolve the conflict.
+
 
 However, Java supports multiple inheritance of type through **interfaces**, which will be covered in a later module.
 
