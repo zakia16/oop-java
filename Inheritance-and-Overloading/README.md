@@ -165,12 +165,14 @@ Doors: 4
 |:---|:---|
 | `Vehicle` | Parent class containing common fields and methods. |
 | `Car extends Vehicle` | Declares `Car` as a subclass of `Vehicle`. |
-| `brand` and `speed` | Fields inherited from `Vehicle`. |
+| `brand` and `speed` | `protected` fields inherited from `Vehicle`. |
 | `numberOfDoors` | A field specific to `Car`. |
 | `start()` | A method inherited from `Vehicle`. |
 | `honk()` | A method defined specifically in `Car`. |
 
-**Important:** Constructors are not inherited in Java. However, a subclass constructor can call a superclass constructor using `super()`.
+**Understanding `protected`:** The `protected` modifier allows `Car` to directly access the inherited `brand` and `speed` fields. It also allows access within the same package and by subclasses in other packages through inheritance.
+
+**Important:** Constructors are not inherited in Java. However, a subclass can call a superclass constructor using `super()`.
 
 ## 4. Types of Inheritance
 
