@@ -176,7 +176,19 @@ Doors: 4
 
 ## 4. Types of Inheritance
 
-Inheritance can be organized into several structural types.
+The following diagram illustrates the five common types of inheritance.
+
+<img width="1042" height="745" alt="image" src="https://github.com/user-attachments/assets/0f511a15-2999-47e1-9e68-fcbcf0feb57a" />
+<p align="center">
+  <sub>
+    Image source: Adapted from
+    <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">GeeksforGeeks – OOP Interview Questions</a>
+  </sub>
+</p>
+
+**Note:** Java supports single, multilevel, and hierarchical inheritance through classes. **Multiple** and **hybrid** inheritance are not supported through classes alone. However, interfaces allow Java to support multiple inheritance of type and create hybrid inheritance structures.
+
+
 
 ### 4.1 Single Inheritance
 
@@ -592,18 +604,6 @@ GPA: 3.85
 | **Organization** | Establishes clear relationships between related classes. |
 
 ---
-
-
-
-Inheritance can be classified into 5 types which are as follows:
-<img width="1042" height="745" alt="image" src="https://github.com/user-attachments/assets/0f511a15-2999-47e1-9e68-fcbcf0feb57a" />
-<p align="center">
-  <sub>
-    Image source: Adapted from
-    <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">GeeksforGeeks – OOP Interview Questions</a>
-  </sub>
-</p>
-
 
 ## 8. Quick Review
 
