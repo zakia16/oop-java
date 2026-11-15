@@ -1,5 +1,13 @@
 
-# Basic Principles of Object-Oriented Programming (OOP)
+# Module: Inheritance
+
+As applications grow, you may notice that different classes share common properties and behaviors. For example, a `Car`, a `Bike`, and a `Truck` all share properties such as color and speed, as well as behaviors such as starting and stopping.
+
+Instead of writing the same code repeatedly, Java allows one class to inherit fields and methods from another class. This concept is called **inheritance**.
+
+Inheritance promotes code reuse, reduces duplication, and helps organize related classes.
+
+## Basic Principles of Object-Oriented Programming (OOP)
 
 Object-Oriented Programming (OOP) is a programming approach organized around **objects**, which combine data and behavior.
 
@@ -26,15 +34,18 @@ OOP is built on four fundamental principles:
 </p>
 
 ---
-## Inheritance
 
-**Inheritance** allows one class to acquire the properties (fields) and behaviors (methods) of another class. It promotes **code reuse** and helps establish relationships between classes.
 
-**Real-world example: Vehicles**
+## 1. What Is Inheritance?
 
-A `Car` and a `Bike` can inherit common properties and methods from a parent class called `Vehicle`.
+**Inheritance** allows one class to acquire the properties (fields) and behaviors (methods) of another class. A child class can also add its own fields and methods or customize inherited behavior.
 
-For example, both vehicles may share properties such as `color` and `speed`, and methods such as `start()` and `stop()`.
+Java uses two important terms:
+
+- **Superclass (Parent Class):** The existing class whose fields and methods can be inherited.
+- **Subclass (Child Class):** The class that inherits from the superclass and can extend its functionality.
+
+### Real-World Example: Vehicles
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4a843286-4361-41da-95bb-5d009fa0365e"
@@ -50,30 +61,6 @@ For example, both vehicles may share properties such as `color` and `speed`, and
     </a>
   </sub>
 </p>
-
-### Key Idea
-
-A child class (subclass) inherits and can extend the functionality of a parent class (superclass).
-
-
-# Module: Inheritance
-
-As applications grow, you may notice that different classes share common properties and behaviors. For example, a `Car`, a `Bike`, and a `Truck` all share properties such as color and speed, as well as behaviors such as starting and stopping.
-
-Instead of writing the same code repeatedly, Java allows one class to inherit fields and methods from another class. This concept is called **inheritance**.
-
-Inheritance promotes code reuse, reduces duplication, and helps organize related classes.
-
-## 1. What Is Inheritance?
-
-**Inheritance** allows one class to acquire the properties (fields) and behaviors (methods) of another class. A child class can also add its own fields and methods or customize inherited behavior.
-
-Java uses two important terms:
-
-- **Superclass (Parent Class):** The existing class whose fields and methods can be inherited.
-- **Subclass (Child Class):** The class that inherits from the superclass and can extend its functionality.
-
-### Real-World Example: Vehicles
 
 Think about different types of vehicles. A car and a bike share common characteristics, but each also has unique features.
 
