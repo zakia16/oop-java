@@ -680,27 +680,4 @@ Method overriding occurs when a subclass provides a new implementation of an inh
 
 </details>
 
-
-**1. Why is multiple inheritance not supported with classes in Java?**
-
-<details>
-<summary>Show Answer</summary>
-
-To avoid ambiguity, particularly the **Diamond Problem**, where a class could inherit conflicting implementations from multiple parent classes.
-
-</details>
-
-**2. What is multilevel inheritance?**
-
-<details>
-<summary>Show Answer</summary>
-
-When a class inherits from another class, which itself inherits from a third class.
-
-For example:
-
-`Animal → Mammal → Dog`
-
-</details>
-
 ---
