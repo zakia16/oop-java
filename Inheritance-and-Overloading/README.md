@@ -283,23 +283,6 @@ class B { }
 // Not allowed in Java
 class C extends A, B { }
 ```
-
-### Multiple Inheritance
-
-Multiple inheritance occurs when one class inherits from more than one parent class.
-
-**Java does not support multiple inheritance with classes.**
-
-For example, the following code is illegal:
-
-```java
-class A { }
-class B { }
-
-// Not allowed in Java
-class C extends A, B { }
-```
-
 Java avoids this restriction to prevent ambiguity and complexity, such as the **Diamond Problem**.
 
 ### The Diamond Problem
