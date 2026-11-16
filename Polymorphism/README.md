@@ -29,7 +29,8 @@ OOP is built on four fundamental principles:
 
 ## Polymorphism
 
-**Polymorphism** means "many forms." It allows the same method or operation to behave differently depending on the object that uses it.
+The word **polymorphism** comes from Greek: *poly* ("many") and *morph* ("forms").
+In programming, polymorphism means **"one interface, multiple implementations."** It allows different objects to respond to the same method call in different ways.
 
 ### Real-World Example: Animal Sounds
 
