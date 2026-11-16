@@ -26,11 +26,12 @@ OOP is built on four fundamental principles:
 </p>
 ---
 
+
 ## Polymorphism
 
 **Polymorphism** means "many forms." It allows the same method or operation to behave differently depending on the object that uses it.
 
-**Real-world example: Animal Sounds**
+### Real-World Example: Animal Sounds
 
 A method named `makeSound()` can produce different results depending on the animal:
 
@@ -47,6 +48,24 @@ A method named `makeSound()` can produce different results depending on the anim
 ### Key Idea
 
 The same method call can produce different behaviors for different objects.
+
+### Types of Polymorphism
+
+Polymorphism in Java is commonly classified into two types:
+
+1. **Compile-Time Polymorphism:** The method to execute is determined by the compiler. This is achieved through method overloading.
+2. **Runtime Polymorphism:** The method to execute is determined at runtime based on the actual object. This is achieved through method overriding.
+
+<img width="1000" height="500" alt="Types of polymorphism: compile-time and runtime" src="https://github.com/user-attachments/assets/d8de530b-9571-4ce5-93ee-eef743677757" />
+
+<p align="center">
+  <sub>
+    Image source: Adapted from
+    <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">GeeksforGeeks – OOP Interview Questions</a>
+  </sub>
+</p>
+
+**In this chapter,** we will focus primarily on runtime polymorphism using inheritance and method overriding. We will briefly review compile-time polymorphism through method overloading.
 
 
 Polymorphism can be classified into two types based on the time when the call to the object or function is resolved. They are as follows:  
