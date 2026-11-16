@@ -34,6 +34,25 @@ In this module, we will focus on **Abstraction** and learn how Java uses abstrac
 
 In previous modules, we explored inheritance and method overloading. We learned how classes can inherit fields and methods from other classes and customize their behavior.
 
+**Real-world example: Driving a Car**
+
+A person can drive a car using the steering wheel, brakes, and accelerator without understanding how the engine or other internal components work.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5115b926-4d76-4cf0-9930-9b2f308298fc"
+       width="700"
+       alt="Car illustrating the concept of abstraction">
+</p>
+
+<p align="center">
+  <sub>
+    Image source:
+    <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
+  </sub>
+</p>
+
+**Key Idea:** Focus on *what an object does*, rather than *how it works internally*.
+
 Sometimes, however, a parent class represents a concept that is too general to create objects directly.
 
 For example:
@@ -59,25 +78,6 @@ We will focus on abstract classes in this chapter and study interfaces in a late
 An **abstract class** is a class declared with the `abstract` keyword. It cannot be instantiated directly, but it can be used as a parent class for other classes.
 
 Abstract classes provide a common structure for related subclasses.
-
-**Real-world example: Driving a Car**
-
-A person can drive a car using the steering wheel, brakes, and accelerator without understanding how the engine or other internal components work.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/5115b926-4d76-4cf0-9930-9b2f308298fc"
-       width="700"
-       alt="Car illustrating the concept of abstraction">
-</p>
-
-<p align="center">
-  <sub>
-    Image source:
-    <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
-  </sub>
-</p>
-
-**Key Idea:** Focus on *what an object does*, rather than *how it works internally*.
 
 ### Declaring an Abstract Class
 
