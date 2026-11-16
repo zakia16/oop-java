@@ -68,17 +68,6 @@ Polymorphism in Java is commonly classified into two types:
 **In this chapter,** we will focus primarily on runtime polymorphism using inheritance and method overriding. We will briefly review compile-time polymorphism through method overloading.
 
 
-Polymorphism can be classified into two types based on the time when the call to the object or function is resolved. They are as follows:  
-Compile Time Polymorphism   
-Runtime Polymorphism  
-<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/d8de530b-9571-4ce5-93ee-eef743677757" />
-<p align="center">
-  <sub>
-    Image source: Adapted from
-    <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">GeeksforGeeks – OOP Interview Questions</a>
-  </sub>
-</p>
-
 ### Review Questions
 
 **1. Why is polymorphism useful?**
