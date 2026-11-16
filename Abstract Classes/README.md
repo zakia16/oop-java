@@ -71,7 +71,7 @@ Java supports abstraction through two mechanisms:
 1. **Abstract Classes:** Can combine abstract methods with fully implemented methods.
 2. **Interfaces:** Define a contract that implementing classes must follow.
 
-We will focus on abstract classes in this chapter and study interfaces in a later module.
+We will focus on abstract classes in this chapter and study **interfaces** in a later module (module 10).
 
 ## 2. What Is an Abstract Class?
 
