@@ -46,41 +46,6 @@ A method named `makeSound()` can produce different results depending on the anim
        alt="Animal sounds illustrating polymorphism">
 </p>
 
-# Polymorphism in Java
-
-## Learning Objectives
-
-By the end of this chapter, you should be able to:
-
-- Define polymorphism in Java.
-- Identify the two types of polymorphism.
-- Explain compile-time polymorphism through method overloading.
-- Explain runtime polymorphism through method overriding.
-- Understand upcasting and dynamic method dispatch.
-- Apply polymorphism using inheritance and abstract classes.
-
----
-
-## 1. Introduction to Polymorphism
-
-The word **polymorphism** comes from Greek: *poly* ("many") and *morph* ("forms").
-
-In programming, polymorphism means **"one interface, multiple implementations."** It allows different objects to respond to the same method call in different ways.
-
-### Real-World Example: Animal Sounds
-
-A method named `makeSound()` can produce different results depending on the animal:
-
-- A `Dog` barks.
-- A `Cat` meows.
-- A `Bird` chirps.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e8a87f53-9595-456c-8234-106f260346fb"
-       width="700"
-       alt="Animal sounds illustrating polymorphism">
-</p>
-
 ### Key Idea
 
 The same method call can produce different behaviors for different objects.
@@ -551,36 +516,7 @@ It allows common code to work with different related objects. New subclasses can
 
 </details>
 
----
-
-## References
-
-- [Oracle Java Tutorials – Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
-- [GeeksforGeeks – OOP Interview Questions](https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/)
-
-
-### Review Questions
-
-**1. Why is polymorphism useful?**
-
-<details>
-<summary>Show Answer</summary>
-
-It makes code more flexible, reusable, and easier to extend.
-
-</details>
-
-**2. What are the two main types of polymorphism in Java?**
-
-<details>
-<summary>Show Answer</summary>
-
-- **Compile-time polymorphism:** Achieved through method overloading.
-- **Runtime polymorphism:** Achieved through method overriding.
-
-</details>
-
-**3. How does polymorphism support extensibility?**
+**10. How does polymorphism support extensibility?**
 
 <details>
 <summary>Show Answer</summary>
