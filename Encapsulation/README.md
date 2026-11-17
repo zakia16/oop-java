@@ -64,37 +64,226 @@ public class MyClass {
 
 ### Key Components of Encapsulation
 
-Encapsulation in Java is achieved using two main components:
 
-1. **Private Fields (`private`)**
-   - Instance variables are declared `private` to restrict direct access from outside the class.
-   - This protects an object's data from unintended changes.
+# Encapsulation in Java
 
-2. **Public Methods (`public`)**
-   - **Getter methods** allow access to private fields.
-   - **Setter methods** allow controlled modification of private fields.
-   - Setters can also validate values before updating fields.
+## Learning Objectives
 
-**Example:**
+By the end of this chapter, you should be able to:
+
+- Explain encapsulation in Java.
+- Use `private` fields to protect data.
+- Create getters and setters.
+- Control read-only and write-only access.
+- Understand how getters and setters protect data.
+- Explain why returning an object reference can break encapsulation.
+- Use defensive copying to protect objects.
+
+---
+
+## 1. What Is Encapsulation?
+
+**Encapsulation** is one of the four fundamental principles of Object-Oriented Programming (OOP).
+
+It means bundling data (fields) and methods together inside a class while restricting direct access to the internal data.
+
+In Java, encapsulation is commonly achieved by:
+
+1. Declaring fields as `private`.
+2. Providing `public` getter and setter methods when access is needed.
+
+### Example
 
 ```java
 public class Student {
-    private String name;  // Private field
 
-    // Getter
-    public String getName() {
-        return name;
-    }
+    private String name;
+    private int age;
 
-    // Setter
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
 ```
 
-> **Key Idea:** Keep data private and provide controlled access through public methods.
+In this example:
 
+- `name` and `age` are private fields.
+- Other classes cannot access these fields directly.
+- The `getName()` method provides controlled access to the name.
+- The `setName()` method allows the name to be modified.
+
+### Key Idea
+
+Encapsulation protects an object's internal data and controls how other classes access or modify it.
+
+---
+
+## 2. Getters and Setters
+
+Getters and setters are methods commonly used to access and modify private fields.
+
+### Getter
+
+A **getter** returns the value of a private field.
+
+```java
+public String getName() {
+    return name;
+}
+```
+
+### Setter
+
+A **setter** changes the value of a private field.
+
+```java
+public void setName(String name) {
+    this.name = name;
+}
+```
+
+### Complete Example
+
+```java
+public class Student {
+
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int age) {
+        if (age >= 0) {
+            this.age = age;
+        }
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+```
+
+**Main.java**
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student student = new Student();
+
+        student.setName("Alex");
+        student.setAge(20);
+
+        System.out.println(student.getName());
+        System.out.println(student.getAge());
+    }
+}
+```
+
+**Output:**
+
+```text
+Alex
+20
+```
+
+### Why Use Setters?
+
+Setters allow a class to validate data before storing it.
+
+For example:
+
+```java
+public void setAge(int age) {
+    if (age >= 0) {
+        this.age = age;
+    }
+}
+```
+
+This prevents a negative age from being stored through the setter.
+
+### Why Use Getters?
+
+Getters allow other classes to retrieve information without directly accessing private fields.
+
+---
+
+## 3. Controlling Access: Read-Only and Write-Only
+
+One advantage of encapsulation is that a class can control how other classes access its fields.
+
+You do not have to provide both a getter and a setter for every field.
+
+| Access | How to Provide It |
+|---|---|
+| Read and Write | Provide both getter and setter. |
+| Read-Only | Provide a getter but no setter. |
+| Write-Only | Provide a setter but no getter. |
+| No Public Access | Provide neither getter nor setter. |
+
+### Read-Only Example
+
+```java
+public class Account {
+
+    private double balance;
+
+    public Account(double balance) {
+        this.balance = balance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+
+Other classes can retrieve the balance but cannot change it through a setter.
+
+### Write-Only Example
+
+```java
+public class Password {
+
+    private String password;
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
+```
+
+Other classes can set the password but cannot retrieve it through a getter.
+
+**Key Idea:** Provide only the methods that other classes need.
+
+---
+
+## 5. Benefits of Encapsulation
+
+Encapsulation provides several benefits:
+
+- Fields can be made read-only or write-only.
+- A class has control over what is stored in its fields.
+- Other classes do not need to know how data is stored internally.
+- The internal implementation can change without requiring changes to calling code, provided the public interface remains compatible.
+- It helps make code more flexible and maintainable.
+
+---
 
 ### Real-world example: Bank Account**
 
