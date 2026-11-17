@@ -187,29 +187,6 @@ public class Main {
 
 > **Important:** A setter is not always necessary. Methods such as `deposit()` and `withdraw()` can provide controlled ways to modify private fields without allowing unrestricted changes.
 
-```java
-public class BankAccount {
-
-    private double balance;
-
-    public void setBalance(double amount) {
-        if (amount >= 0) {
-            balance = amount;
-        }
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-}
-```
-
-This gives us several important benefits:
-
-1. **Validation Control:** The class controls what values can be stored. For example, the setter rejects negative balances.
-2. **Read-Only / Write-Only Access:** Fields can be made read-only or write-only by omitting the setter or getter.
-3. **Implementation Independence:** Other classes do not need to know how the class stores its data internally. We can change the internal implementation without requiring changes to the code that uses the class.
-
 
 ### Key Components of Encapsulation
 
@@ -218,36 +195,6 @@ In Java, encapsulation is commonly achieved by:
 1. Declaring fields as `private`.
 2. Providing `public` getter and setter methods when access is needed.
 
-### Example
-
-```java
-public class Student {
-
-    private String name;
-    private int age;
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-}
-```
-
-In this example:
-
-- `name` and `age` are private fields.
-- Other classes cannot access these fields directly.
-- The `getName()` method provides controlled access to the name.
-- The `setName()` method allows the name to be modified.
-
-### Key Idea
-
-Encapsulation protects an object's internal data and controls how other classes access or modify it.
-
----
 
 ## 2. Getters and Setters
 
@@ -325,26 +272,6 @@ public class Main {
 Alex
 20
 ```
-
-### Why Use Setters?
-
-Setters allow a class to validate data before storing it.
-
-For example:
-
-```java
-public void setAge(int age) {
-    if (age >= 0) {
-        this.age = age;
-    }
-}
-```
-
-This prevents a negative age from being stored through the setter.
-
-### Why Use Getters?
-
-Getters allow other classes to retrieve information without directly accessing private fields.
 
 ---
 
