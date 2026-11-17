@@ -163,7 +163,7 @@ public class BankAccount {
 ```java
 public class Main {
     public static void main(String[] args) {
-        BankAccount account = new BankAccount(100.0);
+        BankAccount account = new BankAccount(10000.0);
 
         // ❌ Direct access blocked (causes a compile error)
         // account.balance = 100000000.0;     
