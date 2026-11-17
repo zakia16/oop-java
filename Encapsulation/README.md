@@ -100,10 +100,6 @@ We make the `balance` field `private` so other classes cannot access it directly
 
 For example, a bank account can provide methods such as `deposit()` and `withdraw()` rather than allowing other classes to change the balance directly.
 
-### Real-world example: Bank Account**
-
-A bank account protects its balance from direct modification. Instead, users interact with it through methods such as `deposit()` and `withdraw()`.
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/02273f56-c939-4417-96d2-3592b3556cdc"
        width="700"
