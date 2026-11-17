@@ -62,14 +62,73 @@ public class MyClass {
 
 <img width="396" height="231" alt="image" src="https://github.com/user-attachments/assets/cbb30c75-e138-4a63-a8a2-4e47cf48ff14" />
 
+
+# Module: Encapsulation & Defensive Copying
+
+In object-oriented programming, one of the most important principles for building robust, secure, and maintainable software is **Encapsulation**. Let's explore why encapsulation is necessary through a simple banking example.
+
+## 1. The Problem: Why Do We Need Encapsulation?
+
+**Encapsulation** in Java is the mechanism of bundling data (variables) and the code acting on that data (methods) together inside a class. It also restricts direct access to an object's internal data.
+
+To understand why this matters, imagine we created a `BankAccount` class to manage a customer's bank balance.
+
+```java
+public class BankAccount {
+    double balance;
+}
+```
+
+Now, suppose another programmer, Bob, writes code to update the account balance:
+
+```java
+public void updateAccount(BankAccount account) {
+    account.balance = 10000000;
+    // More banking code
+}
+```
+
+### What Went Wrong?
+
+Imagine Bob looks at his friend's bank account and thinks:
+
+*"Your balance is looking a little low. Let me fix that for you!"*
+
+So, he changes the balance to **$10 million**! Suddenly, his friend is a millionaire without depositing a single dollar. Bob just created money out of thin air! 😂
+
+**The problem:** Because the `balance` field has default (package-private) access, Bob can directly change it without any validation, as long as his code is in the same package.
+
+To prevent this problem, we need encapsulation!
+
+## 2. Implementing Encapsulation (Getters and Setters)
+
+To fix this, we make the `balance` field `private` and provide controlled access through `public` getter and setter methods.
+
+```java
+public class BankAccount {
+
+    private double balance;
+
+    public void setBalance(double amount) {
+        if (amount >= 0) {
+            balance = amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+
+This gives us several important benefits:
+
+1. **Validation Control:** The class controls what values can be stored. For example, the setter rejects negative balances.
+2. **Read-Only / Write-Only Access:** Fields can be made read-only or write-only by omitting the setter or getter.
+3. **Implementation Independence:** Other classes do not need to know how the class stores its data internally. We can change the internal implementation without requiring changes to the code that uses the class.
+
+
 ### Key Components of Encapsulation
-
-
-# Encapsulation in Java
-
-**Encapsulation** is one of the four fundamental principles of Object-Oriented Programming (OOP).
-
-It means bundling data (fields) and methods together inside a class while restricting direct access to the internal data.
 
 In Java, encapsulation is commonly achieved by:
 
