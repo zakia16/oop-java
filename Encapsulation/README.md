@@ -1,7 +1,7 @@
 
 # Module: Encapsulation
 
-In our previous modules, we learned how to build classes, instantiate objects, and write instance methods. However, in those initial examples, our fields were wide open—meaning any external code could modify an object's data directly (like setting a negative balance or an invalid GPA).
+In our previous modules, we learned how to build classes, instantiate objects, and write instance methods. However, in those initial examples, our fields were wide open which means any external code could modify an object's data directly (like setting a negative balance or an invalid GPA).
 
 In professional software development, leaving object data unprotected is a recipe for bugs and security issues. To build secure, maintainable, and scalable applications, we need strict rules for data visibility.
 
@@ -63,13 +63,7 @@ public class MyClass {
 <img width="396" height="231" alt="image" src="https://github.com/user-attachments/assets/cbb30c75-e138-4a63-a8a2-4e47cf48ff14" />
 
 
-# Module: Encapsulation & Defensive Copying
-
-In object-oriented programming, one of the most important principles for building robust, secure, and maintainable software is **Encapsulation**. Let's explore why encapsulation is necessary through a simple banking example.
-
 ## 1. The Problem: Why Do We Need Encapsulation?
-
-**Encapsulation** in Java is the mechanism of bundling data (variables) and the code acting on that data (methods) together inside a class. It also restricts direct access to an object's internal data.
 
 To understand why this matters, imagine we created a `BankAccount` class to manage a customer's bank balance.
 
@@ -96,7 +90,7 @@ Imagine Bob looks at his friend's bank account and thinks:
 
 So, he changes the balance to **$10 million**! Suddenly, his friend is a millionaire without depositing a single dollar. Bob just created money out of thin air! 😂
 
-**The problem:** Because the `balance` field has default (package-private) access, Bob can directly change it without any validation, as long as his code is in the same package.
+**The problem:** Because balance has no access modifier, other classes in the same package can access it directly. Bob can directly change it without any validation, as long as his code is in the same package.
 
 To prevent this problem, we need encapsulation!
 
