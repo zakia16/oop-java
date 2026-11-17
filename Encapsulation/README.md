@@ -301,8 +301,7 @@ public class Account {
     }
 }
 ```
-
-Other classes can retrieve the balance but cannot change it through a setter.
+Other classes can retrieve the balance but cannot change it through a `setter`.
 
 ### Write-Only Example
 
@@ -317,9 +316,7 @@ public class Password {
 }
 ```
 
-Other classes can set the password but cannot retrieve it through a getter.
-
-**Key Idea:** Provide only the methods that other classes need.
+No `getter` is provided because passwords are sensitive information. Other classes can set a password, but they should not be able to retrieve it directly. This helps protect sensitive data from unnecessary exposure.
 
 ---
 
