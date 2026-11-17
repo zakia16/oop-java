@@ -67,22 +67,6 @@ public class MyClass {
 
 # Encapsulation in Java
 
-## Learning Objectives
-
-By the end of this chapter, you should be able to:
-
-- Explain encapsulation in Java.
-- Use `private` fields to protect data.
-- Create getters and setters.
-- Control read-only and write-only access.
-- Understand how getters and setters protect data.
-- Explain why returning an object reference can break encapsulation.
-- Use defensive copying to protect objects.
-
----
-
-## 1. What Is Encapsulation?
-
 **Encapsulation** is one of the four fundamental principles of Object-Oriented Programming (OOP).
 
 It means bundling data (fields) and methods together inside a class while restricting direct access to the internal data.
