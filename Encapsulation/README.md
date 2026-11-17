@@ -94,9 +94,102 @@ So, he changes the balance to **$10 million**! Suddenly, his friend is a million
 
 To prevent this problem, we need encapsulation!
 
-## 2. Implementing Encapsulation (Getters and Setters)
+### How Do We Implement Encapsulation?
 
-To fix this, we make the `balance` field `private` and provide controlled access through `public` getter and setter methods.
+We make the `balance` field `private` so other classes cannot access it directly. Instead, we provide `public` methods to control how the data is accessed or modified.
+
+For example, a bank account can provide methods such as `deposit()` and `withdraw()` rather than allowing other classes to change the balance directly.
+
+### Real-world example: Bank Account**
+
+A bank account protects its balance from direct modification. Instead, users interact with it through methods such as `deposit()` and `withdraw()`.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/02273f56-c939-4417-96d2-3592b3556cdc"
+       width="700"
+       alt="Real-world example illustrating encapsulation">
+</p>
+
+<p align="center">
+  <sub>
+    Image source:
+    <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
+  </sub>
+</p>
+
+
+### Code Example: BankAccount
+
+The following example demonstrates how encapsulation protects a bank account's balance from unauthorized or invalid changes.
+
+```java
+public class BankAccount {
+
+    // Private field: Direct access is restricted
+    private double balance;
+
+    // Constructor
+    public BankAccount(double initialBalance) {
+        if (initialBalance >= 0) {
+            this.balance = initialBalance;
+        }
+    }
+
+    // Deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: $" + amount);
+        } else {
+            System.out.println("Deposit amount must be positive.");
+        }
+    }
+
+    // Withdraw money
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrew: $" + amount);
+        } else {
+            System.out.println("Invalid withdrawal amount or insufficient funds.");
+        }
+    }
+
+    // Getter: Read the current balance
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+
+### Using the BankAccount Class
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(100.0);
+
+        // ❌ Direct access blocked (causes a compile error)
+        // account.balance = 100000000.0;     
+
+        // ✅ Safe access through public methods
+        account.deposit(50.0);   // Valid: balance becomes 150.0
+        account.withdraw(30.0);  // Valid: balance becomes 120.0
+        account.withdraw(500.0); // Blocked by method validation
+    }
+}
+```
+
+### Understanding the Example
+
+| Component | Purpose |
+|:---|:---|
+| `private double balance` | Protects the account balance from direct access. |
+| `getBalance()` | Getter: Allows reading the balance. |
+| `deposit()` | Allows adding money with validation. |
+| `withdraw()` | Allows withdrawing money with validation. |
+
+> **Important:** A setter is not always necessary. Methods such as `deposit()` and `withdraw()` can provide controlled ways to modify private fields without allowing unrestricted changes.
 
 ```java
 public class BankAccount {
@@ -322,96 +415,6 @@ Encapsulation provides several benefits:
 
 ---
 
-### Real-world example: Bank Account**
-
-A bank account protects its balance from direct modification. Instead, users interact with it through methods such as `deposit()` and `withdraw()`.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/02273f56-c939-4417-96d2-3592b3556cdc"
-       width="700"
-       alt="Real-world example illustrating encapsulation">
-</p>
-
-<p align="center">
-  <sub>
-    Image source:
-    <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
-  </sub>
-</p>
-
-
-### Code Example: BankAccount
-
-The following example demonstrates how encapsulation protects a bank account's balance from unauthorized or invalid changes.
-
-```java
-public class BankAccount {
-
-    // Private field: Direct access is restricted
-    private double balance;
-
-    // Constructor
-    public BankAccount(double initialBalance) {
-        if (initialBalance >= 0) {
-            this.balance = initialBalance;
-        }
-    }
-
-    // Deposit money
-    public void deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;
-            System.out.println("Deposited: $" + amount);
-        } else {
-            System.out.println("Deposit amount must be positive.");
-        }
-    }
-
-    // Withdraw money
-    public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
-            balance -= amount;
-            System.out.println("Withdrew: $" + amount);
-        } else {
-            System.out.println("Invalid withdrawal amount or insufficient funds.");
-        }
-    }
-
-    // Getter: Read the current balance
-    public double getBalance() {
-        return balance;
-    }
-}
-```
-
-### Using the BankAccount Class
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        BankAccount account = new BankAccount(100.0);
-
-        // ❌ Direct access blocked (causes a compile error)
-        // account.balance = 100000000.0;     
-
-        // ✅ Safe access through public methods
-        account.deposit(50.0);   // Valid: balance becomes 150.0
-        account.withdraw(30.0);  // Valid: balance becomes 120.0
-        account.withdraw(500.0); // Blocked by method validation
-    }
-}
-```
-
-### Understanding the Example
-
-| Component | Purpose |
-|:---|:---|
-| `private double balance` | Protects the account balance from direct access. |
-| `getBalance()` | Getter: Allows reading the balance. |
-| `deposit()` | Allows adding money with validation. |
-| `withdraw()` | Allows withdrawing money with validation. |
-
-> **Important:** A setter is not always necessary. Methods such as `deposit()` and `withdraw()` can provide controlled ways to modify private fields without allowing unrestricted changes.
 
 
 ## Benefits of Encapsulation
