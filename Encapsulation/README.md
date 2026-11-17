@@ -1,7 +1,7 @@
 
 # Module: Encapsulation
 
-In our previous modules, we learned how to build classes, instantiate objects, and write instance methods. However, in those initial examples, our fields were wide open which means any external code could modify an object's data directly (like setting a negative balance or an invalid GPA).
+In our previous modules, we learned how to build classes, instantiate objects, and write instance methods. However, in those initial examples, our fields were wide open, which means any external code could modify an object's data directly (like setting a negative balance or an invalid GPA).
 
 In professional software development, leaving object data unprotected is a recipe for bugs and security issues. To build secure, maintainable, and scalable applications, we need strict rules for data visibility.
 
@@ -54,16 +54,16 @@ public class MyClass {
     int defaultField;               // Same package only
 }
 ```
+
 **Key Point:** Use `private` to protect data and `public` to provide controlled access through methods.
 
-## 2. Encapsulation
+## 3. Encapsulation
 
 **Encapsulation** combines data (fields) and the methods that operate on that data into a single unit called a class. It also restricts direct access to an object's data.
 
 <img width="396" height="231" alt="image" src="https://github.com/user-attachments/assets/cbb30c75-e138-4a63-a8a2-4e47cf48ff14" />
 
-
-## 1. The Problem: Why Do We Need Encapsulation?
+### The Problem: Why Do We Need Encapsulation?
 
 To understand why this matters, imagine we created a `BankAccount` class to manage a customer's bank balance.
 
@@ -82,7 +82,7 @@ public void updateAccount(BankAccount account) {
 }
 ```
 
-### What Went Wrong?
+#### What Went Wrong?
 
 Imagine Bob looks at his friend's bank account and thinks:
 
@@ -90,7 +90,7 @@ Imagine Bob looks at his friend's bank account and thinks:
 
 So, he changes the balance to **$10 million**! Suddenly, his friend is a millionaire without depositing a single dollar. Bob just created money out of thin air! 😂
 
-**The problem:** Because balance has no access modifier, other classes in the same package can access it directly. Bob can directly change it without any validation, as long as his code is in the same package.
+**The problem:** Because `balance` has no access modifier, other classes in the same package can access it directly. Bob can directly change it without any validation, as long as his code is in the same package.
 
 To prevent this problem, we need encapsulation!
 
@@ -112,7 +112,6 @@ For example, a bank account can provide methods such as `deposit()` and `withdra
     <a href="https://takeuforward.org/blogs/oops/what-is-oops">TakeUForward – What is OOPs?</a>
   </sub>
 </p>
-
 
 ### Code Example: BankAccount
 
@@ -166,12 +165,12 @@ public class Main {
         BankAccount account = new BankAccount(10000.0);
 
         // ❌ Direct access blocked (causes a compile error)
-        // account.balance = 100000000.0;     
+        // account.balance = 100000000.0;
 
         // ✅ Safe access through public methods
-        account.deposit(50.0);   // Valid: balance becomes 150.0
-        account.withdraw(30.0);  // Valid: balance becomes 120.0
-        account.withdraw(500.0); // Blocked by method validation
+        account.deposit(50.0);
+        account.withdraw(30.0);
+        account.withdraw(500.0);
     }
 }
 ```
@@ -187,7 +186,6 @@ public class Main {
 
 > **Important:** A setter is not always necessary. Methods such as `deposit()` and `withdraw()` can provide controlled ways to modify private fields without allowing unrestricted changes.
 
-
 ### Key Components of Encapsulation
 
 In Java, encapsulation is commonly achieved by:
@@ -195,8 +193,7 @@ In Java, encapsulation is commonly achieved by:
 1. Declaring fields as `private`.
 2. Providing `public` getter and setter methods when access is needed.
 
-
-## 2. Getters and Setters
+## 4. Getters and Setters
 
 Getters and setters are methods commonly used to access and modify private fields.
 
@@ -275,7 +272,7 @@ Alex
 
 ---
 
-## 3. Controlling Access: Read-Only and Write-Only
+## 5. Controlling Access: Read-Only and Write-Only
 
 One advantage of encapsulation is that a class can control how other classes access its fields.
 
@@ -326,7 +323,7 @@ Other classes can set the password but cannot retrieve it through a getter.
 
 ---
 
-## 5. Benefits of Encapsulation
+## 6. Benefits of Encapsulation
 
 - **Data Protection:** Prevents other classes from directly accessing an object's internal fields.
 - **Controlled Access:** A class controls what data is stored in its fields and how that data can be modified.
@@ -338,10 +335,7 @@ Other classes can set the password but cannot retrieve it through a getter.
 
 ---
 
-### Review Questions
-
-
-## 5. Quick Review
+## 7. Quick Review
 
 **1. What is encapsulation?**
 
@@ -396,4 +390,3 @@ No. Provide getters and setters only when needed. Some fields should not be dire
 It protects data, controls how objects are modified, and helps maintain data integrity.
 
 </details>
-
