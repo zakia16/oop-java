@@ -328,27 +328,13 @@ Other classes can set the password but cannot retrieve it through a getter.
 
 ## 5. Benefits of Encapsulation
 
-Encapsulation provides several benefits:
-
-- Fields can be made read-only or write-only.
-- A class has control over what is stored in its fields.
-- Other classes do not need to know how data is stored internally.
-- The internal implementation can change without requiring changes to calling code, provided the public interface remains compatible.
-- It helps make code more flexible and maintainable.
-
----
-
-
-
-## Benefits of Encapsulation
-
-| Benefit | Explanation |
-|---|---|
-| Data Protection | Prevents direct access to an object's internal data. |
-| Controlled Access | Allows data to be modified through methods that can validate input. |
-| Data Integrity | Helps prevent invalid values and keeps an object's data consistent. |
-| Flexibility | Internal implementation can change without requiring changes to other classes that use the object. |
-| Maintainability | Makes programs easier to understand, test, and update. |
+- **Data Protection:** Prevents other classes from directly accessing an object's internal fields.
+- **Controlled Access:** A class controls what data is stored in its fields and how that data can be modified.
+- **Read-Only and Write-Only Fields:** A class can provide only a getter or a setter, depending on the access needed.
+- **Data Integrity:** Methods can validate input and help prevent invalid values.
+- **Information Hiding:** Other classes do not need to know how data is stored or implemented internally.
+- **Flexibility:** The internal implementation can change without requiring changes to calling code, as long as the public interface remains compatible.
+- **Maintainability:** Makes code easier to understand, test, update, and maintain.
 
 ---
 
