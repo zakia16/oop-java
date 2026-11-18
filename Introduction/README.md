@@ -19,6 +19,15 @@ After Installtion:
 
 ---
 
+## VS Code
+
+1. In VS Code, click File > Open Folder... (or press Ctrl + K then Ctrl + O).
+2. Create the folder: Click New folder (right below the back/forward arrows on the left), type JavaPractice, and press Enter.
+3. Select it: Make sure JavaPractice is highlighted (or appears in the Folder: text box at the bottom), then click Select folder.
+<img width="942" height="555" alt="image" src="https://github.com/user-attachments/assets/10ce5d12-471e-410b-acf6-5aefbe458ab1" />
+
+
+
 ## 1.2 Quickstart: First Java Class in IntelliJ
 
 1. **Create Project:** Open IntelliJ -> **New Project** -> Name: `HelloWorld` -> Language: **Java** -> Build system: **IntelliJ** -> JDK: Select **Corretto-25** -> **Create**.
