@@ -13,7 +13,7 @@ If you need to install or upgrade your JDK, you can use your terminal or downloa
 
 • macOS (via Homebrew): Run brew install openjdk@21
 
-After Installtion:      
+After Installation close the previous terminal. Now open a new terminal and type:      
 <img width="582" height="166" alt="image" src="https://github.com/user-attachments/assets/fe51bdb7-4d62-41aa-b071-c279780084af" />
 
 
