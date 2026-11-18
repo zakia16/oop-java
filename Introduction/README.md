@@ -5,6 +5,12 @@ Before writing Java code, ensure you have the following installed and configured
 * **IntelliJ IDEA** ([Community / Ultimate](https://www.jetbrains.com/idea/download/))
 * **Java Development Kit (JDK)** ([Amazon Corretto 25](https://docs.aws.amazon.com/corretto/latest/corretto-25-ug/downloads-list.html))
 
+  
+## How to Install a JDK (If Needed)
+If you need to install or upgrade your JDK, you can use your terminal or download an installer:
+• Windows (via Terminal): Run winget install Microsoft.OpenJDK.21
+• macOS (via Homebrew): Run brew install openjdk@21
+
 ---
 
 ## 1.2 Quickstart: First Java Class in IntelliJ
