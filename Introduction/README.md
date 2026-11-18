@@ -7,9 +7,15 @@ Before writing Java code, ensure you have the following installed and configured
 
   
 ## How to Install a JDK (If Needed)
-If you need to install or upgrade your JDK, you can use your terminal or download an installer:
+If you need to install or upgrade your JDK, you can use your terminal or download an installer:   
 • Windows (via Terminal): Run winget install Microsoft.OpenJDK.21
+<img width="842" height="147" alt="image" src="https://github.com/user-attachments/assets/b0fca581-ac20-49a1-91d0-ae96cc8b6513" />
+
 • macOS (via Homebrew): Run brew install openjdk@21
+
+After Installtion:
+<img width="582" height="166" alt="image" src="https://github.com/user-attachments/assets/fe51bdb7-4d62-41aa-b071-c279780084af" />
+
 
 ---
 
