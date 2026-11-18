@@ -25,6 +25,7 @@ After Installtion:
 2. Create the folder: Click New folder (right below the back/forward arrows on the left), type JavaPractice, and press Enter.
 3. Select it: Make sure JavaPractice is highlighted (or appears in the Folder: text box at the bottom), then click Select folder.
 <img width="942" height="555" alt="image" src="https://github.com/user-attachments/assets/10ce5d12-471e-410b-acf6-5aefbe458ab1" />
+<img width="1917" height="976" alt="image" src="https://github.com/user-attachments/assets/fe46c948-3a12-45a9-a035-6941f983bd3f" />
 
 
 
