@@ -28,14 +28,7 @@ After Installation close the previous terminal. Now open a new terminal and type
 <img width="1917" height="976" alt="image" src="https://github.com/user-attachments/assets/fe46c948-3a12-45a9-a035-6941f983bd3f" />
 
 
-
-## 1.2 Quickstart: First Java Class in IntelliJ
-
-1. **Create Project:** Open IntelliJ -> **New Project** -> Name: `HelloWorld` -> Language: **Java** -> Build system: **IntelliJ** -> JDK: Select **Corretto-25** -> **Create**.
-
-2. **Create Class:** Right-click `src` -> **New** -> **Java Class** -> Name: `HelloWorld`.
-
-3. **Add Code:**
+4. **Add Code:**
 
    ```java
    public class HelloWorld {
@@ -45,7 +38,7 @@ After Installation close the previous terminal. Now open a new terminal and type
    }
    ```
 
-4. **Run the Program:** Click the green **Run** icon next to `main`, or right-click inside the `main` method and select **Run 'HelloWorld.main()'**.
+4. **Run the Program:** Click the **Run Java** icon.
 
    **Expected output:**
 
