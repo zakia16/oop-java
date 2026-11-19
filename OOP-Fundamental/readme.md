@@ -308,7 +308,35 @@ A **constructor** is a special block of code that runs automatically when `new` 
 
 
 ### 3.6.1. Default (No-Argument) Constructor
-A no-argument constructor does not take any parameters. If you do not write any constructor yourself, Java invisibly provides one that sets fields to default values (0, false, null). You can also write your own to set custom default values.
+A no-argument constructor does not take any parameters. If you do not write any constructor yourself, Java invisibly provides one that sets fields to default values. 
+For example:
+
+```java
+public class Student {
+    String name;
+    int studentId;
+    double gpa;
+    boolean enrolled;
+}
+```
+
+You can create an object without writing a constructor:
+
+```java
+Student student1 = new Student();
+```
+
+Java initializes instance fields to their default values:
+
+| Data Type | Default Value |
+|---|---|
+| `int` | `0` |
+| `double` | `0.0` |
+| `boolean` | `false` |
+| `String` | `null` |
+| Other object references | `null` |
+
+**Note:** You can also write your own no-argument constructor to assign custom initial values. Let's see the next example:
 
 ```java
 public class Student {
