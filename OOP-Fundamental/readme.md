@@ -381,7 +381,17 @@ Student student2 = new Student("Sam", 1002, 3.20);
 
 ### 3.6.3. Constructor Overloading
 
-A class can have multiple constructors with different parameter lists.
+Imagine you are building a student registration system. Not every student has the same information available when they are registered.
+
+- Sometimes, we don't know anything about the student yet.
+- Sometimes, we know the student's name and ID, but their GPA is not available.
+- Sometimes, we have all the information, including the GPA.
+
+Do we need to create a different class for each situation? No!
+Java allows a class to have **multiple constructors with different parameter lists**. This is called **constructor overloading**.
+
+Let's update our `Student` class:
+
 
 ```java
 public class Student {
@@ -417,7 +427,8 @@ Student student2 = new Student("Jordan", 1003);     // Calls Constructor 2
 Student student3 = new Student("Alex", 1001, 3.85); // Calls Constructor 3
 ```
 
-If you declare any constructor yourself, Java no longer automatically supplies the default no-argument constructor.
+**How does Java know which constructor to call?**
+Java automatically selects the matching constructor based on the number and types of arguments passed.
 
 
 ## 3.7 The `this` Keyword
