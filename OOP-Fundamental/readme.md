@@ -284,6 +284,21 @@ Each object has its own fields. Changing `student1.name` does not change `studen
 
 ## 3.6 Constructors
 
+Imagine you are building a student management system. Every time a new student joins the university, you need to create a `Student` object and assign values to its fields.
+
+```java
+// for one student 3 lines of code 
+student.name = "Alex";
+student.studentId = 1001;
+student.gpa = 3.85;
+```
+
+Imagine doing this for 100 students! That's a lot of extra code: 100 * 3 = 300 lines.
+
+Wouldn't it be easier if we could create the object and initialize all its fields in one step?
+
+**That's exactly what constructors are for!**
+
 A **constructor** is a special block of code that runs automatically when `new` is called. It lets you initialize an object's fields in a single line.
 
 ### Constructor Rules
