@@ -387,7 +387,7 @@ Imagine you are building a student registration system. Not every student has th
 - Sometimes, we know the student's name and ID, but their GPA is not available.
 - Sometimes, we have all the information, including the GPA.
 
-Do we need to create a different class for each situation? No!
+Do we need to create a different class for each situation? No!   
 Java allows a class to have **multiple constructors with different parameter lists**. This is called **constructor overloading**.
 
 Let's update our `Student` class:
@@ -427,7 +427,7 @@ Student student2 = new Student("Jordan", 1003);     // Calls Constructor 2
 Student student3 = new Student("Alex", 1001, 3.85); // Calls Constructor 3
 ```
 
-**How does Java know which constructor to call?**
+**How does Java know which constructor to call?**   
 Java automatically selects the matching constructor based on the number and types of arguments passed.
 
 
