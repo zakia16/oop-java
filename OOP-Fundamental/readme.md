@@ -516,13 +516,16 @@ Jordan
 
 Both variables refer to the same object. Changing the object's fields through one reference is visible through the other reference.
 
-Stack Frame                  Heap Memory
-+------------+              +-------------------------------+
-| s1 --------|------------->| Student                       |
-| s2 --------|------------->|  name: "Alex"                 |
-+------------+              |  studentId: 1001              |
-                            |  gpa: 3.85                    |
-                            +-------------------------------+
+       Stack (Local Variables)                 Heap (Objects)
+      +----------------------+             +---------------------------+
+      |                      |             |                           |
+      |  s1  ----------------|------------>|        Student            |
+      |                      |             |  +---------------------+  |
+      |  s2  ----------------|-------------|->| name: "Alex"        |  |
+      |                      |             |  | studentId: 1001    |  |
+      +----------------------+             |  | gpa: 3.85          |  |
+                                           |  +---------------------+  |
+                                           +---------------------------+
 
 [▶ Visualize this Java code step-by-step in Python Tutor](https://pythontutor.com/visualize.html#code=public%20class%20MainClass%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Alex%22,%201001,%203.85%29%3B%0A%20%20%20%20%20%20%20%20Student%20s2%20%3D%20s1%3B%0A%0A%20%20%20%20%20%20%20%20s2.name%20%3D%20%22Jordan%22%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println%28s1.name%29%3B%0A%20%20%20%20%7D%0A%7D%0A%0Aclass%20Student%20%7B%0A%20%20%20%20String%20name%3B%0A%20%20%20%20int%20studentId%3B%0A%20%20%20%20double%20gpa%3B%0A%0A%20%20%20%20public%20Student%28String%20name,%20int%20studentId,%20double%20gpa%29%20%7B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%20%20%20%20%20this.studentId%20%3D%20studentId%3B%0A%20%20%20%20%20%20%20%20this.gpa%20%3D%20gpa%3B%0A%20%20%20%20%7D%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=java)
 
