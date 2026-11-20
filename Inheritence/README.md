@@ -1,11 +1,6 @@
 
 # Module: Inheritance
 
-As applications grow, you may notice that different classes share common **properties** and **behaviors**. For example, a `Car`, a `Bike`, and a `Truck` all share properties such as color and speed, as well as behaviors such as starting and stopping.
-
-Instead of writing the same code repeatedly, Java allows one class to inherit fields and methods from another class. This concept is called **inheritance**.
-Inheritance promotes code reuse, reduces duplication, and helps organize related classes.
-
 ## 1. Basic Principles of Object-Oriented Programming (OOP)
 
 Object-Oriented Programming (OOP) is a programming approach organized around **objects**, which combine data and behavior.
@@ -33,6 +28,206 @@ OOP is built on four fundamental principles:
 </p>
 
 ---
+
+
+# Module: Inheritance in Java
+
+## 1. Why Do We Need Inheritance?
+
+Let's imagine we are building a school management system. We need to create classes to represent students and teachers.
+
+At first, we might create two separate classes.
+
+### Class 1: Student
+
+```java
+public class Student {
+    private String name;
+    private int age;
+    private String address;
+    private int studentId;
+
+    public void introduce() {
+        System.out.println("Hi, I am " + name);
+    }
+
+    public void study() {
+        System.out.println(name + " is studying.");
+    }
+
+    // Getters and setters
+}
+```
+
+### Class 2: Teacher
+
+```java
+public class Teacher {
+    private String name;
+    private int age;
+    private String address;
+    private String subject;
+
+    public void introduce() {
+        System.out.println("Hi, I am " + name);
+    }
+
+    public void teach() {
+        System.out.println(name + " is teaching.");
+    }
+
+    // Getters and setters
+}
+```
+
+Do you notice something?
+
+Both classes have several things in common:
+
+- Both have a `name`.
+- Both have an `age`.
+- Both have an `address`.
+- Both have an `introduce()` method.
+
+However, students and teachers also have their own specific information and behaviors:
+
+- A student has a `studentId` and can `study()`.
+- A teacher has a `subject` and can `teach()`.
+
+### 1.1. The Problem: Code Duplication
+
+We are writing the same code in multiple classes!
+
+Imagine our school management system grows and we add more types of people, such as administrators, counselors, and teaching assistants.
+
+We would have to repeat the same fields, getters, setters, and common methods in every class.
+
+Now, suppose we decide to change how the `introduce()` method works or add a new common field, such as `email`.
+
+We would have to update every class!
+
+That creates unnecessary work and makes our program harder to maintain.
+
+**Can we find a better way?**
+
+Absolutely! This is where **Inheritance** comes into the picture.
+
+### 1.2. The Solution: Inheritance
+
+Instead of repeating common code in every class, we can move the shared fields and methods into a common class called `Person`.
+
+Then, the `Student` and `Teacher` classes can inherit those common features while keeping their own specific fields and methods.
+
+Here is what we are going to do:
+
+1. Create a common parent class called `Person` containing shared fields and methods.
+2. Create child classes called `Student` and `Teacher` that reuse the functionality of `Person`.
+3. Add fields and methods specific to each child class.
+
+### 1.3. Creating the Parent Class
+
+Let's move the common fields and methods into a single `Person` class.
+
+```java
+public class Person {
+    private String name;
+    private int age;
+    private String address;
+
+    public void introduce() {
+        System.out.println("Hi, I am " + name);
+    }
+
+    // Getters and setters
+}
+```
+
+Now, the common information and behavior are defined in one place.
+
+### 1.4. Creating Child Classes
+
+Next, let's create the `Student` and `Teacher` classes.
+
+**Student class:**
+
+```java
+public class Student extends Person {
+    private int studentId;
+
+    public void study() {
+        System.out.println("I am studying.");
+    }
+
+    // Getter and setter for studentId
+}
+```
+
+**Teacher class:**
+
+```java
+public class Teacher extends Person {
+    private String subject;
+
+    public void teach() {
+        System.out.println("I am teaching.");
+    }
+
+    // Getter and setter for subject
+}
+```
+
+Look closely at this line:
+
+```java
+public class Student extends Person
+```
+
+The `extends` keyword tells Java that `Student` inherits from `Person`.
+
+Similarly, `Teacher` inherits from `Person`.
+
+This means both child classes can reuse the accessible fields and methods of the parent class.
+
+### 1.5. Creating Objects
+
+Now, let's create objects of both classes.
+
+```java
+Student student = new Student();
+student.setName("Alex");
+student.setAge(20);
+student.setStudentId(1001);
+
+student.introduce(); // Inherited from Person
+student.study();     // Defined in Student
+
+Teacher teacher = new Teacher();
+teacher.setName("Dr. Smith");
+teacher.setAge(40);
+teacher.setSubject("Computer Science");
+
+teacher.introduce(); // Inherited from Person
+teacher.teach();     // Defined in Teacher
+```
+
+Notice that we can call `introduce()` on both objects even though we defined it only once in the `Person` class.
+
+We do not need to rewrite the same method in `Student` and `Teacher`!
+
+### 1.6. Why Is Inheritance Useful?
+
+Imagine adding more types of people to our school system. We can create additional child classes that reuse the common functionality from `Person`.
+
+If we need to change the implementation of `introduce()`, we only need to update it in the `Person` class.
+
+**Inheritance helps us:**
+
+1. **Reuse code:** Share common fields and methods between related classes.
+2. **Reduce duplication:** Avoid writing the same code repeatedly.
+3. **Improve maintainability:** Make changes to common functionality in one place.
+4. **Extend functionality:** Allow child classes to add their own fields and methods.
+
+This is the main idea behind inheritance: **one class can reuse and extend the functionality of another class.**
 
 ## 2. What Is Inheritance?
 
