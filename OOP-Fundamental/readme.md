@@ -491,6 +491,9 @@ Therefore, changing the object's name through `s2` also changes the name observe
 
 Understanding how Java variables store values and refer to objects helps us write code correctly. Another important part of writing maintainable Java code is following consistent naming conventions.
 
+[▶ Visualize this Java code step-by-step in Python Tutor]
+(https://pythontutor.com/visualize.html#code=public%20class%20MainClass%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Alex%22,%201001,%203.85%29%3B%0A%20%20%20%20%20%20%20%20Student%20s2%20%3D%20s1%3B%0A%0A%20%20%20%20%20%20%20%20s2.name%20%3D%20%22Jordan%22%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println%28s1.name%29%3B%0A%20%20%20%20%7D%0A%7D%0A%0Aclass%20Student%20%7B%0A%20%20%20%20String%20name%3B%0A%20%20%20%20int%20studentId%3B%0A%20%20%20%20double%20gpa%3B%0A%0A%20%20%20%20//%20Using%20'this'%20to%20distinguish%20fields%20from%20parameters%0A%20%20%20%20public%20Student%28String%20name,%20int%20studentId,%20double%20gpa%29%20%7B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%20%20%20%20%20this.studentId%20%3D%20studentId%3B%0A%20%20%20%20%20%20%20%20this.gpa%20%3D%20gpa%3B%0A%20%20%20%20%7D%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=java)
+
 ## 3.9 Java Naming Conventions
 
 Java follows standard naming conventions to make code readable, consistent, and easier to maintain.
