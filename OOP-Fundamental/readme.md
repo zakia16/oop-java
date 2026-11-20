@@ -470,9 +470,8 @@ Java variables can store primitive values or references to objects. Understandin
 | **Stores** | A primitive value | A reference to an object |
 | **Example** | `int a = 5;` | `Student s1 = new Student();` |
 
-### Example 1: Assigning String References
-
-Consider the following code:
+### Example 1: Reassigning a Reference (String)
+Consider what happens when we copy a String reference and then reassign one of the variables:
 
 ```java
 String s1 = "Alex";
@@ -494,9 +493,10 @@ Assigning one reference variable to another copies the reference. Reassigning on
 
 [▶ Visualize this Java code step-by-step in Python Tutor](https://pythontutor.com/visualize.html#code=public%20class%20MainClass%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20String%20s1%20%3D%20%22Alex%22%3B%0A%20%20%20%20%20%20%20%20String%20s2%20%3D%20s1%3B%0A%0A%20%20%20%20%20%20%20%20s2%20%3D%20%22Jordan%22%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println%28s1%29%3B%0A%20%20%20%20%7D%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=java)
 
-### Example 2: Two References, One Object
 
-Now, consider what happens when two variables refer to the same `Student` object.
+### Example 2: Two References, One Shared Object (Student)
+
+Now compare that with mutating a field inside an object when two reference variables point to the same Student instance:
 
 ```java
 Student s1 = new Student("Alex", 1001, 3.85);
@@ -516,11 +516,18 @@ Jordan
 
 Both variables refer to the same object. Changing the object's fields through one reference is visible through the other reference.
 
+Stack Frame                  Heap Memory
++------------+              +-------------------------------+
+| s1 --------|------------->| Student                       |
+| s2 --------|------------->|  name: "Alex"                 |
++------------+              |  studentId: 1001              |
+                            |  gpa: 3.85                    |
+                            +-------------------------------+
+
 [▶ Visualize this Java code step-by-step in Python Tutor](https://pythontutor.com/visualize.html#code=public%20class%20MainClass%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Alex%22,%201001,%203.85%29%3B%0A%20%20%20%20%20%20%20%20Student%20s2%20%3D%20s1%3B%0A%0A%20%20%20%20%20%20%20%20s2.name%20%3D%20%22Jordan%22%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println%28s1.name%29%3B%0A%20%20%20%20%7D%0A%7D%0A%0Aclass%20Student%20%7B%0A%20%20%20%20String%20name%3B%0A%20%20%20%20int%20studentId%3B%0A%20%20%20%20double%20gpa%3B%0A%0A%20%20%20%20public%20Student%28String%20name,%20int%20studentId,%20double%20gpa%29%20%7B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%20%20%20%20%20this.studentId%20%3D%20studentId%3B%0A%20%20%20%20%20%20%20%20this.gpa%20%3D%20gpa%3B%0A%20%20%20%20%7D%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=java)
 
-
-Understanding how Java variables store values and refer to objects helps us write code correctly. Another important part of writing maintainable Java code is following consistent naming conventions.
-
+Understanding how Java variables store values and refer to objects helps prevent accidental shared-state bugs when passing or copying references.   
+Another important part of writing maintainable Java code is following consistent naming conventions.
  
 ## 3.9 Java Naming Conventions
 
