@@ -441,45 +441,33 @@ public class Student {
     int studentId;
     double gpa;
 
-    // Using 'this' to distinguish between instance fields and parameters sharing the same name
+    // Using 'this' to distinguish fields from parameters
     public Student(String name, int studentId, double gpa) {
-        this.name = name;       // Refers to the class field = parameter value
-        this.studentId = studentId; // Refers to the class field = parameter value
-        this.gpa = gpa;         // Refers to the class field = parameter value
+        this.name = name;
+        this.studentId = studentId;
+        this.gpa = gpa;
     }
 }
 ```
 
 In `this.name = name;`:
 
-* `this.name` refers to the object's field.
-* `name` refers to the constructor parameter.
+- `this.name` refers to the object's instance field.
+- `name` refers to the constructor parameter.
 
 This makes it clear which variable stores the object's data.
 
+Now that we understand how `this` refers to the current object, let's look at how Java variables store primitive values and refer to objects.
 
-## 3.8 Java Naming Conventions
-Java follows standard naming conventions to make code readable, consistent, and easier to maintain.
+## 3.8 Primitive Variables vs. Object References
 
-| Name | Convention | Examples |
-|:---|:---|:---|
-| **Class name** | Start with an uppercase letter. Use a noun. | `String`, `Color`, `Button`, `System` |
-| **Interface name** | Start with an uppercase letter. Often use an adjective. | `Runnable`, `Remote`, `ActionListener` |
-| **Method name** | Start with a lowercase letter. Use a verb. | `actionPerformed()`, `main()`, `print()`, `println()` |
-| **Variable name** | Start with a lowercase letter. Use descriptive names. | `firstName`, `orderNumber` |
-| **Package name** | Use lowercase letters. | `java.lang`, `java.util`, `java.sql` |
-| **Constant name** | Use uppercase letters. Separate words with underscores (`_`). | `RED`, `YELLOW`, `MAX_PRIORITY` |
+Java variables can store primitive values or references to objects. Understanding the difference helps explain what happens when we assign one variable to another.
 
-
-## 3.9 Primitive Variables vs. Object References
-
-Java variables can store primitive values or references to objects.
-
-| Feature      | Primitive                  | Object Reference              |
-| ------------ | -------------------------- | ----------------------------- |
-| **Examples** | `int`, `double`, `boolean` | `Student`, `String`, arrays   |
-| **Stores**   | A primitive value          | A reference to an object      |
-| **Example**  | `int a = 5;`               | `Student s1 = new Student();` |
+| **Feature** | **Primitive** | **Object Reference** |
+|---|---|---|
+| **Examples** | `int`, `double`, `boolean` | `Student`, `String`, arrays |
+| **Stores** | A primitive value | A reference to an object |
+| **Example** | `int a = 5;` | `Student s1 = new Student();` |
 
 ### Example: Two References, One Object
 
@@ -493,7 +481,6 @@ System.out.println(s1.name);
 ```
 
 **Output:**
-
 ```text
 Jordan
 ```
@@ -501,6 +488,22 @@ Jordan
 Both `s1` and `s2` refer to the same object. Assigning `s1` to `s2` copies the reference, not the object itself.
 
 Therefore, changing the object's name through `s2` also changes the name observed through `s1`.
+
+Understanding how Java variables store values and refer to objects helps us write code correctly. Another important part of writing maintainable Java code is following consistent naming conventions.
+
+## 3.9 Java Naming Conventions
+
+Java follows standard naming conventions to make code readable, consistent, and easier to maintain.
+
+| **Name** | **Convention** | **Examples** |
+|---|---|---|
+| **Class name** | Start with an uppercase letter. Use a noun. | `String`, `Color`, `Button`, `System` |
+| **Interface name** | Start with an uppercase letter. Often use an adjective. | `Runnable`, `Remote`, `ActionListener` |
+| **Method name** | Start with a lowercase letter. Use a verb. | `actionPerformed()`, `main()`, `print()`, `println()` |
+| **Variable name** | Start with a lowercase letter. Use descriptive names. | `firstName`, `orderNumber` |
+| **Package name** | Use lowercase letters. | `java.lang`, `java.util`, `java.sql` |
+| **Constant name** | Use uppercase letters. Separate words with underscores (`_`). | `RED`, `YELLOW`, `MAX_PRIORITY` |
+
 
 ## 3.11 Complete Example: Student Class
 
