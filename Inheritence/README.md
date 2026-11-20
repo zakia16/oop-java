@@ -30,8 +30,6 @@ OOP is built on four fundamental principles:
 ---
 
 
-# Module: Inheritance in Java
-
 ## 1. Why Do We Need Inheritance?
 
 Let's imagine we are building a school management system. We need to create classes to represent students and teachers.
@@ -54,8 +52,6 @@ public class Student {
     public void study() {
         System.out.println(name + " is studying.");
     }
-
-    // Getters and setters
 }
 ```
 
@@ -75,14 +71,12 @@ public class Teacher {
     public void teach() {
         System.out.println(name + " is teaching.");
     }
-
-    // Getters and setters
 }
 ```
 
-Do you notice something?
+Do you notice something here?
 
-Both classes have several things in common:
+Both classes have several things in **common**:
 
 - Both have a `name`.
 - Both have an `age`.
@@ -100,12 +94,14 @@ We are writing the same code in multiple classes!
 
 Imagine our school management system grows and we add more types of people, such as administrators, counselors, and teaching assistants.
 
-We would have to repeat the same fields, getters, setters, and common methods in every class.
+We would have to repeat the same fields, and common methods in every class.
 
-Now, suppose we decide to change how the `introduce()` method works or add a new common field, such as `email`.
+** But what happens if we need to make a change?**
+  For example:
+  - We want to change how the introduce() method works.
+  - We want to add a new common field, such as email.
 
 We would have to update every class!
-
 That creates unnecessary work and makes our program harder to maintain.
 
 **Can we find a better way?**
@@ -120,9 +116,9 @@ Then, the `Student` and `Teacher` classes can inherit those common features whil
 
 Here is what we are going to do:
 
-1. Create a common parent class called `Person` containing shared fields and methods.
-2. Create child classes called `Student` and `Teacher` that reuse the functionality of `Person`.
-3. Add fields and methods specific to each child class.
+1. Superclass (Parent Class): Create a common parent class called `Person` containing shared fields and methods.
+2. Subclass (Child Class): Create child classes called `Student` and `Teacher` that reuse the functionality of `Person`.
+
 
 ### 1.3. Creating the Parent Class
 
@@ -216,10 +212,6 @@ We do not need to rewrite the same method in `Student` and `Teacher`!
 
 ### 1.6. Why Is Inheritance Useful?
 
-Imagine adding more types of people to our school system. We can create additional child classes that reuse the common functionality from `Person`.
-
-If we need to change the implementation of `introduce()`, we only need to update it in the `Person` class.
-
 **Inheritance helps us:**
 
 1. **Reuse code:** Share common fields and methods between related classes.
@@ -228,15 +220,6 @@ If we need to change the implementation of `introduce()`, we only need to update
 4. **Extend functionality:** Allow child classes to add their own fields and methods.
 
 This is the main idea behind inheritance: **one class can reuse and extend the functionality of another class.**
-
-## 2. What Is Inheritance?
-
-**Inheritance** allows one class to acquire the properties (fields) and behaviors (methods) of another class. A child class can also add its own fields and methods or customize inherited behavior.
-
-Java uses two important terms:
-
-- **Superclass (Parent Class):** The existing class whose fields and methods can be inherited.
-- **Subclass (Child Class):** The class that inherits from the superclass and can extend its functionality.
 
 ### Real-World Example: Vehicles
 
@@ -259,100 +242,7 @@ Think about different types of vehicles. A car and a bike share common character
 
 <AsyncImage query="simple educational illustration car motorcycle bicycle truck different types of vehicles white background" aspectRatio="16:9" width="100%" fit="contain"/>
 
-For example:
 
-| Vehicle | Common Properties and Behaviors | Unique Features |
-|:---|:---|:---|
-| Car | Color, speed, `start()`, `stop()` | Number of doors |
-| Bike | Color, speed, `start()`, `stop()` | Number of gears |
-| Truck | Color, speed, `start()`, `stop()` | Cargo capacity |
-
-A parent class called `Vehicle` can contain the common fields and methods. The `Car`, `Bike`, and `Truck` classes can inherit those features and define their own unique functionality.
-
-### The Is-A Relationship
-
-Inheritance represents an **is-a relationship** between classes.
-
-For example:
-- A Car **is a** Vehicle.
-- A Bike **is a** Vehicle.
-- A Dog **is an** Animal.
-- A Student **is a** Person.
-
-**Key Idea:** A subclass inherits features from its superclass and can extend or customize them.
-
-## 3. The `extends` Keyword
-
-In Java, inheritance is implemented using the `extends` keyword.
-
-The general syntax is:
-
-```java
-class ChildClass extends ParentClass {
-    // Additional fields and methods
-}
-```
-
-### Example: Vehicle and Car
-
-```java
-// Superclass (Parent Class)
-class Vehicle {
-    protected String brand;
-    protected int speed;
-
-    public void start() {
-        System.out.println("The vehicle is starting.");
-    }
-}
-
-// Subclass (Child Class)
-class Car extends Vehicle {
-    int numberOfDoors;
-
-    public void honk() {
-        System.out.println("Beep beep! The car is honking.");
-    }
-}
-```
-
-### Using the Classes
-
-```java
-public class Main {
-    public static void main(String[] args) {
-
-        Car myCar = new Car();
-
-        // Inherited fields
-        myCar.brand = "Toyota";
-        myCar.speed = 120;
-
-        // Subclass field
-        myCar.numberOfDoors = 4;
-
-        // Inherited method
-        myCar.start();
-
-        // Subclass method
-        myCar.honk();
-
-        System.out.println("Brand: " + myCar.brand);
-        System.out.println("Speed: " + myCar.speed);
-        System.out.println("Doors: " + myCar.numberOfDoors);
-    }
-}
-```
-
-**Output:**
-
-```text
-The vehicle is starting.
-Beep beep! The car is honking.
-Brand: Toyota
-Speed: 120
-Doors: 4
-```
 
 ### Understanding the Example
 
