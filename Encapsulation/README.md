@@ -79,11 +79,15 @@ public class Main {
 ```
 Let's use a Class to Encapsulate Data and Methods:
 
+BankAccount.java
 ```java
 public class BankAccount {
 
     double balance;
 
+    public BankAccount(double balance) {
+      this.balance = balance;
+    }
     // Deposit money
     public void deposit(double amount) {
         balance += amount;
@@ -100,10 +104,13 @@ public class BankAccount {
 
 Now, suppose another programmer, Bob, writes code to update the account balance:
 
+Main.java
 ```java
-public void updateAccount(BankAccount account) {
-    account.balance = 10000000;
-    // More banking code
+public class Main {
+    public static void main(String[] args) {
+      BankAccount account = new BankAccount(10000.0);
+      account.balance = 10000000;   // Bob directly changes the account balance!
+  }
 }
 ```
 
