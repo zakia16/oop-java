@@ -322,12 +322,9 @@ No `getter` is provided because passwords are sensitive information. Other class
 
 ## 6. Benefits of Encapsulation
 
-- **Data Protection:** Prevents other classes from directly accessing an object's internal fields.
-- **Controlled Access:** A class controls what data is stored in its fields and how that data can be modified.
-- **Read-Only and Write-Only Fields:** A class can provide only a getter or a setter, depending on the access needed.
-- **Data Integrity:** Methods can validate input and help prevent invalid values.
 - **Information Hiding:** Other classes do not need to know how data is stored or implemented internally.
-- **Flexibility:** The internal implementation can change without requiring changes to calling code, as long as the public interface remains compatible.
+- **Controlled Access:** A class controls what data is stored in its fields and how that data can be modified.
+- **Data Integrity:** Methods can validate input and help prevent invalid values.
 - **Maintainability:** Makes code easier to understand, test, update, and maintain.
 
 ---
