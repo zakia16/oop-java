@@ -96,13 +96,12 @@ Imagine our school management system grows and we add more types of people, such
 
 We would have to repeat the same fields, and common methods in every class.
 
-** But what happens if we need to make a change?**  
+**But what happens if we need to make a change?**  
   For example:
   - We want to change how the introduce() method works.
   - We want to add a new common field, such as email.
 
-We would have to update every class!
-That creates unnecessary work and makes our program harder to maintain.
+We would have to update every class! That creates unnecessary work and makes our program harder to maintain.
 
 **Can we find a better way?**
 
@@ -241,7 +240,6 @@ This is the main idea behind inheritance: **one class can reuse and extend the f
 Think about different types of vehicles. A car and a bike share common characteristics, but each also has unique features.
 
 <AsyncImage query="simple educational illustration car motorcycle bicycle truck different types of vehicles white background" aspectRatio="16:9" width="100%" fit="contain"/>
-
 
 
 ### Understanding the Example
