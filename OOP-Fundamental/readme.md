@@ -461,14 +461,7 @@ Now that we understand how `this` refers to the current object, let's look at ho
 
 
 ## 3.8 Primitive Variables vs. Object References
-
-Java variables can store primitive values or references to objects. Understanding the difference helps explain what happens when we assign one variable to another.
-
-| **Feature** | **Primitive** | **Object Reference** |
-|---|---|---|
-| **Examples** | `int`, `double`, `boolean` | `Student`, `String`, arrays |
-| **Stores** | A primitive value | A reference to an object |
-| **Example** | `int a = 5;` | `Student s1 = new Student();` |
+Primitive variables hold values directly, while object reference variables hold a reference (address) to an object in memory. Both examples below use object references, showing what happens when you **reassign a reference** versus **mutate a field on a shared object**.
 
 ### Example 1: Reassigning a Reference (String)
 Consider what happens when we copy a String reference and then reassign one of the variables:
