@@ -348,7 +348,7 @@ No `getter` is provided because passwords are sensitive information. Other class
 - **Data Integrity:** Methods can validate input and help prevent invalid values.
 - **Increased Flexibility**: By controlling access to the fields of a class, you can change the internal implementation without affecting the external code using the class.
 - **Improved Maintainability**: Encapsulation helps in maintaining the code by keeping the fields private and providing public getter and setter methods to modify and view the fields.
-- 
+
 ---
 
 ## 7. Quick Review
