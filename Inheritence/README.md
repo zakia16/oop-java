@@ -237,11 +237,18 @@ We do not need to rewrite the same method in `Student` and `Teacher`!
 **What happens when we create a Student object?**
 
 When we execute:
+```java
 Student student = new Student("Alex", 20, "Dallas", 1001);
-
+```
 Java automatically calls the no-argument constructor of the parent class, Person(), before executing the Student constructor.
 
-This allows the child class to be created without explicitly calling the parent constructor.
+Letz visualize that in python editor:
+https://pythontutor.com/visualize.html#code=public%20class%20MainClass%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20Student%20student%20%3D%20new%20Student%28%22Alex%22,%2020,%20%22Dallas%22,%201001%29%3B%0A%0A%20%20%20%20%20%20%20%20student.introduce%28%29%3B%20//%20Inherited%20from%20Person%0A%20%20%20%20%20%20%20%20student.study%28%29%3B%20%20%20%20%20//%20Defined%20in%20Student%0A%20%20%20%20%7D%0A%7D%0A%0Aclass%20Person%20%7B%0A%20%20%20%20%20%20%20%20protected%20String%20name%3B%0A%20%20%20%20%20%20%20%20protected%20int%20age%3B%0A%20%20%20%20%20%20%20%20protected%20String%20address%3B%0A%0A%20%20%20%20%20%20%20%20public%20void%20introduce%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22Hi,%20I%20am%20%22%20%2B%20name%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%7D%0A%0Aclass%20Student%20extends%20Person%7B%0A%20%20%20%20private%20int%20studentId%3B%0A%0A%20%20%20%20public%20Student%28String%20name,%20int%20age,%20String%20address,%20int%20studentId%29%20%7B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20name%3B%20%20%20%20%20%20%20%20%20//%20as%20soon%20as%20a%20extends%20everything%20turned%20red,%20solution%20make%20Person's%20attribute%20private%0A%20%20%20%20%20%20%20%20this.age%20%3D%20age%3B%0A%20%20%20%20%20%20%20%20this.address%20%3D%20address%3B%0A%20%20%20%20%20%20%20%20this.studentId%20%3D%20studentId%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20study%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28name%20%2B%20%22%20is%20studying.%22%29%3B%0A%20%20%20%20%7D%0A%7D&curInstr=3&mode=display&origin=opt-frontend.js&py=java
+
+In the step-by-step execution view, you can see this order directly on the call stack and heap:   
+<init>:10 (Person) runs first as the implicit parent constructor.   
+<init>:23 (Student) holds the incoming arguments ("Alex", 20, "Dallas", 1001) and assigns the fields after the parent constructor runs.   
+Both frames' this references point to the same Student instance on the heap.   
 
 ### 1.6. Why Is Inheritance Useful?
 
