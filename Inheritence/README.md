@@ -206,7 +206,6 @@ teacher.teach();     // Defined in Teacher
 ```
 
 Notice that we can call `introduce()` on both objects even though we defined it only once in the `Person` class.
-
 We do not need to rewrite the same method in `Student` and `Teacher`!
 
 ### 1.6. Why Is Inheritance Useful?
@@ -240,18 +239,6 @@ This is the main idea behind inheritance: **one class can reuse and extend the f
 Think about different types of vehicles. A car and a bike share common characteristics, but each also has unique features.
 
 <AsyncImage query="simple educational illustration car motorcycle bicycle truck different types of vehicles white background" aspectRatio="16:9" width="100%" fit="contain"/>
-
-
-### Understanding the Example
-
-| Component | Purpose |
-|:---|:---|
-| `Vehicle` | Parent class containing common fields and methods. |
-| `Car extends Vehicle` | Declares `Car` as a subclass of `Vehicle`. |
-| `brand` and `speed` | `protected` fields inherited from `Vehicle`. |
-| `numberOfDoors` | A field specific to `Car`. |
-| `start()` | A method inherited from `Vehicle`. |
-| `honk()` | A method defined specifically in `Car`. |
 
 **Understanding `protected`:** The `protected` modifier allows `Car` to directly access the inherited `brand` and `speed` fields while keeping them hidden from unrelated external classes. It also allows access within the same package and by subclasses in other packages through inheritance.
 
