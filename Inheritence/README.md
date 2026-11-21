@@ -125,19 +125,23 @@ Let's move the common fields and methods into a single `Person` class.
 
 ```java
 public class Person {
-    private String name;
-    private int age;
-    private String address;
+    protected String name;
+    protected int age;
+    protected String address;
+
+    public Person() {
+
+    }
 
     public void introduce() {
         System.out.println("Hi, I am " + name);
     }
-
-    // Getters and setters
 }
 ```
-
 Now, the common information and behavior are defined in one place.
+Note: The Person() constructor is a no-argument constructor. We will see why it is useful when creating objects of the child classes.
+
+**Understanding `protected`:** The `protected` modifier allows `Car` to directly access the inherited `brand` and `speed` fields while keeping them hidden from unrelated external classes. It also allows access within the same package and by subclasses in other packages through inheritance.
 
 ### 1.4. Creating Child Classes
 
@@ -149,11 +153,16 @@ Next, let's create the `Student` and `Teacher` classes.
 public class Student extends Person {
     private int studentId;
 
-    public void study() {
-        System.out.println("I am studying.");
+    public Student(String name, int age, String address, int studentId) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.studentId = studentId;
     }
 
-    // Getter and setter for studentId
+    public void study() {
+        System.out.println(name + " is studying.");
+    }
 }
 ```
 
@@ -163,11 +172,16 @@ public class Student extends Person {
 public class Teacher extends Person {
     private String subject;
 
-    public void teach() {
-        System.out.println("I am teaching.");
+    public Teacher(String name, int age, String address, String subject) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.subject = subject;
     }
 
-    // Getter and setter for subject
+    public void teach() {
+        System.out.println(name + " is teaching.");
+    }
 }
 ```
 
@@ -188,18 +202,16 @@ This means both child classes can reuse the accessible fields and methods of the
 Now, let's create objects of both classes.
 
 ```java
-Student student = new Student();
-student.setName("Alex");
-student.setAge(20);
-student.setStudentId(1001);
+// Create a Student object
+Student student = new Student("Alex", 20, "Dallas", 1001);
 
 student.introduce(); // Inherited from Person
 student.study();     // Defined in Student
 
-Teacher teacher = new Teacher();
-teacher.setName("Dr. Smith");
-teacher.setAge(40);
-teacher.setSubject("Computer Science");
+// Create a Teacher object
+Teacher teacher = new Teacher(
+    "Dr. Smith", 40, "Austin", "Computer Science"
+);
 
 teacher.introduce(); // Inherited from Person
 teacher.teach();     // Defined in Teacher
@@ -207,6 +219,15 @@ teacher.teach();     // Defined in Teacher
 
 Notice that we can call `introduce()` on both objects even though we defined it only once in the `Person` class.
 We do not need to rewrite the same method in `Student` and `Teacher`!
+
+**What happens when we create a Student object?**
+
+When we execute:
+Student student = new Student("Alex", 20, "Dallas", 1001);
+
+Java automatically calls the no-argument constructor of the parent class, Person(), before executing the Student constructor.
+
+This allows the child class to be created without explicitly calling the parent constructor.
 
 ### 1.6. Why Is Inheritance Useful?
 
@@ -239,8 +260,6 @@ This is the main idea behind inheritance: **one class can reuse and extend the f
 Think about different types of vehicles. A car and a bike share common characteristics, but each also has unique features.
 
 <AsyncImage query="simple educational illustration car motorcycle bicycle truck different types of vehicles white background" aspectRatio="16:9" width="100%" fit="contain"/>
-
-**Understanding `protected`:** The `protected` modifier allows `Car` to directly access the inherited `brand` and `speed` fields while keeping them hidden from unrelated external classes. It also allows access within the same package and by subclasses in other packages through inheritance.
 
 **Important:** Constructors are not inherited in Java. However, a subclass can call a superclass constructor using `super()`.
 
