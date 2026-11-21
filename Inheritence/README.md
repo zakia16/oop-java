@@ -96,7 +96,7 @@ Imagine our school management system grows and we add more types of people, such
 
 We would have to repeat the same fields, and common methods in every class.
 
-** But what happens if we need to make a change?**
+** But what happens if we need to make a change?**  
   For example:
   - We want to change how the introduce() method works.
   - We want to add a new common field, such as email.
