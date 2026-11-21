@@ -45,6 +45,13 @@ public class Student {
     private String address;
     private int studentId;
 
+    public Student(String name, int age, String address, int studentId) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.studentId = studentId;
+    }
+
     public void introduce() {
         System.out.println("Hi, I am " + name);
     }
@@ -63,6 +70,13 @@ public class Teacher {
     private int age;
     private String address;
     private String subject;
+
+    public Teacher(String name, int age, String address, String subject) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.subject = subject;
+    }
 
     public void introduce() {
         System.out.println("Hi, I am " + name);
@@ -139,9 +153,9 @@ public class Person {
 }
 ```
 Now, the common information and behavior are defined in one place.
-Note: The Person() constructor is a no-argument constructor. We will see why it is useful when creating objects of the child classes.
+**Note:** Person() is a no-argument constructor because it does not accept any parameters. Java automatically calls this constructor when a child class is created and its constructor does not explicitly call another parent constructor. We will see this when creating Student and Teacher objects.
 
-**Understanding `protected`:** The `protected` modifier allows `Car` to directly access the inherited `brand` and `speed` fields while keeping them hidden from unrelated external classes. It also allows access within the same package and by subclasses in other packages through inheritance.
+**Understanding `protected`:** The protected modifier allows `Student` and `Teacher` to directly access the inherited name, age, and address fields. It also allows access from other classes in the same package.
 
 ### 1.4. Creating Child Classes
 
