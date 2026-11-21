@@ -63,15 +63,40 @@ public class MyClass {
 
 <img width="396" height="231" alt="image" src="https://github.com/user-attachments/assets/cbb30c75-e138-4a63-a8a2-4e47cf48ff14" />
 
-### The Problem: Why Do We Need Encapsulation?
+### Example of Basic Encapsulation:
+Imagine we are writing a program to manage a bank account. We need a variable to store the account balance and a method to deposit money.
+Without using a class, we might write:
 
-To understand why this matters, imagine we created a `BankAccount` class to manage a customer's bank balance.
+```java
+public class Main {
+    public static void main(String[] args) {
+        double balance = 1000;
+        // Deposit money
+        balance = balance + 500;
+        System.out.println("Balance: $" + balance);
+    }
+}
+```
+Let's use a Class to Encapsulate Data and Methods:
 
 ```java
 public class BankAccount {
+
     double balance;
+
+    // Deposit money
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    // Display balance
+    public void displayBalance() {
+        System.out.println("Balance: $" + balance);
+    }
 }
 ```
+
+### The Problem: Is our data still safe?
 
 Now, suppose another programmer, Bob, writes code to update the account balance:
 
@@ -174,16 +199,6 @@ public class Main {
     }
 }
 ```
-
-### Understanding the Example
-
-| Component | Purpose |
-|:---|:---|
-| `private double balance` | Protects the account balance from direct access. |
-| `getBalance()` | Getter: Allows reading the balance. |
-| `deposit()` | Allows adding money with validation. |
-| `withdraw()` | Allows withdrawing money with validation. |
-
 > **Important:** A setter is not always necessary. Methods such as `deposit()` and `withdraw()` can provide controlled ways to modify private fields without allowing unrestricted changes.
 
 ### Key Components of Encapsulation
@@ -322,11 +337,11 @@ No `getter` is provided because passwords are sensitive information. Other class
 
 ## 6. Benefits of Encapsulation
 
-- **Information Hiding:** Other classes do not need to know how data is stored or implemented internally.
-- **Controlled Access:** A class controls what data is stored in its fields and how that data can be modified.
+- **Information Hiding:**: Encapsulation allows the internal representation of an object to be hidden from the outside. Only the necessary details are exposed through a public interface.
 - **Data Integrity:** Methods can validate input and help prevent invalid values.
-- **Maintainability:** Makes code easier to understand, test, update, and maintain.
-
+- **Increased Flexibility**: By controlling access to the fields of a class, you can change the internal implementation without affecting the external code using the class.
+- **Improved Maintainability**: Encapsulation helps in maintaining the code by keeping the fields private and providing public getter and setter methods to modify and view the fields.
+- 
 ---
 
 ## 7. Quick Review
