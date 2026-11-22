@@ -283,6 +283,79 @@ Think about different types of vehicles. A car and a bike share common character
 
 **Important:** Constructors are not inherited in Java. However, a subclass can call a superclass constructor using `super()`.
 
+## 4. The `super` Keyword
+
+The `super` keyword refers to the immediate parent class of a subclass.
+
+It is commonly used for two purposes:
+
+1. **`super()`** – Calls the parent class constructor.
+2. **`super.methodName()`** – Calls a method from the parent class.
+
+### 4.1 Calling a Parent Constructor with `super()`
+
+When a subclass object is created, the parent class constructor must also execute to initialize the inherited portion of the object.
+
+The `super()` statement calls the parent class constructor.
+
+**Example:**
+
+```java
+class Person {
+    protected String name;
+    protected int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class Student extends Person {
+    private int studentId;
+
+    public Student(String name, int age, int studentId) {
+        super(name, age); // Calls the Person constructor
+        this.studentId = studentId;
+    }
+}
+```
+
+In this example:
+- `Person` is the parent class.
+- `Student` is the child class.
+- `super(name, age)` calls the `Person` constructor.
+- `studentId` is initialized by the `Student` constructor.
+
+**Important:** A call to `super()` must be the first statement in a constructor. If the parent class has no accessible no-argument constructor, the child constructor must explicitly call an appropriate parent constructor.
+
+### 4.2 Calling a Parent Method with `super`
+
+A subclass can use `super.methodName()` to call a method defined in its parent class.
+
+```java
+class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound.");
+    }
+}
+
+class Dog extends Animal {
+    public void makeSound() {
+        super.makeSound(); // Calls the parent method
+        System.out.println("The dog barks.");
+    }
+}
+```
+
+**Output:**
+
+```text
+The animal makes a sound.
+The dog barks.
+```
+
+
 ## 4. Types of Inheritance
 
 The following diagram illustrates the five common types of inheritance.
@@ -478,78 +551,6 @@ Java does not support hybrid inheritance through classes alone. However, combina
 | Hierarchical | Multiple subclasses inherit from one superclass. | Yes |
 | Multiple | One class inherits from multiple parent classes. | No, not with classes |
 | Hybrid | Combines two or more inheritance types. | Through classes and interfaces |
-
-## 5. The `super` Keyword
-
-The `super` keyword refers to the immediate parent class of a subclass.
-
-It is commonly used for two purposes:
-
-1. **`super()`** – Calls the parent class constructor.
-2. **`super.methodName()`** – Calls a method from the parent class.
-
-### 4.1 Calling a Parent Constructor with `super()`
-
-When a subclass object is created, the parent class constructor must also execute to initialize the inherited portion of the object.
-
-The `super()` statement calls the parent class constructor.
-
-**Example:**
-
-```java
-class Person {
-    protected String name;
-    protected int age;
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-}
-
-class Student extends Person {
-    private int studentId;
-
-    public Student(String name, int age, int studentId) {
-        super(name, age); // Calls the Person constructor
-        this.studentId = studentId;
-    }
-}
-```
-
-In this example:
-- `Person` is the parent class.
-- `Student` is the child class.
-- `super(name, age)` calls the `Person` constructor.
-- `studentId` is initialized by the `Student` constructor.
-
-**Important:** A call to `super()` must be the first statement in a constructor. If the parent class has no accessible no-argument constructor, the child constructor must explicitly call an appropriate parent constructor.
-
-### 4.2 Calling a Parent Method with `super`
-
-A subclass can use `super.methodName()` to call a method defined in its parent class.
-
-```java
-class Animal {
-    public void makeSound() {
-        System.out.println("The animal makes a sound.");
-    }
-}
-
-class Dog extends Animal {
-    public void makeSound() {
-        super.makeSound(); // Calls the parent method
-        System.out.println("The dog barks.");
-    }
-}
-```
-
-**Output:**
-
-```text
-The animal makes a sound.
-The dog barks.
-```
 
 ## 5. Method Overriding
 
