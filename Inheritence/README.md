@@ -279,7 +279,6 @@ Think about different types of vehicles. A car and a bike share common character
 
 <AsyncImage query="simple educational illustration car motorcycle bicycle truck different types of vehicles white background" aspectRatio="16:9" width="100%" fit="contain"/>
 
-**Important:** Constructors are not inherited in Java. However, a subclass can call a superclass constructor using `super()`.
 
 
 ## 2. The `super` Keyword
@@ -359,32 +358,8 @@ public class Teacher extends Person {
 }
 ```
 
-Notice how much cleaner the child constructors are now!
-
-- `super(name, age, address)` calls the `Person` constructor.
-- The `Person` constructor initializes the shared fields.
-- The `Student` constructor initializes `studentId`.
-- The `Teacher` constructor initializes `subject`.
-
+Notice how much cleaner the child constructors are no
 Now, each class is responsible for initializing its own fields. The common initialization code is written only once in the parent class.
-
-**How does the constructor call work?**
-
-When we create a `Student` object:
-
-```java
-Student student = new Student("Alex", 20, "Dallas", 1001);
-```
-
-The following steps take place:
-
-1. The `Student` constructor begins executing.
-2. `super(name, age, address)` calls the `Person` constructor.
-3. The `Person` constructor initializes `name`, `age`, and `address`.
-4. Control returns to the `Student` constructor.
-5. The `Student` constructor initializes `studentId`.
-
-Both constructors initialize different parts of the **same Student object**.
 
 **Important:** A call to `super()` or `super(arguments)` must be the first statement in a constructor. If the parent class does not have an accessible no-argument constructor, the child constructor must explicitly call an appropriate parent constructor.
 
@@ -395,16 +370,16 @@ A subclass can use `super.methodName()` to call a method defined in its parent c
 **Example:**
 
 ```java
-class Animal {
-    public void makeSound() {
-        System.out.println("The animal makes a sound.");
+class Person {
+    public void introduce() {
+        System.out.println("I am a person.");
     }
 }
 
-class Dog extends Animal {
-    public void makeSound() {
-        super.makeSound(); // Calls the parent method
-        System.out.println("The dog barks.");
+class Student extends Person {
+    public void introduce() {
+        super.introduce(); // Calls the parent method
+        System.out.println("I am a student.");
     }
 }
 ```
@@ -412,8 +387,8 @@ class Dog extends Animal {
 **Output:**
 
 ```text
-The animal makes a sound.
-The dog barks.
+I am a person.
+I am a student.
 ```
 
 
