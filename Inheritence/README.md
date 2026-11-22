@@ -106,32 +106,20 @@ However, students and teachers also have their own specific information and beha
 
 We are writing the same code in multiple classes!
 
-Imagine our school management system grows and we add more types of people, such as administrators, counselors, and teaching assistants.
+Imagine our school management system grows, and we add more types of people, such as administrators, counselors, and teaching assistants.
 
-We would have to repeat the same fields, and common methods in every class.
-
-**But what happens if we need to make a change?**  
-  For example:
-  - We want to change how the introduce() method works.
-  - We want to add a new common field, such as email.
-
-We would have to update every class! That creates unnecessary work and makes our program harder to maintain.
-
-**Can we find a better way?**
-
-Absolutely! This is where **Inheritance** comes into the picture.
+We would have to repeat the same fields and common methods in every class.
 
 ### 1.2. The Solution: Inheritance
 
-Instead of repeating common code in every class, we can move the shared fields and methods into a common class called `Person`.
-
-Then, the `Student` and `Teacher` classes can inherit those common features while keeping their own specific fields and methods.
-
-Here is what we are going to do:
+Instead of repeating common code in every class, here is what we are going to do:
 
 1. Superclass (Parent Class): Create a common parent class called `Person` containing shared fields and methods.
 2. Subclass (Child Class): Create child classes called `Student` and `Teacher` that reuse the functionality of `Person`.
-
+   Note:
+    - A subclass inherits the accessible fields and methods of its parent class.
+    - A subclass **does not inherit the constructors** of its parent class. However, it can call a parent constructor using `super()`.
+  
 
 ### 1.3. Creating the Parent Class
 
