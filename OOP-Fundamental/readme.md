@@ -122,6 +122,9 @@ Methods make programs easier to read, reuse, test, and maintain, as we learned i
 <img width="1215" height="696" alt="image" src="https://github.com/user-attachments/assets/c3530a5c-c622-4085-bf70-fe1e7e2ed021" />
 
 However, as programs grow larger, organizing everything using separate functions (methods) can become complicated. Managing related data and functions separately becomes harder.
+**This is where Object-Oriented Programming (OOP) comes in!**
+
+## 3.2 Why OOPs?
 
 
 ## 3.2 Procedural vs. Object-Oriented Programming
