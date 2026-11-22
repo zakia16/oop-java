@@ -215,7 +215,8 @@ public class Student {
 
 ### Method Anatomy
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/87978d1d-c875-4ab6-b7da-ad167f8b0e08" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/37894cdc-5e68-4128-bf70-f46a6c7cd2ef" />
+
 
 
 ## 3.5 Creating Objects & Calling Methods
