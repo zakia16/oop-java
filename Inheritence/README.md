@@ -282,7 +282,7 @@ Think about different types of vehicles. A car and a bike share common character
 **Important:** Constructors are not inherited in Java. However, a subclass can call a superclass constructor using `super()`.
 
 
-## 4. The `super` Keyword
+## 2. The `super` Keyword
 
 The `super` keyword refers to the immediate parent class of a subclass.
 
@@ -291,7 +291,7 @@ It is commonly used for two purposes:
 1. **`super()`** – Calls the parent class constructor.
 2. **`super.methodName()`** – Calls a method from the parent class.
 
-### 4.1. Calling a Parent Constructor with `super()`
+### 2.1. Calling a Parent Constructor with `super()`
 
 Remember the repeated initialization code in the `Student` and `Teacher` constructors?
 
@@ -388,7 +388,7 @@ Both constructors initialize different parts of the **same Student object**.
 
 **Important:** A call to `super()` or `super(arguments)` must be the first statement in a constructor. If the parent class does not have an accessible no-argument constructor, the child constructor must explicitly call an appropriate parent constructor.
 
-### 4.2. Calling a Parent Method with `super`
+### 2.2. Calling a Parent Method with `super`
 
 A subclass can use `super.methodName()` to call a method defined in its parent class.
 
@@ -417,7 +417,7 @@ The dog barks.
 ```
 
 
-## 4. Types of Inheritance
+## 3. Types of Inheritance
 
 The following diagram illustrates the five common types of inheritance.
 
@@ -433,7 +433,7 @@ The following diagram illustrates the five common types of inheritance.
 
 
 
-### 4.1 Single Inheritance
+### 3.1 Single Inheritance
 
 A subclass inherits from one superclass.
 
@@ -455,7 +455,7 @@ class Dog extends Animal {
 
 **Example:** `Dog` inherits from `Animal`.
 
-### 4.2 Multilevel Inheritance
+### 3.2 Multilevel Inheritance
 
 A class inherits from another subclass, forming an inheritance chain.
 
@@ -483,7 +483,7 @@ class Dog extends Mammal {
 
 **Example:** `Dog` inherits from `Mammal`, and `Mammal` inherits from `Animal`. Therefore, `Dog` can access the inherited methods from both parent classes, subject to access rules.
 
-### 4.3 Hierarchical Inheritance
+### 3.3 Hierarchical Inheritance
 
 Multiple subclasses inherit from the same superclass.
 
@@ -511,7 +511,7 @@ class Bike extends Vehicle {
 
 **Example:** Both `Car` and `Bike` inherit from `Vehicle`.
 
-### 4.4 Multiple Inheritance
+### 3.4 Multiple Inheritance
 
 Multiple inheritance occurs when one class inherits from more than one parent class.
 
@@ -597,7 +597,7 @@ Interface B
 
 However, Java supports multiple inheritance of type through **interfaces**, which will be covered in a later module.
 
-### 4.5 Hybrid Inheritance
+### 3.5 Hybrid Inheritance
 
 Hybrid inheritance combines two or more types of inheritance.
 
