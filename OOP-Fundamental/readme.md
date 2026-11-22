@@ -169,12 +169,6 @@ public class MyClass {
 
 The **class body** (the code between the curly braces `{ }`) contains the members that define the class:
 
-| Class Member | Purpose |
-|:---|:---|
-| **Fields** | Store the data or state of an object. |
-| **Constructors** | Initialize new objects when they are created. |
-| **Methods** | Define the behaviors or actions an object can perform. |
-
 
 ## Fields
 
@@ -183,17 +177,12 @@ The **class body** (the code between the curly braces `{ }`) contains the member
 ```java
 public class Student {
     // Instance fields (attributes)
-    String name;
-    int studentId;
-    double gpa;
+    String name;         // `name` stores the student's name.
+    int studentId;      // `studentId` stores the student's ID.
+    double gpa;        // `gpa` stores the student's GPA.
 }
 ```
 
-Here:
-
-* `name` stores the student's name.
-* `studentId` stores the student's ID.
-* `gpa` stores the student's GPA.
 
 ## Methods
 
