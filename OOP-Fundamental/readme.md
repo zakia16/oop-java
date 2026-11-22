@@ -115,11 +115,14 @@ Hello, Java!
 
 Do not declare types when passing arguments. Use `printTime(11, 59)`, not `printTime(int 11, int 59)`.
 
-### Flow of Execution
+### Advantages of Methods
 
-Java begins execution at the first statement in `main()`. When a method is called, execution moves to that method. After the method finishes, execution returns to the statement following the call.
+Methods make programs easier to read, reuse, test, and maintain, as we learned in CS I when studying Python.
 
-Methods make programs easier to read, reuse, test, and maintain.
+<img width="1215" height="696" alt="image" src="https://github.com/user-attachments/assets/c3530a5c-c622-4085-bf70-fe1e7e2ed021" />
+
+However, as programs grow larger, organizing everything using separate functions (methods) can become complicated. Managing related data and functions separately becomes harder.
+
 
 ## 3.2 Procedural vs. Object-Oriented Programming
 
