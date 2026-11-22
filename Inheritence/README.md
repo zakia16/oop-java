@@ -283,6 +283,7 @@ Think about different types of vehicles. A car and a bike share common character
 
 **Important:** Constructors are not inherited in Java. However, a subclass can call a superclass constructor using `super()`.
 
+
 ## 4. The `super` Keyword
 
 The `super` keyword refers to the immediate parent class of a subclass.
@@ -292,46 +293,108 @@ It is commonly used for two purposes:
 1. **`super()`** – Calls the parent class constructor.
 2. **`super.methodName()`** – Calls a method from the parent class.
 
-### 4.1 Calling a Parent Constructor with `super()`
+### 4.1. Calling a Parent Constructor with `super()`
 
-When a subclass object is created, the parent class constructor must also execute to initialize the inherited portion of the object.
-
-The `super()` statement calls the parent class constructor.
-
-**Example:**
+Remember the repeated initialization code in the `Student` and `Teacher` constructors?
 
 ```java
-class Person {
+this.name = name;
+this.age = age;
+this.address = address;
+```
+
+We can avoid repeating this code by calling the `Person` constructor with `super()`.
+
+Let's update our classes.
+
+**Person class:**
+
+```java
+public class Person {
     protected String name;
     protected int age;
+    protected String address;
 
-    public Person(String name, int age) {
+    public Person(String name, int age, String address) {
         this.name = name;
         this.age = age;
+        this.address = address;
     }
-}
 
-class Student extends Person {
-    private int studentId;
-
-    public Student(String name, int age, int studentId) {
-        super(name, age); // Calls the Person constructor
-        this.studentId = studentId;
+    public void introduce() {
+        System.out.println("Hi, I am " + name);
     }
 }
 ```
 
-In this example:
-- `Person` is the parent class.
-- `Student` is the child class.
-- `super(name, age)` calls the `Person` constructor.
-- `studentId` is initialized by the `Student` constructor.
+**Student class:**
 
-**Important:** A call to `super()` must be the first statement in a constructor. If the parent class has no accessible no-argument constructor, the child constructor must explicitly call an appropriate parent constructor.
+```java
+public class Student extends Person {
+    private int studentId;
 
-### 4.2 Calling a Parent Method with `super`
+    public Student(String name, int age, String address, int studentId) {
+        super(name, age, address);
+        this.studentId = studentId;
+    }
+
+    public void study() {
+        System.out.println(name + " is studying.");
+    }
+}
+```
+
+**Teacher class:**
+
+```java
+public class Teacher extends Person {
+    private String subject;
+
+    public Teacher(String name, int age, String address, String subject) {
+        super(name, age, address);
+        this.subject = subject;
+    }
+
+    public void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+```
+
+Notice how much cleaner the child constructors are now!
+
+- `super(name, age, address)` calls the `Person` constructor.
+- The `Person` constructor initializes the shared fields.
+- The `Student` constructor initializes `studentId`.
+- The `Teacher` constructor initializes `subject`.
+
+Now, each class is responsible for initializing its own fields. The common initialization code is written only once in the parent class.
+
+**How does the constructor call work?**
+
+When we create a `Student` object:
+
+```java
+Student student = new Student("Alex", 20, "Dallas", 1001);
+```
+
+The following steps take place:
+
+1. The `Student` constructor begins executing.
+2. `super(name, age, address)` calls the `Person` constructor.
+3. The `Person` constructor initializes `name`, `age`, and `address`.
+4. Control returns to the `Student` constructor.
+5. The `Student` constructor initializes `studentId`.
+
+Both constructors initialize different parts of the **same Student object**.
+
+**Important:** A call to `super()` or `super(arguments)` must be the first statement in a constructor. If the parent class does not have an accessible no-argument constructor, the child constructor must explicitly call an appropriate parent constructor.
+
+### 4.2. Calling a Parent Method with `super`
 
 A subclass can use `super.methodName()` to call a method defined in its parent class.
+
+**Example:**
 
 ```java
 class Animal {
