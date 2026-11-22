@@ -211,9 +211,7 @@ student.introduce(); // Inherited from Person
 student.study();     // Defined in Student
 
 // Create a Teacher object
-Teacher teacher = new Teacher(
-    "Dr. Smith", 40, "Austin", "Computer Science"
-);
+Teacher teacher = new Teacher("Dr. Smith", 40, "Austin", "Computer Science");
 
 teacher.introduce(); // Inherited from Person
 teacher.teach();     // Defined in Teacher
