@@ -215,21 +215,8 @@ public class Student {
 
 ### Method Anatomy
 
-Consider this method:
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/87978d1d-c875-4ab6-b7da-ad167f8b0e08" />
 
-```java
-public int add(int a, int b) {
-    return a + b;
-}
-```
-
-| Component       | Meaning            |
-| --------------- | ------------------ |
-| `public`        | Access modifier    |
-| `int`           | Return type        |
-| `add`           | Method name        |
-| `int a, int b`  | Parameters         |
-| `return a + b;` | Returns the result |
 
 ## 3.5 Creating Objects & Calling Methods
 
