@@ -126,6 +126,9 @@ However, as programs grow larger, organizing everything using separate functions
 
 ## 3.2 Why OOPs?
 
+OOPs offer 4 unique features, that is not possible for methods.
+These features are:
+
 
 ## 3.2 Procedural vs. Object-Oriented Programming
 
