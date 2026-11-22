@@ -57,14 +57,8 @@ Java supports two commonly taught types of polymorphism:
 1. **Compile-Time Polymorphism:** The compiler determines which overloaded method to call.
 2. **Runtime Polymorphism:** The JVM determines which overridden method to execute based on the actual object.
 
-<img width="1000" height="500" alt="Types of polymorphism: compile-time and runtime" src="https://github.com/user-attachments/assets/d8de530b-9571-4ce5-93ee-eef743677757" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/cb8766ff-c259-4feb-a288-62f67973e722" />
 
-<p align="center">
-  <sub>
-    Image source: Adapted from
-    <a href="https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/">GeeksforGeeks – OOP Interview Questions</a>
-  </sub>
-</p>
 
 ---
 
