@@ -133,6 +133,9 @@ When multiple functions need access to the same information, we can pass that in
 
 Although both approaches work, managing data across many functions can become complicated. It may become difficult to track which functions access or modify the same information.
 
+<img width="482" height="507" alt="image" src="https://github.com/user-attachments/assets/18c3a3be-ba75-471e-a92b-8bda62b3f017" />
+
+
 **2. Keeping Data and Functions Organized**
 
 When data and the functions that operate on it are organized separately, it can become harder to represent real-world entities naturally.
