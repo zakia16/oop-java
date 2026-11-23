@@ -115,34 +115,44 @@ Hello, Java!
 
 Do not declare types when passing arguments. Use `printTime(11, 59)`, not `printTime(int 11, int 59)`.
 
-### Advantages of Methods
+### Advantages of Functions
 
-Methods make programs easier to read, reuse, test, and maintain, as we learned in CS I when studying Python.
+Functions make programs easier to read, reuse, test, and maintain, as we learned in CS I when studying Python.
 
 <img width="1215" height="696" alt="image" src="https://github.com/user-attachments/assets/c3530a5c-c622-4085-bf70-fe1e7e2ed021" />
 
-However, as programs grow larger, organizing everything using separate functions (methods) can become complicated. Managing related data and functions separately becomes harder.   
-**This is where Object-Oriented Programming (OOP) comes in!**
+This works well for small programs, but as programs grow, managing data and functions becomes more difficult.
 
-## 3.2 Why OOPs?
+### Problems with Global Data
 
-OOPs offer 4 unique features, that is not possible for methods.
-These features are:
+Procedural programming uses two types of data:
 
+- **Local data:** Declared inside a function and accessible only within that function.
+- **Global data:** Declared outside functions and accessible by multiple functions.
 
-## 3.2 Procedural vs. Object-Oriented Programming
+When several functions need the same information, we often use global variables.
 
-Procedural programming organizes code around functions. Object-oriented programming (OOP) organizes data and behavior into objects.
+**What's the problem?**    
+Any function can potentially modify global data, making it harder to track changes, find errors, and maintain large programs.
 
-| Aspect         | Procedural Programming                          | Object-Oriented Programming (OOP)          |
-| -------------- | ----------------------------------------------- | ------------------------------------------ |
-| **Focus**      | Functions, e.g., `printStudentInfo(name, gpa)`  | Objects, e.g., `student1.displayProfile()` |
-| **Data**       | Variables, e.g., `String name = "Alex";`        | Object fields, e.g., `student1.name`       |
-| **Code reuse** | Call the same function with different arguments | Create multiple objects from one class     |
+### Modeling the Real World
 
-For example, a procedural program might pass a student's name and GPA to a function. An OOP program can store the name and GPA inside a `Student` object and define methods that use that data.
+Think about real-world objects, such as people and cars. Every object has:
 
-**Key idea:** OOP combines data and behavior into objects.
+- **Attributes (Data):** Characteristics, such as a person's eye color or a car's horsepower.
+- **Behaviors (Functions):** Actions, such as a person walking or a car braking.
+
+It makes sense to organize related data and behaviors together.
+
+### 3.2 The Object-Oriented Approach
+
+**Object-Oriented Programming (OOP)** combines data and the functions that operate on that data into a single unit called an **object**.
+
+OOP introduces four fundamental features that help organize and manage complex programs:
+1. **Encapsulation**
+2. **Inheritance**
+3. **Polymorphism**
+4. **Abstraction**
 
 ## 3.3 Classes and Objects
 
