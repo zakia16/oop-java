@@ -119,7 +119,7 @@ Do not declare types when passing arguments. Use `printTime(11, 59)`, not `print
 
 Functions make programs easier to read, reuse, test, and maintain, as we learned in CS I when studying Python.
 
-<img width="1015" height="600" alt="image" src="https://github.com/user-attachments/assets/c3530a5c-c622-4085-bf70-fe1e7e2ed021" />
+<img width="1015" height="500" alt="image" src="https://github.com/user-attachments/assets/c3530a5c-c622-4085-bf70-fe1e7e2ed021" />
 
 This works well for small programs, but as programs grow, managing data and functions becomes more difficult.
 
@@ -133,7 +133,7 @@ When multiple functions need access to the same information, we can pass that in
 
 Although both approaches work, managing data across many functions can become complicated. It may become difficult to track which functions access or modify the same information.
 
-<img width="482" height="507" alt="image" src="https://github.com/user-attachments/assets/18c3a3be-ba75-471e-a92b-8bda62b3f017" />
+<img width="482" height="407" alt="image" src="https://github.com/user-attachments/assets/18c3a3be-ba75-471e-a92b-8bda62b3f017" />
 
 
 **2. Keeping Data and Functions Organized**
