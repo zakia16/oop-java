@@ -137,7 +137,7 @@ Although both approaches work, managing data across many functions can become co
 
 When data and the functions that operate on it are organized separately, it can become harder to represent real-world entities naturally.
 
-<img width="177" height="88" alt="image" src="https://github.com/user-attachments/assets/70414bbf-775f-4e1a-867c-e250f903aa47" />
+<img width="477" height="388" alt="image" src="https://github.com/user-attachments/assets/70414bbf-775f-4e1a-867c-e250f903aa47" />
 
 
 ### Modeling the Real World
