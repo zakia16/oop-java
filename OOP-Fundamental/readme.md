@@ -123,32 +123,40 @@ Functions make programs easier to read, reuse, test, and maintain, as we learned
 
 This works well for small programs, but as programs grow, managing data and functions becomes more difficult.
 
-### Problems with Global Data
+### Challenges as Programs Grow
 
-Procedural programming uses two types of data:
+Two common challenges can arise as programs become larger:
 
-- **Local data:** Declared inside a function and accessible only within that function.
-- **Global data:** Declared outside functions and accessible by multiple functions.
+**1. Managing Shared Data**
 
-When several functions need the same information, we often use global variables.
+When multiple functions need access to the same information, we can pass that information as parameters or use shared variables.
 
-**What's the problem?**    
-Any function can potentially modify global data, making it harder to track changes, find errors, and maintain large programs.
+Although both approaches work, managing data across many functions can become complicated. It may become difficult to track which functions access or modify the same information.
+
+**2. Keeping Data and Functions Organized**
+
+When data and the functions that operate on it are organized separately, it can become harder to represent real-world entities naturally.
+
+<img width="177" height="88" alt="image" src="https://github.com/user-attachments/assets/70414bbf-775f-4e1a-867c-e250f903aa47" />
+
 
 ### Modeling the Real World
 
 Think about real-world objects, such as people and cars. Every object has:
 
 - **Attributes (Data):** Characteristics, such as a person's eye color or a car's horsepower.
-- **Behaviors (Functions):** Actions, such as a person walking or a car braking.
+- **Behaviors (Methods):** Actions, such as a person walking or a car accelerating.
 
 It makes sense to organize related data and behaviors together.
 
 ### 3.2 The Object-Oriented Approach
 
-**Object-Oriented Programming (OOP)** combines data and the functions that operate on that data into a single unit called an **object**.
+**Object-Oriented Programming (OOP)** combines data and the methods that operate on that data into a single unit called an **object**.
+
+Instead of organizing a program primarily around functions, OOP organizes it around objects that represent real-world or conceptual entities.
 
 OOP introduces four fundamental features that help organize and manage complex programs:
+
 1. **Encapsulation**
 2. **Inheritance**
 3. **Polymorphism**
