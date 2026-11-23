@@ -195,7 +195,7 @@ public class MyClass {
     // Methods
 }
 ```
-<img width="1402" height="882" alt="image" src="https://github.com/user-attachments/assets/954032b6-9580-40c1-b2ad-aeac4b0877e1" />
+<img width="1202" height="782" alt="image" src="https://github.com/user-attachments/assets/954032b6-9580-40c1-b2ad-aeac4b0877e1" />
 
 The **class body** (the code between the curly braces `{ }`) contains the members that define the class:
 
