@@ -119,7 +119,7 @@ Do not declare types when passing arguments. Use `printTime(11, 59)`, not `print
 
 Functions make programs easier to read, reuse, test, and maintain, as we learned in CS I when studying Python.
 
-<img width="1015" height="500" alt="image" src="https://github.com/user-attachments/assets/c3530a5c-c622-4085-bf70-fe1e7e2ed021" />
+<img width="815" height="500" alt="image" src="https://github.com/user-attachments/assets/c3530a5c-c622-4085-bf70-fe1e7e2ed021" />
 
 This works well for small programs, but as programs grow, managing data and functions becomes more difficult.
 
