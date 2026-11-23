@@ -245,7 +245,7 @@ public class Student {
 
 ### Method Anatomy
 
-<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/37894cdc-5e68-4128-bf70-f46a6c7cd2ef" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/37894cdc-5e68-4128-bf70-f46a6c7cd2ef" />
 
 
 
