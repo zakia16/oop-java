@@ -199,6 +199,8 @@ Similarly, `Teacher` inherits from `Person`.
 
 This means both child classes can reuse the accessible fields and methods of the parent class.
 
+<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/88768517-4a08-4d4c-bc45-31dfbf64ab0d" />
+
 ### 1.5. Creating Objects
 
 Now, let's create objects of both classes.
