@@ -114,8 +114,8 @@ We would have to repeat the same fields and common methods in every class.
 
 Instead of repeating common code in every class, here is what we are going to do:
 
-1. Superclass (Parent Class): Create a common parent class called `Person` containing shared fields and methods.
-2. Subclass (Child Class): Create child classes called `Student` and `Teacher` that reuse the functionality of `Person`.
+1. **Superclass (Parent Class)**: Create a common parent class called `Person` containing shared fields and methods.
+2. **Subclass (Child Class)**: Create child classes called `Student` and `Teacher` that reuse the functionality of `Person`.
    Note:
     - A subclass inherits the accessible fields and methods of its parent class.
     - A subclass **does not inherit the constructors** of its parent class. However, it can call a parent constructor using `super()`.
