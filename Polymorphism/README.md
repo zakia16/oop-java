@@ -58,7 +58,7 @@ Java supports two types of polymorphism:
 
 
 * **Method Overloading (Compile-Time / Static Polymorphism):**
-  * Same method name, **different signature** (parameter list)
+  * Same method name, **different signature** (parameters / data types)
   * **Inheritance required?** No (happens within the same class)
   * The compiler determines which overloaded method to call.
   * *Example:* A class having multiple constructors (`Printer()`, `Printer(String name)`)
