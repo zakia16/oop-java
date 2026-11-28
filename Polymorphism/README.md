@@ -52,10 +52,18 @@ The same method call can produce different behaviors for different objects.
 
 ### Types of Polymorphism
 
-Java supports two commonly taught types of polymorphism:
+Java supports two types of polymorphism:
 
-1. **Compile-Time Polymorphism:** The compiler determines which overloaded method to call.
-2. **Runtime Polymorphism:** The JVM determines which overridden method to execute based on the actual object.
+* **Method Overloading (Compile-Time / Static Polymorphism):**
+  * Same method name, **different signature** (parameter list)
+  * **Inheritance required?** No (happens within the same class)
+  * The compiler determines which overloaded method to call.
+  * *Example:* A class having multiple constructors (`Printer()`, `Printer(String name)`)
+* **Method Overriding (Run-Time / Dynamic Polymorphism):**
+  * Same method name, **same signature**
+  * **Inheritance required?** Yes (subclass redefines a superclass method)
+  * The JVM determines which overridden method to execute based on the actual object.
+  * *Example:* A subclass customizing `toString()` or `equals()`
 
 <img width="1264" height="842" alt="image" src="https://github.com/user-attachments/assets/884a99ba-595c-4f21-aeee-9501dc49386c" />
 
