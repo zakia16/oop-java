@@ -71,21 +71,8 @@ Java supports two types of polymorphism:
 
 ---
 
-## 2. Compile-Time vs. Runtime Polymorphism
 
-Java handles polymorphism in two main ways:
-
-| Feature | Compile-Time Polymorphism | Runtime Polymorphism |
-|---|---|---|
-| Also Called | Static Binding / Early Binding | Dynamic Binding / Late Binding |
-| Mechanism | Method Overloading | Method Overriding |
-| Resolved By | Java Compiler (`javac`) | JVM at runtime |
-| Based On | Method arguments and parameter types | Actual object type |
-| Inheritance Required? | No | Yes |
-
----
-
-## 3. Compile-Time Polymorphism (Method Overloading)
+##23. Compile-Time Polymorphism (Method Overloading)
 
 **Compile-time polymorphism** occurs when a class has multiple methods with the same name but different parameter lists.
 
@@ -151,7 +138,7 @@ Printing string: Hello
 
 ---
 
-## 4. Runtime Polymorphism (Method Overriding)
+## 3. Runtime Polymorphism (Method Overriding)
 
 **Runtime polymorphism** occurs when a subclass provides its own implementation of a method inherited from a superclass.
 
@@ -214,7 +201,7 @@ The same method name produces different behaviors depending on the object.
 
 ---
 
-## 5. Upcasting and Dynamic Method Dispatch
+## 4. Upcasting and Dynamic Method Dispatch
 
 ### What Is Upcasting?
 
@@ -294,7 +281,7 @@ Cat meows.
 
 ---
 
-## 6. Complete Code Example: Notification System
+## 5. Complete Code Example: Notification System
 
 This example combines **abstract classes, inheritance, method overriding, and runtime polymorphism**.
 
